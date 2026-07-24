@@ -1,0 +1,36 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ * Ghidra program: libswordigo.so
+ * Address: 0062c0d8
+ * Function: FUN_0062c0d8
+ * Signature: undefined FUN_0062c0d8(void)
+ * Thunk: false
+ * External: false
+ *
+ * GENERATED EVIDENCE. NOT CLEAN SOURCE.
+ */
+
+
+void FUN_0062c0d8(undefined8 *param_1,char *param_2,long param_3)
+
+{
+  int iVar1;
+  undefined8 local_8;
+  
+  *param_1 = &PTR_FUN_007da1f0;
+  *(uint *)(param_1 + 1) = (uint)(param_3 != 0);
+  param_1[2] = 0;
+  FUN_0063e890(param_1,0,0);
+  *param_1 = &PTR_FUN_007b6e40;
+  iVar1 = strcmp(param_2,"C");
+  if ((iVar1 != 0) && (iVar1 = strcmp(param_2,"POSIX"), iVar1 != 0)) {
+    FUN_00670710(&local_8,param_2,0);
+    FUN_0063e890(param_1,local_8,0);
+    FUN_00670744(&local_8);
+                    /* catch() { ... } // from try @ 0062c050 with catch @ 0062c190 */
+    return;
+  }
+  return;
+}
+
+

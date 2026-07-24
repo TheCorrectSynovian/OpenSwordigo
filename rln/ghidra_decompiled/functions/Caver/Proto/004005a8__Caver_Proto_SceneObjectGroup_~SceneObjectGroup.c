@@ -1,0 +1,84 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ * Ghidra program: libswordigo.so
+ * Address: 004005a8
+ * Function: Caver::Proto::SceneObjectGroup::~SceneObjectGroup
+ * Signature: undefined __thiscall ~SceneObjectGroup(SceneObjectGroup * this)
+ * Thunk: false
+ * External: false
+ *
+ * GENERATED EVIDENCE. NOT CLEAN SOURCE.
+ */
+
+
+/* Caver::Proto::SceneObjectGroup::~SceneObjectGroup() */
+
+void __thiscall Caver::Proto::SceneObjectGroup::~SceneObjectGroup(SceneObjectGroup *this)
+
+{
+  char cVar1;
+  long lVar2;
+  bool bVar3;
+  undefined *puVar4;
+  SceneObjectGroup *pSVar5;
+  long lVar6;
+  int *piVar7;
+  int iVar8;
+  long *plVar9;
+  long lVar10;
+  
+  lVar2 = tpidr_el0;
+  lVar6 = *(long *)(lVar2 + 0x28);
+  plVar9 = *(long **)(this + 0x10);
+  bVar3 = plVar9 != (long *)PTR__default_identifier__007e5218;
+  *(undefined **)this = PTR_vtable_007e63b0 + 0x10;
+  if ((bVar3) && (plVar9 != (long *)0x0)) {
+    puVar4 = (undefined *)(*plVar9 + -0x18);
+    if (puVar4 != PTR_DAT_007e5de8) {
+      piVar7 = (int *)(*plVar9 + -8);
+      if (PTR_pthread_create_007e4e78 == (undefined *)0x0) {
+        iVar8 = *piVar7;
+        *piVar7 = iVar8 + -1;
+      }
+      else {
+        do {
+          iVar8 = *piVar7;
+          cVar1 = '\x01';
+          bVar3 = (bool)ExclusiveMonitorPass(piVar7,0x10);
+          if (bVar3) {
+            *piVar7 = iVar8 + -1;
+            cVar1 = ExclusiveMonitorsStatus();
+          }
+        } while (cVar1 != '\0');
+      }
+      if (iVar8 < 1) {
+        operator_delete(puVar4);
+      }
+    }
+    operator_delete(plVar9);
+  }
+  if ((*(SceneObjectGroup **)PTR_default_instance__007e48f0 != this) &&
+     (*(long **)(this + 0x58) != (long *)0x0)) {
+    (**(code **)(**(long **)(this + 0x58) + 8))();
+  }
+  pSVar5 = *(SceneObjectGroup **)(this + 0x18);
+  if (0 < *(int *)(this + 0x24)) {
+    lVar10 = 0;
+    do {
+      google::protobuf::internal::StringTypeHandlerBase::Delete(*(string **)(pSVar5 + lVar10 * 8));
+      pSVar5 = *(SceneObjectGroup **)(this + 0x18);
+      lVar10 = lVar10 + 1;
+    } while (lVar10 < *(int *)(this + 0x24));
+  }
+  if ((pSVar5 != this + 0x30) && (pSVar5 != (SceneObjectGroup *)0x0)) {
+    operator_delete__(pSVar5);
+  }
+  google::protobuf::MessageLite::~MessageLite((MessageLite *)this);
+  if (*(long *)(lVar2 + 0x28) != lVar6) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+

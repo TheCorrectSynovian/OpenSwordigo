@@ -1,0 +1,130 @@
+# =========================================================================
+# OpenSwordigo Advanced .gitignore
+# =========================================================================
+
+# -------------------------------------------------------------------------
+# 1. C++ & CMake Build Outputs
+# -------------------------------------------------------------------------
+build/
+build-*/
+cmake-build-*/
+_build/
+bin/
+out/
+.cache/
+
+# CMake Cache & Generated Files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+install_manifest.txt
+CPackConfig.cmake
+CPackSourceConfig.cmake
+*_builder
+
+# Compiled Executables, Objects & Static/Shared Libraries
+openswordigo_native
+openswordigo_render
+*.o
+*.obj
+*.d
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.elf
+
+# -------------------------------------------------------------------------
+# 2. Ghidra & Reverse-Engineering Large Dumps / Exports
+# -------------------------------------------------------------------------
+# Ghidra Projects & Database Locks
+*.rep/
+*.gzf
+*.lock
+*.lock.db
+
+# Heavy Decompilation Dumps & HTML/XML Exports
+rln/*.gzf
+rln/*.html
+rln/*.xml
+rln/libswordigo.c
+
+# Large raw extracted symbol dumps (Keep clean text sources)
+swordigo_symbols_raw.txt
+swordigo_symbols_all.txt
+
+# -------------------------------------------------------------------------
+# 3. Ghidra Extension (Gradle / Java Build Outputs)
+# -------------------------------------------------------------------------
+.gradle/
+opensw/build/
+opensw/.gradle/
+opensw/dist/
+opensw/.aout/
+*.jar
+*.zip
+
+# Java / Gradle Eclipse / IDE files
+.classpath
+.project
+.settings/
+
+# -------------------------------------------------------------------------
+# 4. IDE & Editor Artifacts
+# -------------------------------------------------------------------------
+# JetBrains (CLion / IntelliJ)
+.idea/
+*.iws
+*.iml
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Visual Studio / Xcode
+*.user
+*.suo
+*.userprefs
+*.sln
+*.vcxproj*
+*.xcodeproj/
+*.xcworkspace/
+
+# Vim / Emacs / Backup Swap Files
+*.swp
+*.swo
+*~
+.#*
+
+# -------------------------------------------------------------------------
+# 5. OS & System Generated Files
+# -------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+.directory
+.Spotlight-V100
+.Trashes
+
+# -------------------------------------------------------------------------
+# 6. Logs & Debug Traces
+# -------------------------------------------------------------------------
+*.log
+*.out
+*.err
+*.profraw
+*.profdata
+core
+core.*
+vgcore.*

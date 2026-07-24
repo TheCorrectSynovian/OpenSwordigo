@@ -1,0 +1,33 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ * Ghidra program: libswordigo.so
+ * Address: 005b8710
+ * Function: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error>>::rethrow
+ * Signature: undefined __thiscall rethrow(clone_impl<boost::exception_detail::error_info_injector<std::runtime_error>> * this)
+ * Thunk: false
+ * External: false
+ *
+ * GENERATED EVIDENCE. NOT CLEAN SOURCE.
+ */
+
+
+/* boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error>
+   >::rethrow() const */
+
+void __thiscall
+boost::exception_detail::
+clone_impl<boost::exception_detail::error_info_injector<std::runtime_error>>::rethrow
+          (clone_impl<boost::exception_detail::error_info_injector<std::runtime_error>> *this)
+
+{
+  clone_impl<boost::exception_detail::error_info_injector<std::runtime_error>> *this_00;
+  
+                    /* try { // try from 005b8710 to 006b88cf has its CatchHandler @ 005b861c */
+  this_00 = (clone_impl<boost::exception_detail::error_info_injector<std::runtime_error>> *)
+            __cxa_allocate_exception(0x40);
+  clone_impl(this_00,(clone_impl *)this);
+                    /* WARNING: Subroutine does not return */
+  __cxa_throw(this_00,PTR_typeinfo_007e6848,PTR__clone_impl_007e5f68);
+}
+
+

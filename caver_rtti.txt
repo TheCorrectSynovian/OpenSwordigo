@@ -1,0 +1,1578 @@
+00000000006bd290 V typeinfo for Caver::LightComponent* ()
+00000000006bcc30 V typeinfo for Caver::ModelComponent* ()
+00000000006bdb60 V typeinfo for Caver::SkillComponent* ()
+00000000006bd200 V typeinfo for Caver::SwingComponent* ()
+00000000006bd3b0 V typeinfo for Caver::AttackComponent* ()
+00000000006bd140 V typeinfo for Caver::DamageComponent* ()
+00000000006bcd80 V typeinfo for Caver::EntityComponent* ()
+00000000006bd170 V typeinfo for Caver::HealthComponent* ()
+00000000006bd800 V typeinfo for Caver::PortalComponent* ()
+00000000006bcf60 V typeinfo for Caver::ShadowComponent* ()
+00000000006bcbf8 V typeinfo for Caver::SpriteComponent* ()
+00000000006bd980 V typeinfo for Caver::ProgramComponent* ()
+00000000006bd350 V typeinfo for Caver::ShatterComponent* ()
+00000000006bd950 V typeinfo for Caver::ItemDropComponent* ()
+00000000006bd650 V typeinfo for Caver::ParticleComponent* ()
+00000000006bda70 V typeinfo for Caver::MagicBoltComponent* ()
+00000000006bda40 V typeinfo for Caver::MagicBombComponent* ()
+00000000006bd860 V typeinfo for Caver::TouchableComponent* ()
+00000000006bcfc0 V typeinfo for Caver::TransformComponent* ()
+00000000006bcd50 V typeinfo for Caver::WaterMeshComponent* ()
+00000000006bd050 V typeinfo for Caver::BackgroundComponent* ()
+00000000006bcdb0 V typeinfo for Caver::EntityInfoComponent* ()
+00000000006bdbc0 V typeinfo for Caver::FireBreathComponent* ()
+00000000006bccf0 V typeinfo for Caver::GroundMeshComponent* ()
+00000000006bce70 V typeinfo for Caver::HeroEntityComponent* ()
+00000000006bcf30 V typeinfo for Caver::PropertiesComponent* ()
+00000000006bd6e0 V typeinfo for Caver::SimpleGlowComponent* ()
+00000000006bd830 V typeinfo for Caver::SpawnPointComponent* ()
+00000000006bd9e0 V typeinfo for Caver::TextBubbleComponent* ()
+00000000006bd260 V typeinfo for Caver::WeaponGlowComponent* ()
+00000000006bd6b0 V typeinfo for Caver::FireEmitterComponent* ()
+00000000006bd9b0 V typeinfo for Caver::OverlayTextComponent* ()
+00000000006bd7d0 V typeinfo for Caver::SoundEffectComponent* ()
+00000000006bd230 V typeinfo for Caver::WeaponTrailComponent* ()
+00000000006bce10 V typeinfo for Caver::EntityActionComponent* ()
+00000000006bd770 V typeinfo for Caver::PortalEffectComponent* ()
+00000000006bd0b0 V typeinfo for Caver::UtilityShapeComponent* ()
+00000000006bccc0 V typeinfo for Caver::GroundPolygonComponent* ()
+00000000006bdaa0 V typeinfo for Caver::MagicHookshotComponent* ()
+00000000006bd380 V typeinfo for Caver::MonsterEntityComponent* ()
+00000000006bd7a0 V typeinfo for Caver::ParticleFieldComponent* ()
+00000000006bd2c0 V typeinfo for Caver::PhysicsObjectComponent* ()
+00000000006bcc90 V typeinfo for Caver::BlendAnimationComponent* ()
+00000000006bcea0 V typeinfo for Caver::BushControllerComponent* ()
+00000000006bce40 V typeinfo for Caver::CharControllerComponent* ()
+00000000006bd0e0 V typeinfo for Caver::CollisionShapeComponent* ()
+00000000006bdad0 V typeinfo for Caver::DimensionSpellComponent* ()
+00000000006bd8c0 V typeinfo for Caver::DoorControllerComponent* ()
+00000000006bdb30 V typeinfo for Caver::MagicExplosionComponent* ()
+00000000006bdb90 V typeinfo for Caver::MagicSpellCastComponent* ()
+00000000006bd710 V typeinfo for Caver::ParticleObjectComponent* ()
+00000000006bd080 V typeinfo for Caver::TextureMappingComponent* ()
+00000000006bd320 V typeinfo for Caver::BreakableObjectComponent* ()
+00000000006bd920 V typeinfo for Caver::CollectableItemComponent* ()
+00000000006bdb00 V typeinfo for Caver::DimensionObjectComponent* ()
+00000000006bd740 V typeinfo for Caver::OrbitControllerComponent* ()
+00000000006bd620 V typeinfo for Caver::ParticleEmitterComponent* ()
+00000000006bd2f0 V typeinfo for Caver::PhysicsPlatformComponent* ()
+00000000006bd890 V typeinfo for Caver::PressureTriggerComponent* ()
+00000000006bd1a0 V typeinfo for Caver::SwingableWeaponComponent* ()
+00000000006bcde0 V typeinfo for Caver::EntityControllerComponent* ()
+00000000006bcc60 V typeinfo for Caver::KeyframeAnimationComponent* ()
+00000000006bd020 V typeinfo for Caver::CharAnimControllerComponent* ()
+00000000006bced0 V typeinfo for Caver::ElevatorControllerComponent* ()
+00000000006bd8f0 V typeinfo for Caver::RotatingBackgroundComponent* ()
+00000000006bcff0 V typeinfo for Caver::AnimationControllerComponent* ()
+00000000006bcd20 V typeinfo for Caver::GroundMeshGeneratorComponent* ()
+00000000006bda10 V typeinfo for Caver::TransformControllerComponent* ()
+00000000006bd560 V typeinfo for Caver::BatMonsterControllerComponent* ()
+00000000006bd680 V typeinfo for Caver::MagicParticleEmitterComponent* ()
+00000000006bcf90 V typeinfo for Caver::ObjectLinkControllerComponent* ()
+00000000006bdbf0 V typeinfo for Caver::ProjectileControllerComponent* ()
+00000000006bd5c0 V typeinfo for Caver::MonsterDeathControllerComponent* ()
+00000000006bd4a0 V typeinfo for Caver::SkellyMonsterControllerComponent* ()
+00000000006bd4d0 V typeinfo for Caver::StaticMonsterControllerComponent* ()
+00000000006bd5f0 V typeinfo for Caver::GenericMonsterControllerComponent* ()
+00000000006bd470 V typeinfo for Caver::LeapingMonsterControllerComponent* ()
+00000000006bcf00 V typeinfo for Caver::ModelTransformControllerComponent* ()
+00000000006bd3e0 V typeinfo for Caver::WalkingMonsterControllerComponent* ()
+00000000006bd590 V typeinfo for Caver::BouncingMonsterControllerComponent* ()
+00000000006bd410 V typeinfo for Caver::ChargingMonsterControllerComponent* ()
+00000000006bd500 V typeinfo for Caver::ShootingMonsterControllerComponent* ()
+00000000006bd440 V typeinfo for Caver::SnappingMonsterControllerComponent* ()
+00000000006bd1d0 V typeinfo for Caver::SwingableWeaponControllerComponent* ()
+00000000006bd530 V typeinfo for Caver::ProjectileMonsterControllerComponent* ()
+00000000006bd110 V typeinfo for Caver::BoneControlledCollisionShapeComponent* ()
+00000000006b8f50 D typeinfo for Caver::CaverShell
+00000000006d5be0 D typeinfo for Caver::GUIControl
+00000000006d35d0 D typeinfo for Caver::PortalView
+00000000006d3740 D typeinfo for Caver::QuestsView
+00000000006d3d40 D typeinfo for Caver::StripeView
+00000000006d7e88 V typeinfo for Caver::AudioPlayer
+00000000006cdba0 D typeinfo for Caver::CreditsView
+00000000006d02c0 D typeinfo for Caver::ItemOverlay
+00000000006bc808 V typeinfo for Caver::IUpdateable
+00000000006d2830 D typeinfo for Caver::LevelUpView
+00000000006d29b0 D typeinfo for Caver::LoadingView
+00000000006d2b60 D typeinfo for Caver::MapMenuPage
+00000000006d31a0 D typeinfo for Caver::NewMenuView
+00000000006d4d70 D typeinfo for Caver::SceneObject
+00000000006d7ec0 D typeinfo for Caver::SoundEffect
+00000000006d08c0 D typeinfo for Caver::TargetFrame
+00000000006b9250 D typeinfo for Caver::AnimKeysNode
+00000000006d1850 D typeinfo for Caver::GameOverView
+00000000006d5770 D typeinfo for Caver::GUIAlertView
+00000000006d5ef0 D typeinfo for Caver::GUIFrameView
+00000000006d6330 D typeinfo for Caver::GUIResponder
+00000000006d76d0 V typeinfo for Caver::GUITextField
+00000000006d26c0 D typeinfo for Caver::ItemInfoView
+00000000006cde90 D typeinfo for Caver::MainMenuView
+00000000006d2d30 D typeinfo for Caver::MapPopupView
+00000000006d3040 D typeinfo for Caver::MenuItemSlot
+00000000006d1380 V typeinfo for Caver::MenuViewPage
+00000000006d0a30 D typeinfo for Caver::PurchaseView
+00000000006d3a20 D typeinfo for Caver::SettingsView
+00000000006b91b0 D typeinfo for Caver::AnimBlendNode
+00000000006d1340 D typeinfo for Caver::CharacterView
+00000000006cda30 D typeinfo for Caver::ChooseAgeView
+00000000006cfb20 D typeinfo for Caver::ExperienceBar
+00000000006cb6b0 D typeinfo for Caver::GameSceneView
+00000000006c3040 D typeinfo for Caver::GlowComponent
+00000000006d5900 D typeinfo for Caver::GUIBubbleView
+00000000006d6da0 D typeinfo for Caver::GUIEffectView
+00000000006d64c0 D typeinfo for Caver::GUIScrollView
+00000000006d2190 D typeinfo for Caver::InventoryView
+00000000006bf780 D typeinfo for Caver::ManaComponent
+00000000006d0590 D typeinfo for Caver::OverlayButton
+00000000006cd8d0 D typeinfo for Caver::BadgeCountView
+00000000006d61c0 D typeinfo for Caver::GUILoadingView
+00000000006d8020 D typeinfo for Caver::GUIPopoverView
+00000000006ba200 D typeinfo for Caver::LightComponent
+00000000006ba3a0 D typeinfo for Caver::ModelComponent
+00000000006d48e0 D typeinfo for Caver::ObjectTemplate
+00000000006ce0a0 D typeinfo for Caver::OnlineMenuView
+00000000006ce970 D typeinfo for Caver::ProfileManager
+00000000006bb740 D typeinfo for Caver::ShapeComponent
+00000000006c11f0 D typeinfo for Caver::SkillComponent
+00000000006c13e0 D typeinfo for Caver::SpellComponent
+00000000006c5610 D typeinfo for Caver::SwingComponent
+00000000006d3ec0 D typeinfo for Caver::TabbedMenuView
+00000000006d7db0 D typeinfo for Caver::TextureLibrary
+00000000006c1580 D typeinfo for Caver::AttackComponent
+00000000006d7e70 D typeinfo for Caver::AudioPlayerImpl
+00000000006c2e90 V typeinfo for Caver::ComponentOutlet<Caver::LightComponent>
+00000000006b9470 V typeinfo for Caver::ComponentOutlet<Caver::ModelComponent>
+00000000006bee20 V typeinfo for Caver::ComponentOutlet<Caver::ShapeComponent>
+00000000006be1d0 V typeinfo for Caver::ComponentOutlet<Caver::SwingComponent>
+00000000006c1e90 V typeinfo for Caver::ComponentOutlet<Caver::AttackComponent>
+00000000006be310 V typeinfo for Caver::ComponentOutlet<Caver::EntityComponent>
+00000000006c3770 V typeinfo for Caver::ComponentOutlet<Caver::ParticleComponent>
+00000000006b9a70 V typeinfo for Caver::ComponentOutlet<Caver::AnimationComponent>
+00000000006c4d50 V typeinfo for Caver::ComponentOutlet<Caver::GroundMeshComponent>
+00000000006c5280 V typeinfo for Caver::ComponentOutlet<Caver::WeaponGlowComponent>
+00000000006be270 V typeinfo for Caver::ComponentOutlet<Caver::SoundEffectComponent>
+00000000006c52d0 V typeinfo for Caver::ComponentOutlet<Caver::WeaponTrailComponent>
+00000000006c1770 V typeinfo for Caver::ComponentOutlet<Caver::UtilityShapeComponent>
+00000000006c3d50 V typeinfo for Caver::ComponentOutlet<Caver::GroundPolygonComponent>
+00000000006c17c0 V typeinfo for Caver::ComponentOutlet<Caver::MonsterEntityComponent>
+00000000006c2960 V typeinfo for Caver::ComponentOutlet<Caver::BlendAnimationComponent>
+00000000006c2750 V typeinfo for Caver::ComponentOutlet<Caver::CharControllerComponent>
+00000000006baea0 V typeinfo for Caver::ComponentOutlet<Caver::CollisionShapeComponent>
+00000000006c3d00 V typeinfo for Caver::ComponentOutlet<Caver::TextureMappingComponent>
+00000000006c0290 V typeinfo for Caver::ComponentOutlet<Caver::ParticleEmitterComponent>
+00000000006bdf90 V typeinfo for Caver::ComponentOutlet<Caver::KeyframeAnimationComponent>
+00000000006be2c0 V typeinfo for Caver::ComponentOutlet<Caver::CharAnimControllerComponent>
+00000000006bee70 V typeinfo for Caver::ComponentOutlet<Caver::AnimationControllerComponent>
+00000000006be220 V typeinfo for Caver::ComponentOutlet<Caver::SwingableWeaponControllerComponent>
+00000000006be6f0 D typeinfo for Caver::DamageComponent
+00000000006bea90 D typeinfo for Caver::EntityComponent
+00000000006cfc80 D typeinfo for Caver::GameOverlayView
+00000000006d1b20 D typeinfo for Caver::GuideToggleView
+00000000006bf240 D typeinfo for Caver::HealthComponent
+00000000006d0170 V typeinfo for Caver::ParticleEmitter
+00000000006bae50 D typeinfo for Caver::PortalComponent
+00000000006bb3e0 D typeinfo for Caver::ShadowComponent
+00000000006d3bc0 D typeinfo for Caver::SkillPickerView
+00000000006bbcc0 D typeinfo for Caver::SpriteComponent
+00000000006ceca8 V typeinfo for Caver::StoreController
+00000000006cf860 D typeinfo for Caver::DebugInfoOverlay
+00000000006d5d90 D typeinfo for Caver::GUIDraggableItem
+00000000006d7690 D typeinfo for Caver::GUITextFieldImpl
+00000000006d6be8 V typeinfo for Caver::IFWMouseListener
+00000000006ccbc8 V typeinfo for Caver::IMapViewDelegate
+00000000006d3ef8 V typeinfo for Caver::ITabViewDelegate
+00000000006d23a0 D typeinfo for Caver::ItemBuyPopupView
+00000000006d7dd8 V typeinfo for Caver::ITextureDelegate
+00000000006d3310 D typeinfo for Caver::NotificationView
+00000000006cd720 V typeinfo for Caver::OnlineController
+00000000006ba920 D typeinfo for Caver::OverlayComponent
+00000000006ce310 D typeinfo for Caver::ProfilePanelView
+00000000006bb070 D typeinfo for Caver::ProgramComponent
+00000000006d38b0 D typeinfo for Caver::SceneLoadingView
+00000000006d4e40 D typeinfo for Caver::SceneObjectGroup
+00000000006c3ef0 D typeinfo for Caver::ShatterComponent
+00000000006d0ca0 D typeinfo for Caver::StoreProductView
+00000000006d16f0 D typeinfo for Caver::DraggableMenuItem
+00000000006d19b0 D typeinfo for Caver::GuidePurchaseView
+00000000006d6990 D typeinfo for Caver::GUIViewController
+00000000006d52b8 V typeinfo for Caver::IFWTouchResponder
+00000000006bf5e0 D typeinfo for Caver::ItemDropComponent
+00000000006d2560 D typeinfo for Caver::ItemInfoPopupView
+00000000006d0700 D typeinfo for Caver::OverlayMenuButton
+00000000006c3520 D typeinfo for Caver::ParticleComponent
+00000000006d53e0 D typeinfo for Caver::SoundEffectSource
+00000000006b9e20 V typeinfo for Caver::AnimationComponent
+00000000006cf700 V typeinfo for Caver::ConsumableItemView
+00000000006cbc80 D typeinfo for Caver::GameViewController
+00000000006d1cb0 D typeinfo for Caver::InventoryItemPanel
+00000000006cc9d8 V typeinfo for Caver::IPauseViewDelegate
+00000000006d76e8 V typeinfo for Caver::ITextInputDelegate
+00000000006c0600 D typeinfo for Caver::MagicBoltComponent
+00000000006c07c0 D typeinfo for Caver::MagicBombComponent
+00000000006ce910 D typeinfo for Caver::ProfilesHeaderView
+00000000006bc250 D typeinfo for Caver::TouchableComponent
+00000000006bc3f0 D typeinfo for Caver::TransformComponent
+00000000006c5090 D typeinfo for Caver::WaterMeshComponent
+00000000006d11a0 D typeinfo for Caver::AttributePointsView
+00000000006b9c10 D typeinfo for Caver::BackgroundComponent
+00000000006b9460 V typeinfo for Caver::ComponentOutletBase
+00000000006bf010 D typeinfo for Caver::EntityInfoComponent
+00000000006c0240 D typeinfo for Caver::FireBreathComponent
+00000000006cb540 D typeinfo for Caver::GameSceneController
+00000000006c4ac0 D typeinfo for Caver::GroundMeshComponent
+00000000006bf3e0 D typeinfo for Caver::HeroEntityComponent
+00000000006d6bf8 V typeinfo for Caver::IFWKeyboardListener
+00000000006cbd18 V typeinfo for Caver::IGameEventResponder
+00000000006cc9a0 D typeinfo for Caver::PauseViewController
+00000000006bb240 D typeinfo for Caver::PropertiesComponent
+00000000006c40a0 D typeinfo for Caver::SimpleGlowComponent
+00000000006bbb20 D typeinfo for Caver::SpawnPointComponent
+00000000006d0f50 D typeinfo for Caver::StoreViewController
+00000000006bbea0 D typeinfo for Caver::TextBubbleComponent
+00000000006c57c0 D typeinfo for Caver::WeaponGlowComponent
+00000000006d4340 D typeinfo for Caver::BlastParticleEmitter
+00000000006cf500 D typeinfo for Caver::ConfigureOverlayView
+00000000006cf9c0 D typeinfo for Caver::DraggableOverlayItem
+00000000006c2e40 D typeinfo for Caver::FireEmitterComponent
+00000000006cb558 V typeinfo for Caver::IGameControlDelegate
+00000000006d1f20 D typeinfo for Caver::InventoryTrinketSlot
+00000000006bac80 D typeinfo for Caver::OverlayTextComponent
+00000000006ccb60 D typeinfo for Caver::PortalViewController
+00000000006ce590 D typeinfo for Caver::ProfileSelectionView
+00000000006bb950 D typeinfo for Caver::SoundEffectComponent
+00000000006d4560 D typeinfo for Caver::SparkParticleEmitter
+00000000006d45d0 D typeinfo for Caver::TrailParticleEmitter
+00000000006c5960 D typeinfo for Caver::WeaponTrailComponent
+00000000006cdcd0 D typeinfo for Caver::CreditsViewController
+00000000006be890 D typeinfo for Caver::EntityActionComponent
+00000000006cb4b8 V typeinfo for Caver::IGameOverViewDelegate
+00000000006cc308 V typeinfo for Caver::IGUIAlertViewDelegate
+00000000006ce358 V typeinfo for Caver::IGUITextFieldDelegate
+00000000006cc7d8 V typeinfo for Caver::IMainMenuViewDelegate
+00000000006d1f58 V typeinfo for Caver::IMenuItemSlotDelegate
+00000000006cb038 V typeinfo for Caver::ISettingsViewDelegate
+00000000006cc5c0 D typeinfo for Caver::LevelUpViewController
+00000000006c3cb0 D typeinfo for Caver::PortalEffectComponent
+00000000006bb580 D typeinfo for Caver::ShadowVolumeComponent
+00000000006bcbe0 V typeinfo for Caver::UtilityShapeComponent
+00000000006d4640 D typeinfo for Caver::WhooshParticleEmitter
+00000000006caf70 D typeinfo for Caver::GameMenuViewController
+00000000006cb480 D typeinfo for Caver::GameOverViewController
+00000000006c4ef0 D typeinfo for Caver::GroundPolygonComponent
+00000000006c0440 D typeinfo for Caver::HookshotTrailComponent
+00000000006cb018 V typeinfo for Caver::ICharacterViewDelegate
+00000000006cc7f8 V typeinfo for Caver::IChooseAgeViewDelegate
+00000000006d62b8 V typeinfo for Caver::IGUINavigationDelegate
+00000000006cb008 V typeinfo for Caver::IInventoryViewDelegate
+00000000006ce998 V typeinfo for Caver::IPlayerProfileDelegate
+00000000006c0b20 D typeinfo for Caver::MagicHookshotComponent
+00000000006cc760 D typeinfo for Caver::MainMenuViewController
+00000000006bf920 D typeinfo for Caver::MonsterEntityComponent
+00000000006cd580 D typeinfo for Caver::OfflineAchievementView
+00000000006c3960 D typeinfo for Caver::ParticleFieldComponent
+00000000006bfb80 D typeinfo for Caver::PhysicsObjectComponent
+00000000006d7a80 D typeinfo for Caver::ProfileManager_Android
+00000000006d0ac0 D typeinfo for Caver::PurchaseViewController
+00000000006b91c8 V typeinfo for Caver::ReferenceCountedObject
+00000000006b9e00 D typeinfo for Caver::BlendAnimationComponent
+00000000006c4240 D typeinfo for Caver::BushControllerComponent
+00000000006be180 D typeinfo for Caver::CharControllerComponent
+00000000006b9710 D typeinfo for Caver::CollisionShapeComponent
+00000000006c0080 D typeinfo for Caver::DimensionSpellComponent
+00000000006c4410 D typeinfo for Caver::DoorControllerComponent
+00000000006d43b0 D typeinfo for Caver::FountainParticleEmitter
+00000000006d6280 D typeinfo for Caver::GUINavigationController
+00000000006cbd58 V typeinfo for Caver::IProfileManagerDelegate
+00000000006cb028 V typeinfo for Caver::ITabbedMenuViewDelegate
+00000000006c0960 D typeinfo for Caver::MagicExplosionComponent
+00000000006c0cc0 D typeinfo for Caver::MagicSpellCastComponent
+00000000006c0e60 D typeinfo for Caver::ObjectModifierComponent
+00000000006cd280 D typeinfo for Caver::OfflineAchievementsView
+00000000006c3b00 D typeinfo for Caver::ParticleObjectComponent
+00000000006d7bc0 D typeinfo for Caver::StoreController_Android
+00000000006bc090 D typeinfo for Caver::TextureMappingComponent
+00000000006bdda0 D typeinfo for Caver::BreakableObjectComponent
+00000000006be520 D typeinfo for Caver::CollectableItemComponent
+00000000006bfec0 D typeinfo for Caver::DimensionObjectComponent
+00000000006cb048 V typeinfo for Caver::IGuideToggleViewDelegate
+00000000006cce78 V typeinfo for Caver::ISkillPickerViewDelegate
+00000000006d7a20 D typeinfo for Caver::OnlineController_Android
+00000000006ce140 D typeinfo for Caver::OnlineMenuViewController
+00000000006c3380 D typeinfo for Caver::OrbitControllerComponent
+00000000006c3720 D typeinfo for Caver::ParticleEmitterComponent
+00000000006bfd20 D typeinfo for Caver::PhysicsPlatformComponent
+00000000006c4780 D typeinfo for Caver::PressureTriggerComponent
+00000000006c5230 D typeinfo for Caver::SwingableWeaponComponent
+00000000006bedd0 D typeinfo for Caver::EntityControllerComponent
+00000000006ce5c8 V typeinfo for Caver::IProfilePanelViewDelegate
+00000000006ceb40 D typeinfo for Caver::ProfileManagerLoadingView
+00000000006cce40 D typeinfo for Caver::SkillPickerViewController
+00000000006cc2f8 V typeinfo for Caver::IGuidePurchaseViewDelegate
+00000000006bb988 V typeinfo for Caver::ISoundEffectSourceDelegate
+00000000006ba030 D typeinfo for Caver::KeyframeAnimationComponent
+00000000006c2030 D typeinfo for Caver::MonsterControllerComponent
+00000000006cd020 D typeinfo for Caver::AchievementNotificationView
+00000000006bdf40 D typeinfo for Caver::CharAnimControllerComponent
+00000000006c45e0 D typeinfo for Caver::ElevatorControllerComponent
+00000000006cc2b0 D typeinfo for Caver::GuidePurchaseViewController
+00000000006d21e8 V typeinfo for Caver::IInventoryItemPanelDelegate
+00000000006baac0 D typeinfo for Caver::OverlayTargetArrowComponent
+00000000006c4920 D typeinfo for Caver::RotatingBackgroundComponent
+00000000006b9a20 D typeinfo for Caver::AnimationControllerComponent
+00000000006c4d00 D typeinfo for Caver::GroundMeshGeneratorComponent
+00000000006d1398 V typeinfo for Caver::IAttributePointsViewDelegate
+00000000006cb068 V typeinfo for Caver::IStoreViewControllerDelegate
+00000000006bc610 D typeinfo for Caver::TransformControllerComponent
+00000000006c1720 D typeinfo for Caver::BatMonsterControllerComponent
+00000000006cab28 V typeinfo for Caver::IConfigureOverlayViewDelegate
+00000000006cf548 V typeinfo for Caver::IDraggableOverlayItemDelegate
+00000000006d1ce8 V typeinfo for Caver::IInventoryTrinketSlotDelegate
+00000000006cbd48 V typeinfo for Caver::IPortalViewControllerDelegate
+00000000006ce768 V typeinfo for Caver::IProfileSelectionViewDelegate
+00000000006c31e0 D typeinfo for Caver::MagicParticleEmitterComponent
+00000000006ba780 D typeinfo for Caver::ObjectLinkControllerComponent
+00000000006c1000 D typeinfo for Caver::ProjectileControllerComponent
+00000000006caaf0 D typeinfo for Caver::ConfigureOverlayViewController
+00000000006cbd38 V typeinfo for Caver::ILevelUpViewControllerDelegate
+00000000006ce730 D typeinfo for Caver::ProfileSelectionViewController
+00000000006cbd28 V typeinfo for Caver::IGameMenuViewControllerDelegate
+00000000006cb058 V typeinfo for Caver::IPurchaseViewControllerDelegate
+00000000006c21d0 D typeinfo for Caver::MonsterDeathControllerComponent
+00000000006c2700 D typeinfo for Caver::SkellyMonsterControllerComponent
+00000000006c2b00 D typeinfo for Caver::StaticMonsterControllerComponent
+00000000006c1ca0 D typeinfo for Caver::GenericMonsterControllerComponent
+00000000006c1e40 D typeinfo for Caver::LeapingMonsterControllerComponent
+00000000006ba590 D typeinfo for Caver::ModelTransformControllerComponent
+00000000006cd3b0 D typeinfo for Caver::OfflineAchievementsViewController
+00000000006c2ca0 D typeinfo for Caver::WalkingMonsterControllerComponent
+00000000006c1960 D typeinfo for Caver::BouncingMonsterControllerComponent
+00000000006c1b00 D typeinfo for Caver::ChargingMonsterControllerComponent
+00000000006c2560 D typeinfo for Caver::ShootingMonsterControllerComponent
+00000000006c2910 D typeinfo for Caver::SnappingMonsterControllerComponent
+00000000006c5470 D typeinfo for Caver::SwingableWeaponControllerComponent
+00000000006cebd0 D typeinfo for Caver::ProfileManagerLoadingViewController
+00000000006c23c0 D typeinfo for Caver::ProjectileMonsterControllerComponent
+00000000006b9410 D typeinfo for Caver::BoneControlledCollisionShapeComponent
+00000000006cc7e8 V typeinfo for Caver::IProfileSelectionViewControllerDelegate
+00000000006c63c0 D typeinfo for Caver::Proto::FloatColor
+00000000006c6440 D typeinfo for Caver::Proto::Font_Glyph
+00000000006c64a0 D typeinfo for Caver::Proto::GUIMargins
+00000000006c7220 D typeinfo for Caver::Proto::LevelState
+00000000006c6520 D typeinfo for Caver::Proto::MusicTrack
+00000000006caa10 D typeinfo for Caver::Proto::PackedMesh
+00000000006c71c0 D typeinfo for Caver::Proto::QuestState
+00000000006c6c80 D typeinfo for Caver::Proto::EntityClass
+00000000006c6ce0 D typeinfo for Caver::Proto::GameOptions
+00000000006c6cc0 D typeinfo for Caver::Proto::GuideTarget
+00000000006c9ef0 D typeinfo for Caver::Proto::SceneObject
+00000000006c64e0 D typeinfo for Caver::Proto::SoundEffect
+00000000006ca9d0 D typeinfo for Caver::Proto::MeshMaterial
+00000000006c6500 D typeinfo for Caver::Proto::SoundLibrary
+00000000006caa30 D typeinfo for Caver::Proto::UnpackedMesh
+00000000006c64c0 D typeinfo for Caver::Proto::GUIViewLayout
+00000000006c6540 D typeinfo for Caver::Proto::MusicPlaylist
+00000000006c9ed0 D typeinfo for Caver::Proto::ObjectLibrary
+00000000006c7180 D typeinfo for Caver::Proto::PlayerProfile
+00000000006c7260 D typeinfo for Caver::Proto::CharacterState
+00000000006ca150 D typeinfo for Caver::Proto::LightComponent
+00000000006c6ba0 D typeinfo for Caver::Proto::MapNode_Portal
+00000000006c9f70 D typeinfo for Caver::Proto::ModelComponent
+00000000006c9eb0 D typeinfo for Caver::Proto::ObjectTemplate
+00000000006ca090 D typeinfo for Caver::Proto::ShapeComponent
+00000000006ca890 D typeinfo for Caver::Proto::SkillComponent
+00000000006ca950 D typeinfo for Caver::Proto::SpellComponent
+00000000006ca6f0 D typeinfo for Caver::Proto::SwingComponent
+00000000006ca590 D typeinfo for Caver::Proto::AttackComponent
+00000000006ca0d0 D typeinfo for Caver::Proto::DamageComponent
+00000000006c65e0 D typeinfo for Caver::Proto::EditorViewState
+00000000006ca210 D typeinfo for Caver::Proto::EntityComponent
+00000000006ca0f0 D typeinfo for Caver::Proto::HealthComponent
+00000000006ca410 D typeinfo for Caver::Proto::ParticleEmitter
+00000000006ca750 D typeinfo for Caver::Proto::PortalComponent
+00000000006ca170 D typeinfo for Caver::Proto::ShadowComponent
+00000000006c9f50 D typeinfo for Caver::Proto::SpriteComponent
+00000000006c71a0 D typeinfo for Caver::Proto::StateProperties
+00000000006ca2b0 D typeinfo for Caver::Proto::ProgramComponent
+00000000006c9f10 D typeinfo for Caver::Proto::SceneObjectGroup
+00000000006ca7f0 D typeinfo for Caver::Proto::ItemDropComponent
+00000000006ca450 D typeinfo for Caver::Proto::ParticleComponent
+00000000006ca850 D typeinfo for Caver::Proto::MagicBoltComponent
+00000000006ca910 D typeinfo for Caver::Proto::MagicBombComponent
+00000000006c63e0 D typeinfo for Caver::Proto::Texture_Subtexture
+00000000006ca7b0 D typeinfo for Caver::Proto::TouchableComponent
+00000000006ca070 D typeinfo for Caver::Proto::WaterMeshComponent
+00000000006ca3d0 D typeinfo for Caver::Proto::BackgroundComponent
+00000000006ca390 D typeinfo for Caver::Proto::EntityInfoComponent
+00000000006ca8d0 D typeinfo for Caver::Proto::FireBreathComponent
+00000000006ca010 D typeinfo for Caver::Proto::GroundMeshComponent
+00000000006ca3b0 D typeinfo for Caver::Proto::HeroEntityComponent
+00000000006ca3f0 D typeinfo for Caver::Proto::PropertiesComponent
+00000000006ca490 D typeinfo for Caver::Proto::SimpleGlowComponent
+00000000006ca770 D typeinfo for Caver::Proto::SpawnPointComponent
+00000000006ca710 D typeinfo for Caver::Proto::WeaponGlowComponent
+00000000006ca470 D typeinfo for Caver::Proto::FireEmitterComponent
+00000000006ca810 D typeinfo for Caver::Proto::OverlayTextComponent
+00000000006ca190 D typeinfo for Caver::Proto::SoundEffectComponent
+00000000006ca730 D typeinfo for Caver::Proto::WeaponTrailComponent
+00000000006ca350 D typeinfo for Caver::Proto::EntityActionComponent
+00000000006c7160 D typeinfo for Caver::Proto::PlayerProfile_Counter
+00000000006ca830 D typeinfo for Caver::Proto::PortalEffectComponent
+00000000006c9ff0 D typeinfo for Caver::Proto::GroundPolygonComponent
+00000000006ca930 D typeinfo for Caver::Proto::MagicHookshotComponent
+00000000006ca2d0 D typeinfo for Caver::Proto::MonsterEntityComponent
+00000000006ca4f0 D typeinfo for Caver::Proto::ParticleFieldComponent
+00000000006ca2f0 D typeinfo for Caver::Proto::PhysicsObjectComponent
+00000000006c6400 D typeinfo for Caver::Proto::Texture_ConversionInfo
+00000000006c9fb0 D typeinfo for Caver::Proto::BlendAnimationComponent
+00000000006ca230 D typeinfo for Caver::Proto::BushControllerComponent
+00000000006ca1f0 D typeinfo for Caver::Proto::CharControllerComponent
+00000000006ca0b0 D typeinfo for Caver::Proto::CollisionShapeComponent
+00000000006ca990 D typeinfo for Caver::Proto::DimensionSpellComponent
+00000000006ca290 D typeinfo for Caver::Proto::DoorControllerComponent
+00000000006c6ca0 D typeinfo for Caver::Proto::GuideTarget_LevelObject
+00000000006ca870 D typeinfo for Caver::Proto::MagicExplosionComponent
+00000000006ca8b0 D typeinfo for Caver::Proto::MagicSpellCastComponent
+00000000006ca4b0 D typeinfo for Caver::Proto::ParticleObjectComponent
+00000000006ca050 D typeinfo for Caver::Proto::TextureMappingComponent
+00000000006ca310 D typeinfo for Caver::Proto::BreakableObjectComponent
+00000000006c7240 D typeinfo for Caver::Proto::CharacterState_ItemState
+00000000006ca790 D typeinfo for Caver::Proto::CollectableItemComponent
+00000000006ca970 D typeinfo for Caver::Proto::DimensionObjectComponent
+00000000006ca4d0 D typeinfo for Caver::Proto::OrbitControllerComponent
+00000000006ca430 D typeinfo for Caver::Proto::ParticleEmitterComponent
+00000000006ca370 D typeinfo for Caver::Proto::PhysicsPlatformComponent
+00000000006ca270 D typeinfo for Caver::Proto::PressureTriggerComponent
+00000000006ca6b0 D typeinfo for Caver::Proto::SwingableWeaponComponent
+00000000006ca330 D typeinfo for Caver::Proto::EntityControllerComponent
+00000000006c9f90 D typeinfo for Caver::Proto::KeyframeAnimationComponent
+00000000006ca510 D typeinfo for Caver::Proto::MonsterControllerComponent
+00000000006ca1d0 D typeinfo for Caver::Proto::CharAnimControllerComponent
+00000000006ca250 D typeinfo for Caver::Proto::ElevatorControllerComponent
+00000000006ca1b0 D typeinfo for Caver::Proto::AnimationControllerComponent
+00000000006ca030 D typeinfo for Caver::Proto::GroundMeshGeneratorComponent
+00000000006ca630 D typeinfo for Caver::Proto::BatMonsterControllerComponent
+00000000006ca130 D typeinfo for Caver::Proto::ObjectLinkControllerComponent
+00000000006ca8f0 D typeinfo for Caver::Proto::ProjectileControllerComponent
+00000000006ca7d0 D typeinfo for Caver::Proto::ItemDropComponent_ItemDropEntry
+00000000006ca670 D typeinfo for Caver::Proto::MonsterDeathControllerComponent
+00000000006ca5d0 D typeinfo for Caver::Proto::SkellyMonsterControllerComponent
+00000000006ca5f0 D typeinfo for Caver::Proto::StaticMonsterControllerComponent
+00000000006ca690 D typeinfo for Caver::Proto::GenericMonsterControllerComponent
+00000000006ca5b0 D typeinfo for Caver::Proto::LeapingMonsterControllerComponent
+00000000006c9fd0 D typeinfo for Caver::Proto::ModelTransformControllerComponent
+00000000006ca530 D typeinfo for Caver::Proto::WalkingMonsterControllerComponent
+00000000006ca650 D typeinfo for Caver::Proto::BouncingMonsterControllerComponent
+00000000006ca550 D typeinfo for Caver::Proto::ChargingMonsterControllerComponent
+00000000006ca610 D typeinfo for Caver::Proto::ShootingMonsterControllerComponent
+00000000006ca570 D typeinfo for Caver::Proto::SnappingMonsterControllerComponent
+00000000006ca6d0 D typeinfo for Caver::Proto::SwingableWeaponControllerComponent
+00000000006ca110 D typeinfo for Caver::Proto::BoneControlledCollisionShapeComponent
+00000000006c6360 D typeinfo for Caver::Proto::Box
+00000000006c6c00 D typeinfo for Caver::Proto::Map
+00000000006c6460 D typeinfo for Caver::Proto::Font
+00000000006c6c20 D typeinfo for Caver::Proto::Item
+00000000006ca9f0 D typeinfo for Caver::Proto::Mesh
+00000000006c6c60 D typeinfo for Caver::Proto::Quest
+00000000006c9f30 D typeinfo for Caver::Proto::Scene
+00000000006c6c40 D typeinfo for Caver::Proto::Skill
+00000000006c6380 D typeinfo for Caver::Proto::Circle
+00000000006c6bc0 D typeinfo for Caver::Proto::MapNode
+00000000006c6be0 D typeinfo for Caver::Proto::MapZone
+00000000006c63a0 D typeinfo for Caver::Proto::Polygon
+00000000006c6480 D typeinfo for Caver::Proto::Program
+00000000006c6420 D typeinfo for Caver::Proto::Texture
+00000000006c6300 D typeinfo for Caver::Proto::Vector2
+00000000006c6320 D typeinfo for Caver::Proto::Vector3
+00000000006c62e0 D typeinfo for Caver::Proto::DateTime
+00000000006c6d00 D typeinfo for Caver::Proto::GameData
+00000000006ca9b0 D typeinfo for Caver::Proto::MeshData
+00000000006c9e90 D typeinfo for Caver::Proto::Component
+00000000006c7200 D typeinfo for Caver::Proto::GameState
+00000000006c71e0 D typeinfo for Caver::Proto::QuestText
+00000000006c6340 D typeinfo for Caver::Proto::Rectangle
+00000000006d4a18 D typeinfo for Caver::Scene
+00000000006cf350 D typeinfo for Caver::CoinBar
+00000000006d52a0 D typeinfo for Caver::FWShell
+00000000006d6900 D typeinfo for Caver::GUIView
+00000000006d0420 D typeinfo for Caver::ManaBar
+00000000006d2e90 D typeinfo for Caver::MapView
+00000000006d40a0 D typeinfo for Caver::TabView
+00000000006d7d50 D typeinfo for Caver::Texture
+00000000006b91e0 V typeinfo for Caver::AnimNode
+00000000006d6050 D typeinfo for Caver::GUILabel
+00000000006bc7b0 D typeinfo for Caver::Component
+00000000006d5a70 D typeinfo for Caver::GUIButton
+00000000006d6630 D typeinfo for Caver::GUISlider
+00000000006d67a0 D typeinfo for Caver::GUISwitch
+00000000006d6ba0 D typeinfo for Caver::GUIWindow
+00000000006d00c0 D typeinfo for Caver::HealthBar
+00000000006bc7f8 V typeinfo for Caver::IBindable
+00000000006d3470 D typeinfo for Caver::PauseView
+00000000006ccd80 D typeinfo for Caver::SceneView
+00000000006d0e00 D typeinfo for Caver::StoreView
+00000000006bd2a0 V typeinfo for Caver::LightComponent* (*)()
+00000000006bcc40 V typeinfo for Caver::ModelComponent* (*)()
+00000000006bdb70 V typeinfo for Caver::SkillComponent* (*)()
+00000000006bd210 V typeinfo for Caver::SwingComponent* (*)()
+00000000006bd3c0 V typeinfo for Caver::AttackComponent* (*)()
+00000000006bd150 V typeinfo for Caver::DamageComponent* (*)()
+00000000006bcd90 V typeinfo for Caver::EntityComponent* (*)()
+00000000006bd180 V typeinfo for Caver::HealthComponent* (*)()
+00000000006bd810 V typeinfo for Caver::PortalComponent* (*)()
+00000000006bcf70 V typeinfo for Caver::ShadowComponent* (*)()
+00000000006bcc10 V typeinfo for Caver::SpriteComponent* (*)()
+00000000006bd990 V typeinfo for Caver::ProgramComponent* (*)()
+00000000006bd360 V typeinfo for Caver::ShatterComponent* (*)()
+00000000006bd960 V typeinfo for Caver::ItemDropComponent* (*)()
+00000000006bd660 V typeinfo for Caver::ParticleComponent* (*)()
+00000000006bda80 V typeinfo for Caver::MagicBoltComponent* (*)()
+00000000006bda50 V typeinfo for Caver::MagicBombComponent* (*)()
+00000000006bd870 V typeinfo for Caver::TouchableComponent* (*)()
+00000000006bcfd0 V typeinfo for Caver::TransformComponent* (*)()
+00000000006bcd60 V typeinfo for Caver::WaterMeshComponent* (*)()
+00000000006bd060 V typeinfo for Caver::BackgroundComponent* (*)()
+00000000006bcdc0 V typeinfo for Caver::EntityInfoComponent* (*)()
+00000000006bdbd0 V typeinfo for Caver::FireBreathComponent* (*)()
+00000000006bcd00 V typeinfo for Caver::GroundMeshComponent* (*)()
+00000000006bce80 V typeinfo for Caver::HeroEntityComponent* (*)()
+00000000006bcf40 V typeinfo for Caver::PropertiesComponent* (*)()
+00000000006bd6f0 V typeinfo for Caver::SimpleGlowComponent* (*)()
+00000000006bd840 V typeinfo for Caver::SpawnPointComponent* (*)()
+00000000006bd9f0 V typeinfo for Caver::TextBubbleComponent* (*)()
+00000000006bd270 V typeinfo for Caver::WeaponGlowComponent* (*)()
+00000000006bd6c0 V typeinfo for Caver::FireEmitterComponent* (*)()
+00000000006bd9c0 V typeinfo for Caver::OverlayTextComponent* (*)()
+00000000006bd7e0 V typeinfo for Caver::SoundEffectComponent* (*)()
+00000000006bd240 V typeinfo for Caver::WeaponTrailComponent* (*)()
+00000000006bce20 V typeinfo for Caver::EntityActionComponent* (*)()
+00000000006bd780 V typeinfo for Caver::PortalEffectComponent* (*)()
+00000000006bd0c0 V typeinfo for Caver::UtilityShapeComponent* (*)()
+00000000006bccd0 V typeinfo for Caver::GroundPolygonComponent* (*)()
+00000000006bdab0 V typeinfo for Caver::MagicHookshotComponent* (*)()
+00000000006bd390 V typeinfo for Caver::MonsterEntityComponent* (*)()
+00000000006bd7b0 V typeinfo for Caver::ParticleFieldComponent* (*)()
+00000000006bd2d0 V typeinfo for Caver::PhysicsObjectComponent* (*)()
+00000000006bcca0 V typeinfo for Caver::BlendAnimationComponent* (*)()
+00000000006bceb0 V typeinfo for Caver::BushControllerComponent* (*)()
+00000000006bce50 V typeinfo for Caver::CharControllerComponent* (*)()
+00000000006bd0f0 V typeinfo for Caver::CollisionShapeComponent* (*)()
+00000000006bdae0 V typeinfo for Caver::DimensionSpellComponent* (*)()
+00000000006bd8d0 V typeinfo for Caver::DoorControllerComponent* (*)()
+00000000006bdb40 V typeinfo for Caver::MagicExplosionComponent* (*)()
+00000000006bdba0 V typeinfo for Caver::MagicSpellCastComponent* (*)()
+00000000006bd720 V typeinfo for Caver::ParticleObjectComponent* (*)()
+00000000006bd090 V typeinfo for Caver::TextureMappingComponent* (*)()
+00000000006bd330 V typeinfo for Caver::BreakableObjectComponent* (*)()
+00000000006bd930 V typeinfo for Caver::CollectableItemComponent* (*)()
+00000000006bdb10 V typeinfo for Caver::DimensionObjectComponent* (*)()
+00000000006bd750 V typeinfo for Caver::OrbitControllerComponent* (*)()
+00000000006bd630 V typeinfo for Caver::ParticleEmitterComponent* (*)()
+00000000006bd300 V typeinfo for Caver::PhysicsPlatformComponent* (*)()
+00000000006bd8a0 V typeinfo for Caver::PressureTriggerComponent* (*)()
+00000000006bd1b0 V typeinfo for Caver::SwingableWeaponComponent* (*)()
+00000000006bcdf0 V typeinfo for Caver::EntityControllerComponent* (*)()
+00000000006bcc70 V typeinfo for Caver::KeyframeAnimationComponent* (*)()
+00000000006bd030 V typeinfo for Caver::CharAnimControllerComponent* (*)()
+00000000006bcee0 V typeinfo for Caver::ElevatorControllerComponent* (*)()
+00000000006bd900 V typeinfo for Caver::RotatingBackgroundComponent* (*)()
+00000000006bd000 V typeinfo for Caver::AnimationControllerComponent* (*)()
+00000000006bcd30 V typeinfo for Caver::GroundMeshGeneratorComponent* (*)()
+00000000006bda20 V typeinfo for Caver::TransformControllerComponent* (*)()
+00000000006bd570 V typeinfo for Caver::BatMonsterControllerComponent* (*)()
+00000000006bd690 V typeinfo for Caver::MagicParticleEmitterComponent* (*)()
+00000000006bcfa0 V typeinfo for Caver::ObjectLinkControllerComponent* (*)()
+00000000006bdc00 V typeinfo for Caver::ProjectileControllerComponent* (*)()
+00000000006bd5d0 V typeinfo for Caver::MonsterDeathControllerComponent* (*)()
+00000000006bd4b0 V typeinfo for Caver::SkellyMonsterControllerComponent* (*)()
+00000000006bd4e0 V typeinfo for Caver::StaticMonsterControllerComponent* (*)()
+00000000006bd600 V typeinfo for Caver::GenericMonsterControllerComponent* (*)()
+00000000006bd480 V typeinfo for Caver::LeapingMonsterControllerComponent* (*)()
+00000000006bcf10 V typeinfo for Caver::ModelTransformControllerComponent* (*)()
+00000000006bd3f0 V typeinfo for Caver::WalkingMonsterControllerComponent* (*)()
+00000000006bd5a0 V typeinfo for Caver::BouncingMonsterControllerComponent* (*)()
+00000000006bd420 V typeinfo for Caver::ChargingMonsterControllerComponent* (*)()
+00000000006bd510 V typeinfo for Caver::ShootingMonsterControllerComponent* (*)()
+00000000006bd450 V typeinfo for Caver::SnappingMonsterControllerComponent* (*)()
+00000000006bd1e0 V typeinfo for Caver::SwingableWeaponControllerComponent* (*)()
+00000000006bd540 V typeinfo for Caver::ProjectileMonsterControllerComponent* (*)()
+00000000006bd120 V typeinfo for Caver::BoneControlledCollisionShapeComponent* (*)()
+00000000005864a0 V typeinfo name for Caver::LightComponent* ()
+0000000000585850 V typeinfo name for Caver::ModelComponent* ()
+0000000000587650 V typeinfo name for Caver::SkillComponent* ()
+00000000005863a0 V typeinfo name for Caver::SwingComponent* ()
+00000000005866a0 V typeinfo name for Caver::AttackComponent* ()
+0000000000586240 V typeinfo name for Caver::DamageComponent* ()
+0000000000585ad0 V typeinfo name for Caver::EntityComponent* ()
+0000000000586280 V typeinfo name for Caver::HealthComponent* ()
+0000000000586fe0 V typeinfo name for Caver::PortalComponent* ()
+0000000000585e80 V typeinfo name for Caver::ShadowComponent* ()
+0000000000585810 V typeinfo name for Caver::SpriteComponent* ()
+00000000005872b0 V typeinfo name for Caver::ProgramComponent* ()
+0000000000586600 V typeinfo name for Caver::ShatterComponent* ()
+0000000000587270 V typeinfo name for Caver::ItemDropComponent* ()
+0000000000586ca0 V typeinfo name for Caver::ParticleComponent* ()
+0000000000587480 V typeinfo name for Caver::MagicBoltComponent* ()
+0000000000587420 V typeinfo name for Caver::MagicBombComponent* ()
+0000000000587090 V typeinfo name for Caver::TouchableComponent* ()
+0000000000585f30 V typeinfo name for Caver::TransformComponent* ()
+0000000000585a80 V typeinfo name for Caver::WaterMeshComponent* ()
+0000000000586050 V typeinfo name for Caver::BackgroundComponent* ()
+0000000000585b20 V typeinfo name for Caver::EntityInfoComponent* ()
+0000000000587700 V typeinfo name for Caver::FireBreathComponent* ()
+00000000005859c0 V typeinfo name for Caver::GroundMeshComponent* ()
+0000000000585ca0 V typeinfo name for Caver::HeroEntityComponent* ()
+0000000000585e30 V typeinfo name for Caver::PropertiesComponent* ()
+0000000000586db0 V typeinfo name for Caver::SimpleGlowComponent* ()
+0000000000587030 V typeinfo name for Caver::SpawnPointComponent* ()
+0000000000587360 V typeinfo name for Caver::TextBubbleComponent* ()
+0000000000586450 V typeinfo name for Caver::WeaponGlowComponent* ()
+0000000000586d50 V typeinfo name for Caver::FireEmitterComponent* ()
+0000000000587300 V typeinfo name for Caver::OverlayTextComponent* ()
+0000000000586f90 V typeinfo name for Caver::SoundEffectComponent* ()
+00000000005863f0 V typeinfo name for Caver::WeaponTrailComponent* ()
+0000000000585be0 V typeinfo name for Caver::EntityActionComponent* ()
+0000000000586ed0 V typeinfo name for Caver::PortalEffectComponent* ()
+0000000000586110 V typeinfo name for Caver::UtilityShapeComponent* ()
+0000000000585960 V typeinfo name for Caver::GroundPolygonComponent* ()
+00000000005874e0 V typeinfo name for Caver::MagicHookshotComponent* ()
+0000000000586650 V typeinfo name for Caver::MonsterEntityComponent* ()
+0000000000586f30 V typeinfo name for Caver::ParticleFieldComponent* ()
+00000000005864f0 V typeinfo name for Caver::PhysicsObjectComponent* ()
+0000000000585900 V typeinfo name for Caver::BlendAnimationComponent* ()
+0000000000585d00 V typeinfo name for Caver::BushControllerComponent* ()
+0000000000585c40 V typeinfo name for Caver::CharControllerComponent* ()
+0000000000586170 V typeinfo name for Caver::CollisionShapeComponent* ()
+0000000000587540 V typeinfo name for Caver::DimensionSpellComponent* ()
+0000000000587150 V typeinfo name for Caver::DoorControllerComponent* ()
+0000000000587600 V typeinfo name for Caver::MagicExplosionComponent* ()
+00000000005876a0 V typeinfo name for Caver::MagicSpellCastComponent* ()
+0000000000586e10 V typeinfo name for Caver::ParticleObjectComponent* ()
+00000000005860b0 V typeinfo name for Caver::TextureMappingComponent* ()
+00000000005865b0 V typeinfo name for Caver::BreakableObjectComponent* ()
+0000000000587210 V typeinfo name for Caver::CollectableItemComponent* ()
+00000000005875a0 V typeinfo name for Caver::DimensionObjectComponent* ()
+0000000000586e70 V typeinfo name for Caver::OrbitControllerComponent* ()
+0000000000586c40 V typeinfo name for Caver::ParticleEmitterComponent* ()
+0000000000586550 V typeinfo name for Caver::PhysicsPlatformComponent* ()
+00000000005870f0 V typeinfo name for Caver::PressureTriggerComponent* ()
+00000000005862d0 V typeinfo name for Caver::SwingableWeaponComponent* ()
+0000000000585b80 V typeinfo name for Caver::EntityControllerComponent* ()
+00000000005858a0 V typeinfo name for Caver::KeyframeAnimationComponent* ()
+0000000000585ff0 V typeinfo name for Caver::CharAnimControllerComponent* ()
+0000000000585d60 V typeinfo name for Caver::ElevatorControllerComponent* ()
+00000000005871b0 V typeinfo name for Caver::RotatingBackgroundComponent* ()
+0000000000585f90 V typeinfo name for Caver::AnimationControllerComponent* ()
+0000000000585a20 V typeinfo name for Caver::GroundMeshGeneratorComponent* ()
+00000000005873c0 V typeinfo name for Caver::TransformControllerComponent* ()
+0000000000586a90 V typeinfo name for Caver::BatMonsterControllerComponent* ()
+0000000000586cf0 V typeinfo name for Caver::MagicParticleEmitterComponent* ()
+0000000000585ed0 V typeinfo name for Caver::ObjectLinkControllerComponent* ()
+0000000000587760 V typeinfo name for Caver::ProjectileControllerComponent* ()
+0000000000586b70 V typeinfo name for Caver::MonsterDeathControllerComponent* ()
+00000000005868d0 V typeinfo name for Caver::SkellyMonsterControllerComponent* ()
+0000000000586930 V typeinfo name for Caver::StaticMonsterControllerComponent* ()
+0000000000586be0 V typeinfo name for Caver::GenericMonsterControllerComponent* ()
+0000000000586870 V typeinfo name for Caver::LeapingMonsterControllerComponent* ()
+0000000000585dd0 V typeinfo name for Caver::ModelTransformControllerComponent* ()
+0000000000586700 V typeinfo name for Caver::WalkingMonsterControllerComponent* ()
+0000000000586b00 V typeinfo name for Caver::BouncingMonsterControllerComponent* ()
+0000000000586770 V typeinfo name for Caver::ChargingMonsterControllerComponent* ()
+00000000005869a0 V typeinfo name for Caver::ShootingMonsterControllerComponent* ()
+00000000005867f0 V typeinfo name for Caver::SnappingMonsterControllerComponent* ()
+0000000000586340 V typeinfo name for Caver::SwingableWeaponControllerComponent* ()
+0000000000586a20 V typeinfo name for Caver::ProjectileMonsterControllerComponent* ()
+00000000005861e0 V typeinfo name for Caver::BoneControlledCollisionShapeComponent* ()
+0000000000583530 R typeinfo name for Caver::CaverShell
+0000000000596dd0 R typeinfo name for Caver::GUIControl
+0000000000594c30 R typeinfo name for Caver::PortalView
+0000000000594c60 R typeinfo name for Caver::QuestsView
+0000000000594e40 R typeinfo name for Caver::StripeView
+00000000005980c0 V typeinfo name for Caver::AudioPlayer
+0000000000590df0 R typeinfo name for Caver::CreditsView
+0000000000592a50 R typeinfo name for Caver::ItemOverlay
+0000000000584bc0 V typeinfo name for Caver::IUpdateable
+0000000000594620 R typeinfo name for Caver::LevelUpView
+00000000005946d0 R typeinfo name for Caver::LoadingView
+0000000000594760 R typeinfo name for Caver::MapMenuPage
+0000000000594a40 R typeinfo name for Caver::NewMenuView
+0000000000595e90 R typeinfo name for Caver::SceneObject
+00000000005980e0 R typeinfo name for Caver::SoundEffect
+0000000000592c30 R typeinfo name for Caver::TargetFrame
+00000000005837b0 R typeinfo name for Caver::AnimKeysNode
+0000000000593c90 R typeinfo name for Caver::GameOverView
+0000000000596cc0 R typeinfo name for Caver::GUIAlertView
+0000000000596e50 R typeinfo name for Caver::GUIFrameView
+0000000000596ff0 R typeinfo name for Caver::GUIResponder
+0000000000597990 V typeinfo name for Caver::GUITextField
+0000000000594510 R typeinfo name for Caver::ItemInfoView
+0000000000591100 R typeinfo name for Caver::MainMenuView
+00000000005947d0 R typeinfo name for Caver::MapPopupView
+0000000000594a20 R typeinfo name for Caver::MenuItemSlot
+0000000000593ae0 V typeinfo name for Caver::MenuViewPage
+0000000000592ce0 R typeinfo name for Caver::PurchaseView
+0000000000594d50 R typeinfo name for Caver::SettingsView
+0000000000583740 R typeinfo name for Caver::AnimBlendNode
+0000000000593ac0 R typeinfo name for Caver::CharacterView
+0000000000590d40 R typeinfo name for Caver::ChooseAgeView
+00000000005923e0 R typeinfo name for Caver::ExperienceBar
+000000000058ec30 R typeinfo name for Caver::GameSceneView
+00000000005895e0 R typeinfo name for Caver::GlowComponent
+0000000000596d70 R typeinfo name for Caver::GUIBubbleView
+0000000000597220 R typeinfo name for Caver::GUIEffectView
+0000000000597060 R typeinfo name for Caver::GUIScrollView
+0000000000594190 R typeinfo name for Caver::InventoryView
+00000000005885e0 R typeinfo name for Caver::ManaComponent
+0000000000592ab0 R typeinfo name for Caver::OverlayButton
+0000000000590cf0 R typeinfo name for Caver::BadgeCountView
+0000000000596e90 R typeinfo name for Caver::GUILoadingView
+00000000005981c0 R typeinfo name for Caver::GUIPopoverView
+0000000000583fe0 R typeinfo name for Caver::LightComponent
+00000000005840c0 R typeinfo name for Caver::ModelComponent
+0000000000595b50 R typeinfo name for Caver::ObjectTemplate
+0000000000591240 R typeinfo name for Caver::OnlineMenuView
+0000000000591930 R typeinfo name for Caver::ProfileManager
+0000000000584810 R typeinfo name for Caver::ShapeComponent
+0000000000588e20 R typeinfo name for Caver::SkillComponent
+0000000000588e60 R typeinfo name for Caver::SpellComponent
+000000000058a280 R typeinfo name for Caver::SwingComponent
+0000000000594e70 R typeinfo name for Caver::TabbedMenuView
+0000000000597f90 R typeinfo name for Caver::TextureLibrary
+0000000000588f90 R typeinfo name for Caver::AttackComponent
+00000000005980a0 R typeinfo name for Caver::AudioPlayerImpl
+00000000005895b0 V typeinfo name for Caver::ComponentOutlet<Caver::LightComponent>
+0000000000583890 V typeinfo name for Caver::ComponentOutlet<Caver::ModelComponent>
+00000000005881d0 V typeinfo name for Caver::ComponentOutlet<Caver::ShapeComponent>
+0000000000587ba0 V typeinfo name for Caver::ComponentOutlet<Caver::SwingComponent>
+00000000005891f0 V typeinfo name for Caver::ComponentOutlet<Caver::AttackComponent>
+0000000000587ca0 V typeinfo name for Caver::ComponentOutlet<Caver::EntityComponent>
+00000000005898a0 V typeinfo name for Caver::ComponentOutlet<Caver::ParticleComponent>
+0000000000583cb0 V typeinfo name for Caver::ComponentOutlet<Caver::AnimationComponent>
+0000000000589f20 V typeinfo name for Caver::ComponentOutlet<Caver::GroundMeshComponent>
+000000000058a150 V typeinfo name for Caver::ComponentOutlet<Caver::WeaponGlowComponent>
+0000000000587c20 V typeinfo name for Caver::ComponentOutlet<Caver::SoundEffectComponent>
+000000000058a190 V typeinfo name for Caver::ComponentOutlet<Caver::WeaponTrailComponent>
+0000000000589000 V typeinfo name for Caver::ComponentOutlet<Caver::UtilityShapeComponent>
+00000000005899f0 V typeinfo name for Caver::ComponentOutlet<Caver::GroundPolygonComponent>
+0000000000589040 V typeinfo name for Caver::ComponentOutlet<Caver::MonsterEntityComponent>
+0000000000589470 V typeinfo name for Caver::ComponentOutlet<Caver::BlendAnimationComponent>
+00000000005893d0 V typeinfo name for Caver::ComponentOutlet<Caver::CharControllerComponent>
+00000000005844d0 V typeinfo name for Caver::ComponentOutlet<Caver::CollisionShapeComponent>
+00000000005899b0 V typeinfo name for Caver::ComponentOutlet<Caver::TextureMappingComponent>
+0000000000588a60 V typeinfo name for Caver::ComponentOutlet<Caver::ParticleEmitterComponent>
+00000000005878c0 V typeinfo name for Caver::ComponentOutlet<Caver::KeyframeAnimationComponent>
+0000000000587c60 V typeinfo name for Caver::ComponentOutlet<Caver::CharAnimControllerComponent>
+0000000000588200 V typeinfo name for Caver::ComponentOutlet<Caver::AnimationControllerComponent>
+0000000000587bd0 V typeinfo name for Caver::ComponentOutlet<Caver::SwingableWeaponControllerComponent>
+0000000000587ed0 R typeinfo name for Caver::DamageComponent
+0000000000587fc0 R typeinfo name for Caver::EntityComponent
+0000000000592630 R typeinfo name for Caver::GameOverlayView
+0000000000593e00 R typeinfo name for Caver::GuideToggleView
+0000000000588390 R typeinfo name for Caver::HealthComponent
+0000000000592a20 V typeinfo name for Caver::ParticleEmitter
+00000000005844b0 R typeinfo name for Caver::PortalComponent
+0000000000584700 R typeinfo name for Caver::ShadowComponent
+0000000000594e10 R typeinfo name for Caver::SkillPickerView
+0000000000584920 R typeinfo name for Caver::SpriteComponent
+0000000000591ad0 V typeinfo name for Caver::StoreController
+0000000000592340 R typeinfo name for Caver::DebugInfoOverlay
+0000000000596e30 R typeinfo name for Caver::GUIDraggableItem
+0000000000597970 R typeinfo name for Caver::GUITextFieldImpl
+0000000000597180 V typeinfo name for Caver::IFWMouseListener
+000000000058fff0 V typeinfo name for Caver::IMapViewDelegate
+0000000000594e90 V typeinfo name for Caver::ITabViewDelegate
+0000000000594350 R typeinfo name for Caver::ItemBuyPopupView
+0000000000597fb0 V typeinfo name for Caver::ITextureDelegate
+0000000000594b00 R typeinfo name for Caver::NotificationView
+0000000000590c80 V typeinfo name for Caver::OnlineController
+00000000005842f0 R typeinfo name for Caver::OverlayComponent
+0000000000591550 R typeinfo name for Caver::ProfilePanelView
+0000000000584600 R typeinfo name for Caver::ProgramComponent
+0000000000594c80 R typeinfo name for Caver::SceneLoadingView
+0000000000595ee0 R typeinfo name for Caver::SceneObjectGroup
+0000000000589a40 R typeinfo name for Caver::ShatterComponent
+0000000000593260 R typeinfo name for Caver::StoreProductView
+0000000000593c60 R typeinfo name for Caver::DraggableMenuItem
+0000000000593d40 R typeinfo name for Caver::GuidePurchaseView
+00000000005970e0 R typeinfo name for Caver::GUIViewController
+00000000005965d0 V typeinfo name for Caver::IFWTouchResponder
+00000000005885c0 R typeinfo name for Caver::ItemDropComponent
+0000000000594460 R typeinfo name for Caver::ItemInfoPopupView
+0000000000592b00 R typeinfo name for Caver::OverlayMenuButton
+00000000005896b0 R typeinfo name for Caver::ParticleComponent
+0000000000596860 R typeinfo name for Caver::SoundEffectSource
+0000000000583df0 V typeinfo name for Caver::AnimationComponent
+00000000005922c0 V typeinfo name for Caver::ConsumableItemView
+000000000058f1a0 R typeinfo name for Caver::GameViewController
+0000000000593f20 R typeinfo name for Caver::InventoryItemPanel
+000000000058ff20 V typeinfo name for Caver::IPauseViewDelegate
+00000000005979b0 V typeinfo name for Caver::ITextInputDelegate
+0000000000588b90 R typeinfo name for Caver::MagicBoltComponent
+0000000000588bd0 R typeinfo name for Caver::MagicBombComponent
+0000000000591900 R typeinfo name for Caver::ProfilesHeaderView
+0000000000584ac0 R typeinfo name for Caver::TouchableComponent
+0000000000584ae0 R typeinfo name for Caver::TransformComponent
+000000000058a010 R typeinfo name for Caver::WaterMeshComponent
+0000000000593870 R typeinfo name for Caver::AttributePointsView
+0000000000583cf0 R typeinfo name for Caver::BackgroundComponent
+00000000005838c0 V typeinfo name for Caver::ComponentOutletBase
+0000000000588250 R typeinfo name for Caver::EntityInfoComponent
+0000000000588a40 R typeinfo name for Caver::FireBreathComponent
+000000000058eb70 R typeinfo name for Caver::GameSceneController
+0000000000589d00 R typeinfo name for Caver::GroundMeshComponent
+0000000000588460 R typeinfo name for Caver::HeroEntityComponent
+00000000005971a0 V typeinfo name for Caver::IFWKeyboardListener
+000000000058f1c0 V typeinfo name for Caver::IGameEventResponder
+000000000058ff00 R typeinfo name for Caver::PauseViewController
+00000000005846a0 R typeinfo name for Caver::PropertiesComponent
+0000000000589b00 R typeinfo name for Caver::SimpleGlowComponent
+00000000005848f0 R typeinfo name for Caver::SpawnPointComponent
+0000000000593540 R typeinfo name for Caver::StoreViewController
+00000000005849b0 R typeinfo name for Caver::TextBubbleComponent
+000000000058a2d0 R typeinfo name for Caver::WeaponGlowComponent
+0000000000595490 R typeinfo name for Caver::BlastParticleEmitter
+0000000000592150 R typeinfo name for Caver::ConfigureOverlayView
+0000000000592360 R typeinfo name for Caver::DraggableOverlayItem
+0000000000589590 R typeinfo name for Caver::FireEmitterComponent
+000000000058eb90 V typeinfo name for Caver::IGameControlDelegate
+0000000000594090 R typeinfo name for Caver::InventoryTrinketSlot
+0000000000584410 R typeinfo name for Caver::OverlayTextComponent
+000000000058ffd0 R typeinfo name for Caver::PortalViewController
+00000000005916b0 R typeinfo name for Caver::ProfileSelectionView
+0000000000584880 R typeinfo name for Caver::SoundEffectComponent
+0000000000595750 R typeinfo name for Caver::SparkParticleEmitter
+0000000000595780 R typeinfo name for Caver::TrailParticleEmitter
+000000000058a2f0 R typeinfo name for Caver::WeaponTrailComponent
+0000000000590e90 R typeinfo name for Caver::CreditsViewController
+0000000000587f00 R typeinfo name for Caver::EntityActionComponent
+000000000058e9b0 V typeinfo name for Caver::IGameOverViewDelegate
+000000000058f740 V typeinfo name for Caver::IGUIAlertViewDelegate
+0000000000591570 V typeinfo name for Caver::IGUITextFieldDelegate
+000000000058fd10 V typeinfo name for Caver::IMainMenuViewDelegate
+00000000005940b0 V typeinfo name for Caver::IMenuItemSlotDelegate
+000000000058e5d0 V typeinfo name for Caver::ISettingsViewDelegate
+000000000058fac0 R typeinfo name for Caver::LevelUpViewController
+0000000000589990 R typeinfo name for Caver::PortalEffectComponent
+0000000000584760 R typeinfo name for Caver::ShadowVolumeComponent
+00000000005857d0 V typeinfo name for Caver::UtilityShapeComponent
+00000000005957c0 R typeinfo name for Caver::WhooshParticleEmitter
+000000000058e510 R typeinfo name for Caver::GameMenuViewController
+000000000058e980 R typeinfo name for Caver::GameOverViewController
+0000000000589fa0 R typeinfo name for Caver::GroundPolygonComponent
+0000000000588b00 R typeinfo name for Caver::HookshotTrailComponent
+000000000058e570 V typeinfo name for Caver::ICharacterViewDelegate
+000000000058fd70 V typeinfo name for Caver::IChooseAgeViewDelegate
+0000000000596ef0 V typeinfo name for Caver::IGUINavigationDelegate
+000000000058e540 V typeinfo name for Caver::IInventoryViewDelegate
+0000000000591950 V typeinfo name for Caver::IPlayerProfileDelegate
+0000000000588cc0 R typeinfo name for Caver::MagicHookshotComponent
+000000000058fce0 R typeinfo name for Caver::MainMenuViewController
+00000000005886d0 R typeinfo name for Caver::MonsterEntityComponent
+0000000000590c10 R typeinfo name for Caver::OfflineAchievementView
+0000000000589920 R typeinfo name for Caver::ParticleFieldComponent
+00000000005888a0 R typeinfo name for Caver::PhysicsObjectComponent
+0000000000597af0 R typeinfo name for Caver::ProfileManager_Android
+0000000000593000 R typeinfo name for Caver::PurchaseViewController
+0000000000583780 V typeinfo name for Caver::ReferenceCountedObject
+0000000000583dc0 R typeinfo name for Caver::BlendAnimationComponent
+0000000000589b50 R typeinfo name for Caver::BushControllerComponent
+0000000000587b70 R typeinfo name for Caver::CharControllerComponent
+0000000000583b00 R typeinfo name for Caver::CollisionShapeComponent
+00000000005889f0 R typeinfo name for Caver::DimensionSpellComponent
+0000000000589ba0 R typeinfo name for Caver::DoorControllerComponent
+00000000005954f0 R typeinfo name for Caver::FountainParticleEmitter
+0000000000596ec0 R typeinfo name for Caver::GUINavigationController
+000000000058f270 V typeinfo name for Caver::IProfileManagerDelegate
+000000000058e5a0 V typeinfo name for Caver::ITabbedMenuViewDelegate
+0000000000588c50 R typeinfo name for Caver::MagicExplosionComponent
+0000000000588cf0 R typeinfo name for Caver::MagicSpellCastComponent
+0000000000588d30 R typeinfo name for Caver::ObjectModifierComponent
+0000000000590980 R typeinfo name for Caver::OfflineAchievementsView
+0000000000589950 R typeinfo name for Caver::ParticleObjectComponent
+0000000000597c60 R typeinfo name for Caver::StoreController_Android
+0000000000584a70 R typeinfo name for Caver::TextureMappingComponent
+0000000000587800 R typeinfo name for Caver::BreakableObjectComponent
+0000000000587db0 R typeinfo name for Caver::CollectableItemComponent
+00000000005889c0 R typeinfo name for Caver::DimensionObjectComponent
+000000000058e5f0 V typeinfo name for Caver::IGuideToggleViewDelegate
+00000000005901b0 V typeinfo name for Caver::ISkillPickerViewDelegate
+0000000000597ac0 R typeinfo name for Caver::OnlineController_Android
+00000000005912f0 R typeinfo name for Caver::OnlineMenuViewController
+0000000000589680 R typeinfo name for Caver::OrbitControllerComponent
+0000000000589870 R typeinfo name for Caver::ParticleEmitterComponent
+0000000000588990 R typeinfo name for Caver::PhysicsPlatformComponent
+0000000000589ca0 R typeinfo name for Caver::PressureTriggerComponent
+000000000058a120 R typeinfo name for Caver::SwingableWeaponComponent
+00000000005881a0 R typeinfo name for Caver::EntityControllerComponent
+00000000005916d0 V typeinfo name for Caver::IProfilePanelViewDelegate
+0000000000591a20 R typeinfo name for Caver::ProfileManagerLoadingView
+0000000000590180 R typeinfo name for Caver::SkillPickerViewController
+000000000058f710 V typeinfo name for Caver::IGuidePurchaseViewDelegate
+00000000005848a0 V typeinfo name for Caver::ISoundEffectSourceDelegate
+0000000000583ec0 R typeinfo name for Caver::KeyframeAnimationComponent
+0000000000589230 R typeinfo name for Caver::MonsterControllerComponent
+0000000000590240 R typeinfo name for Caver::AchievementNotificationView
+0000000000587890 R typeinfo name for Caver::CharAnimControllerComponent
+0000000000589c10 R typeinfo name for Caver::ElevatorControllerComponent
+000000000058f6e0 R typeinfo name for Caver::GuidePurchaseViewController
+00000000005941b0 V typeinfo name for Caver::IInventoryItemPanelDelegate
+0000000000584350 R typeinfo name for Caver::OverlayTargetArrowComponent
+0000000000589cd0 R typeinfo name for Caver::RotatingBackgroundComponent
+0000000000583c80 R typeinfo name for Caver::AnimationControllerComponent
+0000000000589ef0 R typeinfo name for Caver::GroundMeshGeneratorComponent
+0000000000593b00 V typeinfo name for Caver::IAttributePointsViewDelegate
+000000000058e650 V typeinfo name for Caver::IStoreViewControllerDelegate
+0000000000584b50 R typeinfo name for Caver::TransformControllerComponent
+0000000000588fd0 R typeinfo name for Caver::BatMonsterControllerComponent
+000000000058e190 V typeinfo name for Caver::IConfigureOverlayViewDelegate
+0000000000592170 V typeinfo name for Caver::IDraggableOverlayItemDelegate
+0000000000593f40 V typeinfo name for Caver::IInventoryTrinketSlotDelegate
+000000000058f240 V typeinfo name for Caver::IPortalViewControllerDelegate
+0000000000591850 V typeinfo name for Caver::IProfileSelectionViewDelegate
+0000000000589620 R typeinfo name for Caver::MagicParticleEmitterComponent
+00000000005842c0 R typeinfo name for Caver::ObjectLinkControllerComponent
+0000000000588da0 R typeinfo name for Caver::ProjectileControllerComponent
+000000000058e160 R typeinfo name for Caver::ConfigureOverlayViewController
+000000000058f210 V typeinfo name for Caver::ILevelUpViewControllerDelegate
+0000000000591820 R typeinfo name for Caver::ProfileSelectionViewController
+000000000058f1e0 V typeinfo name for Caver::IGameMenuViewControllerDelegate
+000000000058e620 V typeinfo name for Caver::IPurchaseViewControllerDelegate
+0000000000589270 R typeinfo name for Caver::MonsterDeathControllerComponent
+00000000005893a0 R typeinfo name for Caver::SkellyMonsterControllerComponent
+00000000005894b0 R typeinfo name for Caver::StaticMonsterControllerComponent
+0000000000589180 R typeinfo name for Caver::GenericMonsterControllerComponent
+00000000005891c0 R typeinfo name for Caver::LeapingMonsterControllerComponent
+00000000005841e0 R typeinfo name for Caver::ModelTransformControllerComponent
+0000000000590a40 R typeinfo name for Caver::OfflineAchievementsViewController
+00000000005894e0 R typeinfo name for Caver::WalkingMonsterControllerComponent
+0000000000589090 R typeinfo name for Caver::BouncingMonsterControllerComponent
+0000000000589140 R typeinfo name for Caver::ChargingMonsterControllerComponent
+0000000000589340 R typeinfo name for Caver::ShootingMonsterControllerComponent
+0000000000589440 R typeinfo name for Caver::SnappingMonsterControllerComponent
+000000000058a1f0 R typeinfo name for Caver::SwingableWeaponControllerComponent
+0000000000591a50 R typeinfo name for Caver::ProfileManagerLoadingViewController
+00000000005892e0 R typeinfo name for Caver::ProjectileMonsterControllerComponent
+0000000000583860 R typeinfo name for Caver::BoneControlledCollisionShapeComponent
+000000000058fd30 V typeinfo name for Caver::IProfileSelectionViewControllerDelegate
+000000000058a7d0 R typeinfo name for Caver::Proto::FloatColor
+000000000058a870 R typeinfo name for Caver::Proto::Font_Glyph
+000000000058a8d0 R typeinfo name for Caver::Proto::GUIMargins
+000000000058b400 R typeinfo name for Caver::Proto::LevelState
+000000000058a950 R typeinfo name for Caver::Proto::MusicTrack
+000000000058e120 R typeinfo name for Caver::Proto::PackedMesh
+000000000058b3a0 R typeinfo name for Caver::Proto::QuestState
+000000000058af60 R typeinfo name for Caver::Proto::EntityClass
+000000000058afd0 R typeinfo name for Caver::Proto::GameOptions
+000000000058afb0 R typeinfo name for Caver::Proto::GuideTarget
+000000000058d0e0 R typeinfo name for Caver::Proto::SceneObject
+000000000058a910 R typeinfo name for Caver::Proto::SoundEffect
+000000000058e0e0 R typeinfo name for Caver::Proto::MeshMaterial
+000000000058a930 R typeinfo name for Caver::Proto::SoundLibrary
+000000000058e140 R typeinfo name for Caver::Proto::UnpackedMesh
+000000000058a8f0 R typeinfo name for Caver::Proto::GUIViewLayout
+000000000058a970 R typeinfo name for Caver::Proto::MusicPlaylist
+000000000058d0c0 R typeinfo name for Caver::Proto::ObjectLibrary
+000000000058b360 R typeinfo name for Caver::Proto::PlayerProfile
+000000000058b450 R typeinfo name for Caver::Proto::CharacterState
+000000000058d420 R typeinfo name for Caver::Proto::LightComponent
+000000000058ae80 R typeinfo name for Caver::Proto::MapNode_Portal
+000000000058d170 R typeinfo name for Caver::Proto::ModelComponent
+000000000058d0a0 R typeinfo name for Caver::Proto::ObjectTemplate
+000000000058d320 R typeinfo name for Caver::Proto::ShapeComponent
+000000000058df30 R typeinfo name for Caver::Proto::SkillComponent
+000000000058e040 R typeinfo name for Caver::Proto::SpellComponent
+000000000058dce0 R typeinfo name for Caver::Proto::SwingComponent
+000000000058da70 R typeinfo name for Caver::Proto::AttackComponent
+000000000058d370 R typeinfo name for Caver::Proto::DamageComponent
+000000000058aa40 R typeinfo name for Caver::Proto::EditorViewState
+000000000058d520 R typeinfo name for Caver::Proto::EntityComponent
+000000000058d390 R typeinfo name for Caver::Proto::HealthComponent
+000000000058d810 R typeinfo name for Caver::Proto::ParticleEmitter
+000000000058dd60 R typeinfo name for Caver::Proto::PortalComponent
+000000000058d440 R typeinfo name for Caver::Proto::ShadowComponent
+000000000058d150 R typeinfo name for Caver::Proto::SpriteComponent
+000000000058b380 R typeinfo name for Caver::Proto::StateProperties
+000000000058d600 R typeinfo name for Caver::Proto::ProgramComponent
+000000000058d100 R typeinfo name for Caver::Proto::SceneObjectGroup
+000000000058de40 R typeinfo name for Caver::Proto::ItemDropComponent
+000000000058d860 R typeinfo name for Caver::Proto::ParticleComponent
+000000000058ded0 R typeinfo name for Caver::Proto::MagicBoltComponent
+000000000058dfe0 R typeinfo name for Caver::Proto::MagicBombComponent
+000000000058a7f0 R typeinfo name for Caver::Proto::Texture_Subtexture
+000000000058dde0 R typeinfo name for Caver::Proto::TouchableComponent
+000000000058d2f0 R typeinfo name for Caver::Proto::WaterMeshComponent
+000000000058d7b0 R typeinfo name for Caver::Proto::BackgroundComponent
+000000000058d750 R typeinfo name for Caver::Proto::EntityInfoComponent
+000000000058df80 R typeinfo name for Caver::Proto::FireBreathComponent
+000000000058d260 R typeinfo name for Caver::Proto::GroundMeshComponent
+000000000058d780 R typeinfo name for Caver::Proto::HeroEntityComponent
+000000000058d7e0 R typeinfo name for Caver::Proto::PropertiesComponent
+000000000058d8c0 R typeinfo name for Caver::Proto::SimpleGlowComponent
+000000000058dd80 R typeinfo name for Caver::Proto::SpawnPointComponent
+000000000058dd00 R typeinfo name for Caver::Proto::WeaponGlowComponent
+000000000058d890 R typeinfo name for Caver::Proto::FireEmitterComponent
+000000000058de70 R typeinfo name for Caver::Proto::OverlayTextComponent
+000000000058d460 R typeinfo name for Caver::Proto::SoundEffectComponent
+000000000058dd30 R typeinfo name for Caver::Proto::WeaponTrailComponent
+000000000058d6f0 R typeinfo name for Caver::Proto::EntityActionComponent
+000000000058b330 R typeinfo name for Caver::Proto::PlayerProfile_Counter
+000000000058dea0 R typeinfo name for Caver::Proto::PortalEffectComponent
+000000000058d230 R typeinfo name for Caver::Proto::GroundPolygonComponent
+000000000058e010 R typeinfo name for Caver::Proto::MagicHookshotComponent
+000000000058d630 R typeinfo name for Caver::Proto::MonsterEntityComponent
+000000000058d950 R typeinfo name for Caver::Proto::ParticleFieldComponent
+000000000058d660 R typeinfo name for Caver::Proto::PhysicsObjectComponent
+000000000058a820 R typeinfo name for Caver::Proto::Texture_ConversionInfo
+000000000058d1c0 R typeinfo name for Caver::Proto::BlendAnimationComponent
+000000000058d540 R typeinfo name for Caver::Proto::BushControllerComponent
+000000000058d4f0 R typeinfo name for Caver::Proto::CharControllerComponent
+000000000058d340 R typeinfo name for Caver::Proto::CollisionShapeComponent
+000000000058e090 R typeinfo name for Caver::Proto::DimensionSpellComponent
+000000000058d5d0 R typeinfo name for Caver::Proto::DoorControllerComponent
+000000000058af80 R typeinfo name for Caver::Proto::GuideTarget_LevelObject
+000000000058df00 R typeinfo name for Caver::Proto::MagicExplosionComponent
+000000000058df50 R typeinfo name for Caver::Proto::MagicSpellCastComponent
+000000000058d8f0 R typeinfo name for Caver::Proto::ParticleObjectComponent
+000000000058d2c0 R typeinfo name for Caver::Proto::TextureMappingComponent
+000000000058d690 R typeinfo name for Caver::Proto::BreakableObjectComponent
+000000000058b420 R typeinfo name for Caver::Proto::CharacterState_ItemState
+000000000058ddb0 R typeinfo name for Caver::Proto::CollectableItemComponent
+000000000058e060 R typeinfo name for Caver::Proto::DimensionObjectComponent
+000000000058d920 R typeinfo name for Caver::Proto::OrbitControllerComponent
+000000000058d830 R typeinfo name for Caver::Proto::ParticleEmitterComponent
+000000000058d720 R typeinfo name for Caver::Proto::PhysicsPlatformComponent
+000000000058d5a0 R typeinfo name for Caver::Proto::PressureTriggerComponent
+000000000058dc70 R typeinfo name for Caver::Proto::SwingableWeaponComponent
+000000000058d6c0 R typeinfo name for Caver::Proto::EntityControllerComponent
+000000000058d190 R typeinfo name for Caver::Proto::KeyframeAnimationComponent
+000000000058d980 R typeinfo name for Caver::Proto::MonsterControllerComponent
+000000000058d4c0 R typeinfo name for Caver::Proto::CharAnimControllerComponent
+000000000058d570 R typeinfo name for Caver::Proto::ElevatorControllerComponent
+000000000058d490 R typeinfo name for Caver::Proto::AnimationControllerComponent
+000000000058d290 R typeinfo name for Caver::Proto::GroundMeshGeneratorComponent
+000000000058db90 R typeinfo name for Caver::Proto::BatMonsterControllerComponent
+000000000058d3f0 R typeinfo name for Caver::Proto::ObjectLinkControllerComponent
+000000000058dfb0 R typeinfo name for Caver::Proto::ProjectileControllerComponent
+000000000058de10 R typeinfo name for Caver::Proto::ItemDropComponent_ItemDropEntry
+000000000058dc00 R typeinfo name for Caver::Proto::MonsterDeathControllerComponent
+000000000058dad0 R typeinfo name for Caver::Proto::SkellyMonsterControllerComponent
+000000000058db10 R typeinfo name for Caver::Proto::StaticMonsterControllerComponent
+000000000058dc30 R typeinfo name for Caver::Proto::GenericMonsterControllerComponent
+000000000058da90 R typeinfo name for Caver::Proto::LeapingMonsterControllerComponent
+000000000058d1f0 R typeinfo name for Caver::Proto::ModelTransformControllerComponent
+000000000058d9b0 R typeinfo name for Caver::Proto::WalkingMonsterControllerComponent
+000000000058dbc0 R typeinfo name for Caver::Proto::BouncingMonsterControllerComponent
+000000000058d9f0 R typeinfo name for Caver::Proto::ChargingMonsterControllerComponent
+000000000058db50 R typeinfo name for Caver::Proto::ShootingMonsterControllerComponent
+000000000058da30 R typeinfo name for Caver::Proto::SnappingMonsterControllerComponent
+000000000058dca0 R typeinfo name for Caver::Proto::SwingableWeaponControllerComponent
+000000000058d3b0 R typeinfo name for Caver::Proto::BoneControlledCollisionShapeComponent
+000000000058a770 R typeinfo name for Caver::Proto::Box
+000000000058aee0 R typeinfo name for Caver::Proto::Map
+000000000058a890 R typeinfo name for Caver::Proto::Font
+000000000058af00 R typeinfo name for Caver::Proto::Item
+000000000058e100 R typeinfo name for Caver::Proto::Mesh
+000000000058af40 R typeinfo name for Caver::Proto::Quest
+000000000058d130 R typeinfo name for Caver::Proto::Scene
+000000000058af20 R typeinfo name for Caver::Proto::Skill
+000000000058a790 R typeinfo name for Caver::Proto::Circle
+000000000058aea0 R typeinfo name for Caver::Proto::MapNode
+000000000058aec0 R typeinfo name for Caver::Proto::MapZone
+000000000058a7b0 R typeinfo name for Caver::Proto::Polygon
+000000000058a8b0 R typeinfo name for Caver::Proto::Program
+000000000058a850 R typeinfo name for Caver::Proto::Texture
+000000000058a710 R typeinfo name for Caver::Proto::Vector2
+000000000058a730 R typeinfo name for Caver::Proto::Vector3
+000000000058a6f0 R typeinfo name for Caver::Proto::DateTime
+000000000058aff0 R typeinfo name for Caver::Proto::GameData
+000000000058e0c0 R typeinfo name for Caver::Proto::MeshData
+000000000058d080 R typeinfo name for Caver::Proto::Component
+000000000058b3e0 R typeinfo name for Caver::Proto::GameState
+000000000058b3c0 R typeinfo name for Caver::Proto::QuestText
+000000000058a750 R typeinfo name for Caver::Proto::Rectangle
+0000000000595cd8 R typeinfo name for Caver::Scene
+00000000005920b0 R typeinfo name for Caver::CoinBar
+00000000005965b0 R typeinfo name for Caver::FWShell
+00000000005970c0 R typeinfo name for Caver::GUIView
+0000000000592a90 R typeinfo name for Caver::ManaBar
+00000000005949a0 R typeinfo name for Caver::MapView
+0000000000594f10 R typeinfo name for Caver::TabView
+0000000000597ee0 R typeinfo name for Caver::Texture
+0000000000583760 V typeinfo name for Caver::AnimNode
+0000000000596e70 R typeinfo name for Caver::GUILabel
+0000000000584b80 R typeinfo name for Caver::Component
+0000000000596db0 R typeinfo name for Caver::GUIButton
+0000000000597080 R typeinfo name for Caver::GUISlider
+00000000005970a0 R typeinfo name for Caver::GUISwitch
+0000000000597160 R typeinfo name for Caver::GUIWindow
+00000000005929c0 R typeinfo name for Caver::HealthBar
+0000000000584ba0 V typeinfo name for Caver::IBindable
+0000000000594b30 R typeinfo name for Caver::PauseView
+0000000000590160 R typeinfo name for Caver::SceneView
+00000000005932b0 R typeinfo name for Caver::StoreView
+0000000000586480 V typeinfo name for Caver::LightComponent* (*)()
+0000000000585830 V typeinfo name for Caver::ModelComponent* (*)()
+0000000000587630 V typeinfo name for Caver::SkillComponent* (*)()
+0000000000586380 V typeinfo name for Caver::SwingComponent* (*)()
+0000000000586680 V typeinfo name for Caver::AttackComponent* (*)()
+0000000000586220 V typeinfo name for Caver::DamageComponent* (*)()
+0000000000585ab0 V typeinfo name for Caver::EntityComponent* (*)()
+0000000000586260 V typeinfo name for Caver::HealthComponent* (*)()
+0000000000586fc0 V typeinfo name for Caver::PortalComponent* (*)()
+0000000000585e60 V typeinfo name for Caver::ShadowComponent* (*)()
+00000000005857f0 V typeinfo name for Caver::SpriteComponent* (*)()
+0000000000587290 V typeinfo name for Caver::ProgramComponent* (*)()
+00000000005865e0 V typeinfo name for Caver::ShatterComponent* (*)()
+0000000000587240 V typeinfo name for Caver::ItemDropComponent* (*)()
+0000000000586c70 V typeinfo name for Caver::ParticleComponent* (*)()
+0000000000587450 V typeinfo name for Caver::MagicBoltComponent* (*)()
+00000000005873f0 V typeinfo name for Caver::MagicBombComponent* (*)()
+0000000000587060 V typeinfo name for Caver::TouchableComponent* (*)()
+0000000000585f00 V typeinfo name for Caver::TransformComponent* (*)()
+0000000000585a50 V typeinfo name for Caver::WaterMeshComponent* (*)()
+0000000000586020 V typeinfo name for Caver::BackgroundComponent* (*)()
+0000000000585af0 V typeinfo name for Caver::EntityInfoComponent* (*)()
+00000000005876d0 V typeinfo name for Caver::FireBreathComponent* (*)()
+0000000000585990 V typeinfo name for Caver::GroundMeshComponent* (*)()
+0000000000585c70 V typeinfo name for Caver::HeroEntityComponent* (*)()
+0000000000585e00 V typeinfo name for Caver::PropertiesComponent* (*)()
+0000000000586d80 V typeinfo name for Caver::SimpleGlowComponent* (*)()
+0000000000587000 V typeinfo name for Caver::SpawnPointComponent* (*)()
+0000000000587330 V typeinfo name for Caver::TextBubbleComponent* (*)()
+0000000000586420 V typeinfo name for Caver::WeaponGlowComponent* (*)()
+0000000000586d20 V typeinfo name for Caver::FireEmitterComponent* (*)()
+00000000005872d0 V typeinfo name for Caver::OverlayTextComponent* (*)()
+0000000000586f60 V typeinfo name for Caver::SoundEffectComponent* (*)()
+00000000005863c0 V typeinfo name for Caver::WeaponTrailComponent* (*)()
+0000000000585bb0 V typeinfo name for Caver::EntityActionComponent* (*)()
+0000000000586ea0 V typeinfo name for Caver::PortalEffectComponent* (*)()
+00000000005860e0 V typeinfo name for Caver::UtilityShapeComponent* (*)()
+0000000000585930 V typeinfo name for Caver::GroundPolygonComponent* (*)()
+00000000005874b0 V typeinfo name for Caver::MagicHookshotComponent* (*)()
+0000000000586620 V typeinfo name for Caver::MonsterEntityComponent* (*)()
+0000000000586f00 V typeinfo name for Caver::ParticleFieldComponent* (*)()
+00000000005864c0 V typeinfo name for Caver::PhysicsObjectComponent* (*)()
+00000000005858d0 V typeinfo name for Caver::BlendAnimationComponent* (*)()
+0000000000585cd0 V typeinfo name for Caver::BushControllerComponent* (*)()
+0000000000585c10 V typeinfo name for Caver::CharControllerComponent* (*)()
+0000000000586140 V typeinfo name for Caver::CollisionShapeComponent* (*)()
+0000000000587510 V typeinfo name for Caver::DimensionSpellComponent* (*)()
+0000000000587120 V typeinfo name for Caver::DoorControllerComponent* (*)()
+00000000005875d0 V typeinfo name for Caver::MagicExplosionComponent* (*)()
+0000000000587670 V typeinfo name for Caver::MagicSpellCastComponent* (*)()
+0000000000586de0 V typeinfo name for Caver::ParticleObjectComponent* (*)()
+0000000000586080 V typeinfo name for Caver::TextureMappingComponent* (*)()
+0000000000586580 V typeinfo name for Caver::BreakableObjectComponent* (*)()
+00000000005871e0 V typeinfo name for Caver::CollectableItemComponent* (*)()
+0000000000587570 V typeinfo name for Caver::DimensionObjectComponent* (*)()
+0000000000586e40 V typeinfo name for Caver::OrbitControllerComponent* (*)()
+0000000000586c10 V typeinfo name for Caver::ParticleEmitterComponent* (*)()
+0000000000586520 V typeinfo name for Caver::PhysicsPlatformComponent* (*)()
+00000000005870c0 V typeinfo name for Caver::PressureTriggerComponent* (*)()
+00000000005862a0 V typeinfo name for Caver::SwingableWeaponComponent* (*)()
+0000000000585b50 V typeinfo name for Caver::EntityControllerComponent* (*)()
+0000000000585870 V typeinfo name for Caver::KeyframeAnimationComponent* (*)()
+0000000000585fc0 V typeinfo name for Caver::CharAnimControllerComponent* (*)()
+0000000000585d30 V typeinfo name for Caver::ElevatorControllerComponent* (*)()
+0000000000587180 V typeinfo name for Caver::RotatingBackgroundComponent* (*)()
+0000000000585f60 V typeinfo name for Caver::AnimationControllerComponent* (*)()
+00000000005859f0 V typeinfo name for Caver::GroundMeshGeneratorComponent* (*)()
+0000000000587390 V typeinfo name for Caver::TransformControllerComponent* (*)()
+0000000000586a60 V typeinfo name for Caver::BatMonsterControllerComponent* (*)()
+0000000000586cc0 V typeinfo name for Caver::MagicParticleEmitterComponent* (*)()
+0000000000585ea0 V typeinfo name for Caver::ObjectLinkControllerComponent* (*)()
+0000000000587730 V typeinfo name for Caver::ProjectileControllerComponent* (*)()
+0000000000586b40 V typeinfo name for Caver::MonsterDeathControllerComponent* (*)()
+00000000005868a0 V typeinfo name for Caver::SkellyMonsterControllerComponent* (*)()
+0000000000586900 V typeinfo name for Caver::StaticMonsterControllerComponent* (*)()
+0000000000586ba0 V typeinfo name for Caver::GenericMonsterControllerComponent* (*)()
+0000000000586830 V typeinfo name for Caver::LeapingMonsterControllerComponent* (*)()
+0000000000585d90 V typeinfo name for Caver::ModelTransformControllerComponent* (*)()
+00000000005866c0 V typeinfo name for Caver::WalkingMonsterControllerComponent* (*)()
+0000000000586ac0 V typeinfo name for Caver::BouncingMonsterControllerComponent* (*)()
+0000000000586730 V typeinfo name for Caver::ChargingMonsterControllerComponent* (*)()
+0000000000586960 V typeinfo name for Caver::ShootingMonsterControllerComponent* (*)()
+00000000005867b0 V typeinfo name for Caver::SnappingMonsterControllerComponent* (*)()
+0000000000586300 V typeinfo name for Caver::SwingableWeaponControllerComponent* (*)()
+00000000005869e0 V typeinfo name for Caver::ProjectileMonsterControllerComponent* (*)()
+00000000005861a0 V typeinfo name for Caver::BoneControlledCollisionShapeComponent* (*)()
+00000000006b8ec0 D vtable for Caver::CaverShell
+00000000006d5a90 D vtable for Caver::GUIControl
+00000000006d3490 D vtable for Caver::PortalView
+00000000006d35f0 D vtable for Caver::QuestsView
+00000000006d3c00 D vtable for Caver::StripeView
+00000000006cda60 D vtable for Caver::CreditsView
+00000000006d0180 D vtable for Caver::ItemOverlay
+00000000006d26f0 D vtable for Caver::LevelUpView
+00000000006d2860 D vtable for Caver::LoadingView
+00000000006d29d0 D vtable for Caver::MapMenuPage
+00000000006d3060 D vtable for Caver::NewMenuView
+00000000006d4cd0 D vtable for Caver::SceneObject
+00000000006d7ea0 D vtable for Caver::SoundEffect
+00000000006d0780 D vtable for Caver::TargetFrame
+00000000006b9200 D vtable for Caver::AnimKeysNode
+00000000006d1710 D vtable for Caver::GameOverView
+00000000006d5600 D vtable for Caver::GUIAlertView
+00000000006d5db0 D vtable for Caver::GUIFrameView
+00000000006d62e0 D vtable for Caver::GUIResponder
+00000000006d76f8 V vtable for Caver::GUITextField
+00000000006d2580 D vtable for Caver::ItemInfoView
+00000000006cdd50 D vtable for Caver::MainMenuView
+00000000006d2bf0 D vtable for Caver::MapPopupView
+00000000006d2f00 D vtable for Caver::MenuItemSlot
+00000000006d13a8 V vtable for Caver::MenuViewPage
+00000000006d08f0 D vtable for Caver::PurchaseView
+00000000006d38d0 D vtable for Caver::SettingsView
+00000000006b9160 D vtable for Caver::AnimBlendNode
+00000000006d11d0 D vtable for Caver::CharacterView
+00000000006cd8f0 D vtable for Caver::ChooseAgeView
+00000000006cf9e0 D vtable for Caver::ExperienceBar
+00000000006cb570 D vtable for Caver::GameSceneView
+00000000006c2eb0 D vtable for Caver::GlowComponent
+00000000006d57c0 D vtable for Caver::GUIBubbleView
+00000000006d6c60 D vtable for Caver::GUIEffectView
+00000000006d6370 D vtable for Caver::GUIScrollView
+00000000006d1fc0 D vtable for Caver::InventoryView
+00000000006bf600 D vtable for Caver::ManaComponent
+00000000006d0440 D vtable for Caver::OverlayButton
+00000000006cd790 D vtable for Caver::BadgeCountView
+00000000006d6070 D vtable for Caver::GUILoadingView
+00000000006d7ee0 D vtable for Caver::GUIPopoverView
+00000000006ba050 D vtable for Caver::LightComponent
+00000000006ba220 D vtable for Caver::ModelComponent
+00000000006d4840 D vtable for Caver::ObjectTemplate
+00000000006cdf60 D vtable for Caver::OnlineMenuView
+00000000006ce930 D vtable for Caver::ProfileManager
+00000000006bb5a0 D vtable for Caver::ShapeComponent
+00000000006c1020 D vtable for Caver::SkillComponent
+00000000006c1210 D vtable for Caver::SpellComponent
+00000000006c5490 D vtable for Caver::SwingComponent
+00000000006d3d60 D vtable for Caver::TabbedMenuView
+00000000006d7d90 D vtable for Caver::TextureLibrary
+00000000006c1400 D vtable for Caver::AttackComponent
+00000000006d7df0 D vtable for Caver::AudioPlayerImpl
+00000000006c2e58 V vtable for Caver::ComponentOutlet<Caver::LightComponent>
+00000000006b9428 V vtable for Caver::ComponentOutlet<Caver::ModelComponent>
+00000000006bede8 V vtable for Caver::ComponentOutlet<Caver::ShapeComponent>
+00000000006be198 V vtable for Caver::ComponentOutlet<Caver::SwingComponent>
+00000000006c1e58 V vtable for Caver::ComponentOutlet<Caver::AttackComponent>
+00000000006be2d8 V vtable for Caver::ComponentOutlet<Caver::EntityComponent>
+00000000006c3738 V vtable for Caver::ComponentOutlet<Caver::ParticleComponent>
+00000000006b9a38 V vtable for Caver::ComponentOutlet<Caver::AnimationComponent>
+00000000006c4d18 V vtable for Caver::ComponentOutlet<Caver::GroundMeshComponent>
+00000000006c5248 V vtable for Caver::ComponentOutlet<Caver::WeaponGlowComponent>
+00000000006be238 V vtable for Caver::ComponentOutlet<Caver::SoundEffectComponent>
+00000000006c5298 V vtable for Caver::ComponentOutlet<Caver::WeaponTrailComponent>
+00000000006c1738 V vtable for Caver::ComponentOutlet<Caver::UtilityShapeComponent>
+00000000006c3d18 V vtable for Caver::ComponentOutlet<Caver::GroundPolygonComponent>
+00000000006c1788 V vtable for Caver::ComponentOutlet<Caver::MonsterEntityComponent>
+00000000006c2928 V vtable for Caver::ComponentOutlet<Caver::BlendAnimationComponent>
+00000000006c2718 V vtable for Caver::ComponentOutlet<Caver::CharControllerComponent>
+00000000006bae68 V vtable for Caver::ComponentOutlet<Caver::CollisionShapeComponent>
+00000000006c3cc8 V vtable for Caver::ComponentOutlet<Caver::TextureMappingComponent>
+00000000006c0258 V vtable for Caver::ComponentOutlet<Caver::ParticleEmitterComponent>
+00000000006bdf58 V vtable for Caver::ComponentOutlet<Caver::KeyframeAnimationComponent>
+00000000006be288 V vtable for Caver::ComponentOutlet<Caver::CharAnimControllerComponent>
+00000000006bee38 V vtable for Caver::ComponentOutlet<Caver::AnimationControllerComponent>
+00000000006be1e8 V vtable for Caver::ComponentOutlet<Caver::SwingableWeaponControllerComponent>
+00000000006be540 D vtable for Caver::DamageComponent
+00000000006be8b0 D vtable for Caver::EntityComponent
+00000000006cfb40 D vtable for Caver::GameOverlayView
+00000000006d19e0 D vtable for Caver::GuideToggleView
+00000000006bf030 D vtable for Caver::HealthComponent
+00000000006d0128 V vtable for Caver::ParticleEmitter
+00000000006baca0 D vtable for Caver::PortalComponent
+00000000006bb260 D vtable for Caver::ShadowComponent
+00000000006d3a50 D vtable for Caver::SkillPickerView
+00000000006bbb40 D vtable for Caver::SpriteComponent
+00000000006cec38 V vtable for Caver::StoreController
+00000000006cf720 D vtable for Caver::DebugInfoOverlay
+00000000006d5c50 D vtable for Caver::GUIDraggableItem
+00000000006d7470 D vtable for Caver::GUITextFieldImpl
+00000000006d2260 D vtable for Caver::ItemBuyPopupView
+00000000006d31d0 D vtable for Caver::NotificationView
+00000000006cd5e8 V vtable for Caver::OnlineController
+00000000006ba7a0 D vtable for Caver::OverlayComponent
+00000000006ce170 D vtable for Caver::ProfilePanelView
+00000000006baec0 D vtable for Caver::ProgramComponent
+00000000006d3760 D vtable for Caver::SceneLoadingView
+00000000006d4db0 D vtable for Caver::SceneObjectGroup
+00000000006c3d70 D vtable for Caver::ShatterComponent
+00000000006d0b60 D vtable for Caver::StoreProductView
+00000000006d15b0 D vtable for Caver::DraggableMenuItem
+00000000006d1870 D vtable for Caver::GuidePurchaseView
+00000000006d6920 D vtable for Caver::GUIViewController
+00000000006bf400 D vtable for Caver::ItemDropComponent
+00000000006d2420 D vtable for Caver::ItemInfoPopupView
+00000000006d05b0 D vtable for Caver::OverlayMenuButton
+00000000006c33a0 D vtable for Caver::ParticleComponent
+00000000006d53c0 D vtable for Caver::SoundEffectSource
+00000000006cf5b8 V vtable for Caver::ConsumableItemView
+00000000006cb870 D vtable for Caver::GameViewController
+00000000006d1b50 D vtable for Caver::InventoryItemPanel
+00000000006c0460 D vtable for Caver::MagicBoltComponent
+00000000006c0620 D vtable for Caver::MagicBombComponent
+00000000006ce7d0 D vtable for Caver::ProfilesHeaderView
+00000000006bc0b0 D vtable for Caver::TouchableComponent
+00000000006bc270 D vtable for Caver::TransformComponent
+00000000006c4f10 D vtable for Caver::WaterMeshComponent
+00000000006d1060 D vtable for Caver::AttributePointsView
+00000000006b9a90 D vtable for Caver::BackgroundComponent
+00000000006bee90 D vtable for Caver::EntityInfoComponent
+00000000006c00a0 D vtable for Caver::FireBreathComponent
+00000000006cb520 D vtable for Caver::GameSceneController
+00000000006c4940 D vtable for Caver::GroundMeshComponent
+00000000006bf260 D vtable for Caver::HeroEntityComponent
+00000000006cc910 D vtable for Caver::PauseViewController
+00000000006bb090 D vtable for Caver::PropertiesComponent
+00000000006c3f10 D vtable for Caver::SimpleGlowComponent
+00000000006bb9a0 D vtable for Caver::SpawnPointComponent
+00000000006d0ec0 D vtable for Caver::StoreViewController
+00000000006bbce0 D vtable for Caver::TextBubbleComponent
+00000000006c5630 D vtable for Caver::WeaponGlowComponent
+00000000006d42f0 D vtable for Caver::BlastParticleEmitter
+00000000006cf370 D vtable for Caver::ConfigureOverlayView
+00000000006cf880 D vtable for Caver::DraggableOverlayItem
+00000000006c2cc0 D vtable for Caver::FireEmitterComponent
+00000000006d1db0 D vtable for Caver::InventoryTrinketSlot
+00000000006baae0 D vtable for Caver::OverlayTextComponent
+00000000006cca40 D vtable for Caver::PortalViewController
+00000000006ce420 D vtable for Caver::ProfileSelectionView
+00000000006bb7b0 D vtable for Caver::SoundEffectComponent
+00000000006d4510 D vtable for Caver::SparkParticleEmitter
+00000000006d4580 D vtable for Caver::TrailParticleEmitter
+00000000006c57e0 D vtable for Caver::WeaponTrailComponent
+00000000006cdc60 D vtable for Caver::CreditsViewController
+00000000006be710 D vtable for Caver::EntityActionComponent
+00000000006cc530 D vtable for Caver::LevelUpViewController
+00000000006c3b20 D vtable for Caver::PortalEffectComponent
+00000000006bb400 D vtable for Caver::ShadowVolumeComponent
+00000000006bca48 V vtable for Caver::UtilityShapeComponent
+00000000006d45f0 D vtable for Caver::WhooshParticleEmitter
+00000000006cadc0 D vtable for Caver::GameMenuViewController
+00000000006cb3f0 D vtable for Caver::GameOverViewController
+00000000006c4d70 D vtable for Caver::GroundPolygonComponent
+00000000006c02b0 D vtable for Caver::HookshotTrailComponent
+00000000006c0980 D vtable for Caver::MagicHookshotComponent
+00000000006cc600 D vtable for Caver::MainMenuViewController
+00000000006bf7a0 D vtable for Caver::MonsterEntityComponent
+00000000006cd440 D vtable for Caver::OfflineAchievementView
+00000000006c37e0 D vtable for Caver::ParticleFieldComponent
+00000000006bf990 D vtable for Caver::PhysicsObjectComponent
+00000000006d7a40 D vtable for Caver::ProfileManager_Android
+00000000006d0a50 D vtable for Caver::PurchaseViewController
+00000000006b9c80 D vtable for Caver::BlendAnimationComponent
+00000000006c40c0 D vtable for Caver::BushControllerComponent
+00000000006bdfb0 D vtable for Caver::CharControllerComponent
+00000000006b9530 D vtable for Caver::CollisionShapeComponent
+00000000006bfee0 D vtable for Caver::DimensionSpellComponent
+00000000006c4260 D vtable for Caver::DoorControllerComponent
+00000000006d4360 D vtable for Caver::FountainParticleEmitter
+00000000006d61e0 D vtable for Caver::GUINavigationController
+00000000006c07e0 D vtable for Caver::MagicExplosionComponent
+00000000006c0b40 D vtable for Caver::MagicSpellCastComponent
+00000000006c0ce0 D vtable for Caver::ObjectModifierComponent
+00000000006cd140 D vtable for Caver::OfflineAchievementsView
+00000000006c3980 D vtable for Caver::ParticleObjectComponent
+00000000006d7b50 D vtable for Caver::StoreController_Android
+00000000006bbf10 D vtable for Caver::TextureMappingComponent
+00000000006bdc20 D vtable for Caver::BreakableObjectComponent
+00000000006be330 D vtable for Caver::CollectableItemComponent
+00000000006bfd40 D vtable for Caver::DimensionObjectComponent
+00000000006d78e0 D vtable for Caver::OnlineController_Android
+00000000006ce0d0 D vtable for Caver::OnlineMenuViewController
+00000000006c3200 D vtable for Caver::OrbitControllerComponent
+00000000006c3540 D vtable for Caver::ParticleEmitterComponent
+00000000006bfba0 D vtable for Caver::PhysicsPlatformComponent
+00000000006c4600 D vtable for Caver::PressureTriggerComponent
+00000000006c50b0 D vtable for Caver::SwingableWeaponComponent
+00000000006beab0 D vtable for Caver::EntityControllerComponent
+00000000006cea00 D vtable for Caver::ProfileManagerLoadingView
+00000000006ccda0 D vtable for Caver::SkillPickerViewController
+00000000006b9e40 D vtable for Caver::KeyframeAnimationComponent
+00000000006c1eb0 D vtable for Caver::MonsterControllerComponent
+00000000006ccee0 D vtable for Caver::AchievementNotificationView
+00000000006bddc0 D vtable for Caver::CharAnimControllerComponent
+00000000006c4430 D vtable for Caver::ElevatorControllerComponent
+00000000006cc1d0 D vtable for Caver::GuidePurchaseViewController
+00000000006ba940 D vtable for Caver::OverlayTargetArrowComponent
+00000000006c47a0 D vtable for Caver::RotatingBackgroundComponent
+00000000006b9870 D vtable for Caver::AnimationControllerComponent
+00000000006c4b80 D vtable for Caver::GroundMeshGeneratorComponent
+00000000006bc410 D vtable for Caver::TransformControllerComponent
+00000000006c15a0 D vtable for Caver::BatMonsterControllerComponent
+00000000006c3060 D vtable for Caver::MagicParticleEmitterComponent
+00000000006ba5b0 D vtable for Caver::ObjectLinkControllerComponent
+00000000006c0e80 D vtable for Caver::ProjectileControllerComponent
+00000000006caa50 D vtable for Caver::ConfigureOverlayViewController
+00000000006ce690 D vtable for Caver::ProfileSelectionViewController
+00000000006c2050 D vtable for Caver::MonsterDeathControllerComponent
+00000000006c2580 D vtable for Caver::SkellyMonsterControllerComponent
+00000000006c2980 D vtable for Caver::StaticMonsterControllerComponent
+00000000006c1b20 D vtable for Caver::GenericMonsterControllerComponent
+00000000006c1cc0 D vtable for Caver::LeapingMonsterControllerComponent
+00000000006ba3c0 D vtable for Caver::ModelTransformControllerComponent
+00000000006cd340 D vtable for Caver::OfflineAchievementsViewController
+00000000006c2b20 D vtable for Caver::WalkingMonsterControllerComponent
+00000000006c17e0 D vtable for Caver::BouncingMonsterControllerComponent
+00000000006c1980 D vtable for Caver::ChargingMonsterControllerComponent
+00000000006c23e0 D vtable for Caver::ShootingMonsterControllerComponent
+00000000006c2770 D vtable for Caver::SnappingMonsterControllerComponent
+00000000006c52f0 D vtable for Caver::SwingableWeaponControllerComponent
+00000000006ceb60 D vtable for Caver::ProfileManagerLoadingViewController
+00000000006c2240 D vtable for Caver::ProjectileMonsterControllerComponent
+00000000006b9270 D vtable for Caver::BoneControlledCollisionShapeComponent
+00000000006c5cc8 D vtable for Caver::Proto::FloatColor
+00000000006c5ea8 D vtable for Caver::Proto::Font_Glyph
+00000000006c6010 D vtable for Caver::Proto::GUIMargins
+00000000006c6ff0 D vtable for Caver::Proto::LevelState
+00000000006c61f0 D vtable for Caver::Proto::MusicTrack
+00000000006c9da0 D vtable for Caver::Proto::PackedMesh
+00000000006c6e88 D vtable for Caver::Proto::QuestState
+00000000006c6948 D vtable for Caver::Proto::EntityClass
+00000000006c6ab0 D vtable for Caver::Proto::GameOptions
+00000000006c6a38 D vtable for Caver::Proto::GuideTarget
+00000000006c73e8 D vtable for Caver::Proto::SceneObject
+00000000006c6100 D vtable for Caver::Proto::SoundEffect
+00000000006c9cb0 D vtable for Caver::Proto::MeshMaterial
+00000000006c6178 D vtable for Caver::Proto::SoundLibrary
+00000000006c9e18 D vtable for Caver::Proto::UnpackedMesh
+00000000006c6088 D vtable for Caver::Proto::GUIViewLayout
+00000000006c6268 D vtable for Caver::Proto::MusicPlaylist
+00000000006c7370 D vtable for Caver::Proto::ObjectLibrary
+00000000006c6d98 D vtable for Caver::Proto::PlayerProfile
+00000000006c70e0 D vtable for Caver::Proto::CharacterState
+00000000006c7cd0 D vtable for Caver::Proto::LightComponent
+00000000006c6600 D vtable for Caver::Proto::MapNode_Portal
+00000000006c75c8 D vtable for Caver::Proto::ModelComponent
+00000000006c72f8 D vtable for Caver::Proto::ObjectTemplate
+00000000006c7a00 D vtable for Caver::Proto::ShapeComponent
+00000000006c9800 D vtable for Caver::Proto::SkillComponent
+00000000006c9ad0 D vtable for Caver::Proto::SpellComponent
+00000000006c91e8 D vtable for Caver::Proto::SwingComponent
+00000000006c8cc0 D vtable for Caver::Proto::AttackComponent
+00000000006c7af0 D vtable for Caver::Proto::DamageComponent
+00000000006c6560 D vtable for Caver::Proto::EditorViewState
+00000000006c7fa0 D vtable for Caver::Proto::EntityComponent
+00000000006c7b68 D vtable for Caver::Proto::HealthComponent
+00000000006c8720 D vtable for Caver::Proto::ParticleEmitter
+00000000006c9350 D vtable for Caver::Proto::PortalComponent
+00000000006c7d48 D vtable for Caver::Proto::ShadowComponent
+00000000006c7550 D vtable for Caver::Proto::SpriteComponent
+00000000006c6e10 D vtable for Caver::Proto::StateProperties
+00000000006c81f8 D vtable for Caver::Proto::ProgramComponent
+00000000006c7460 D vtable for Caver::Proto::SceneObjectGroup
+00000000006c95a8 D vtable for Caver::Proto::ItemDropComponent
+00000000006c8810 D vtable for Caver::Proto::ParticleComponent
+00000000006c9710 D vtable for Caver::Proto::MagicBoltComponent
+00000000006c99e0 D vtable for Caver::Proto::MagicBombComponent
+00000000006c5d40 D vtable for Caver::Proto::Texture_Subtexture
+00000000006c94b8 D vtable for Caver::Proto::TouchableComponent
+00000000006c7988 D vtable for Caver::Proto::WaterMeshComponent
+00000000006c8630 D vtable for Caver::Proto::BackgroundComponent
+00000000006c8540 D vtable for Caver::Proto::EntityInfoComponent
+00000000006c98f0 D vtable for Caver::Proto::FireBreathComponent
+00000000006c7820 D vtable for Caver::Proto::GroundMeshComponent
+00000000006c85b8 D vtable for Caver::Proto::HeroEntityComponent
+00000000006c86a8 D vtable for Caver::Proto::PropertiesComponent
+00000000006c8900 D vtable for Caver::Proto::SimpleGlowComponent
+00000000006c93c8 D vtable for Caver::Proto::SpawnPointComponent
+00000000006c9260 D vtable for Caver::Proto::WeaponGlowComponent
+00000000006c8888 D vtable for Caver::Proto::FireEmitterComponent
+00000000006c9620 D vtable for Caver::Proto::OverlayTextComponent
+00000000006c7dc0 D vtable for Caver::Proto::SoundEffectComponent
+00000000006c92d8 D vtable for Caver::Proto::WeaponTrailComponent
+00000000006c8450 D vtable for Caver::Proto::EntityActionComponent
+00000000006c6d20 D vtable for Caver::Proto::PlayerProfile_Counter
+00000000006c9698 D vtable for Caver::Proto::PortalEffectComponent
+00000000006c77a8 D vtable for Caver::Proto::GroundPolygonComponent
+00000000006c9a58 D vtable for Caver::Proto::MagicHookshotComponent
+00000000006c8270 D vtable for Caver::Proto::MonsterEntityComponent
+00000000006c8a68 D vtable for Caver::Proto::ParticleFieldComponent
+00000000006c82e8 D vtable for Caver::Proto::PhysicsObjectComponent
+00000000006c5db8 D vtable for Caver::Proto::Texture_ConversionInfo
+00000000006c76b8 D vtable for Caver::Proto::BlendAnimationComponent
+00000000006c8018 D vtable for Caver::Proto::BushControllerComponent
+00000000006c7f28 D vtable for Caver::Proto::CharControllerComponent
+00000000006c7a78 D vtable for Caver::Proto::CollisionShapeComponent
+00000000006c9bc0 D vtable for Caver::Proto::DimensionSpellComponent
+00000000006c8180 D vtable for Caver::Proto::DoorControllerComponent
+00000000006c69c0 D vtable for Caver::Proto::GuideTarget_LevelObject
+00000000006c9788 D vtable for Caver::Proto::MagicExplosionComponent
+00000000006c9878 D vtable for Caver::Proto::MagicSpellCastComponent
+00000000006c8978 D vtable for Caver::Proto::ParticleObjectComponent
+00000000006c7910 D vtable for Caver::Proto::TextureMappingComponent
+00000000006c8360 D vtable for Caver::Proto::BreakableObjectComponent
+00000000006c7068 D vtable for Caver::Proto::CharacterState_ItemState
+00000000006c9440 D vtable for Caver::Proto::CollectableItemComponent
+00000000006c9b48 D vtable for Caver::Proto::DimensionObjectComponent
+00000000006c89f0 D vtable for Caver::Proto::OrbitControllerComponent
+00000000006c8798 D vtable for Caver::Proto::ParticleEmitterComponent
+00000000006c84c8 D vtable for Caver::Proto::PhysicsPlatformComponent
+00000000006c8108 D vtable for Caver::Proto::PressureTriggerComponent
+00000000006c90f8 D vtable for Caver::Proto::SwingableWeaponComponent
+00000000006c83d8 D vtable for Caver::Proto::EntityControllerComponent
+00000000006c7640 D vtable for Caver::Proto::KeyframeAnimationComponent
+00000000006c8ae0 D vtable for Caver::Proto::MonsterControllerComponent
+00000000006c7eb0 D vtable for Caver::Proto::CharAnimControllerComponent
+00000000006c8090 D vtable for Caver::Proto::ElevatorControllerComponent
+00000000006c7e38 D vtable for Caver::Proto::AnimationControllerComponent
+00000000006c7898 D vtable for Caver::Proto::GroundMeshGeneratorComponent
+00000000006c8f18 D vtable for Caver::Proto::BatMonsterControllerComponent
+00000000006c7c58 D vtable for Caver::Proto::ObjectLinkControllerComponent
+00000000006c9968 D vtable for Caver::Proto::ProjectileControllerComponent
+00000000006c9530 D vtable for Caver::Proto::ItemDropComponent_ItemDropEntry
+00000000006c9008 D vtable for Caver::Proto::MonsterDeathControllerComponent
+00000000006c8db0 D vtable for Caver::Proto::SkellyMonsterControllerComponent
+00000000006c8e28 D vtable for Caver::Proto::StaticMonsterControllerComponent
+00000000006c9080 D vtable for Caver::Proto::GenericMonsterControllerComponent
+00000000006c8d38 D vtable for Caver::Proto::LeapingMonsterControllerComponent
+00000000006c7730 D vtable for Caver::Proto::ModelTransformControllerComponent
+00000000006c8b58 D vtable for Caver::Proto::WalkingMonsterControllerComponent
+00000000006c8f90 D vtable for Caver::Proto::BouncingMonsterControllerComponent
+00000000006c8bd0 D vtable for Caver::Proto::ChargingMonsterControllerComponent
+00000000006c8ea0 D vtable for Caver::Proto::ShootingMonsterControllerComponent
+00000000006c8c48 D vtable for Caver::Proto::SnappingMonsterControllerComponent
+00000000006c9170 D vtable for Caver::Proto::SwingableWeaponControllerComponent
+00000000006c7be0 D vtable for Caver::Proto::BoneControlledCollisionShapeComponent
+00000000006c5b60 D vtable for Caver::Proto::Box
+00000000006c6768 D vtable for Caver::Proto::Map
+00000000006c5f20 D vtable for Caver::Proto::Font
+00000000006c67e0 D vtable for Caver::Proto::Item
+00000000006c9d28 D vtable for Caver::Proto::Mesh
+00000000006c68d0 D vtable for Caver::Proto::Quest
+00000000006c74d8 D vtable for Caver::Proto::Scene
+00000000006c6858 D vtable for Caver::Proto::Skill
+00000000006c5bd8 D vtable for Caver::Proto::Circle
+00000000006c6678 D vtable for Caver::Proto::MapNode
+00000000006c66f0 D vtable for Caver::Proto::MapZone
+00000000006c5c50 D vtable for Caver::Proto::Polygon
+00000000006c5f98 D vtable for Caver::Proto::Program
+00000000006c5e30 D vtable for Caver::Proto::Texture
+00000000006c59f8 D vtable for Caver::Proto::Vector2
+00000000006c5a70 D vtable for Caver::Proto::Vector3
+00000000006c5980 D vtable for Caver::Proto::DateTime
+00000000006c6b28 D vtable for Caver::Proto::GameData
+00000000006c9c38 D vtable for Caver::Proto::MeshData
+00000000006c7280 D vtable for Caver::Proto::Component
+00000000006c6f78 D vtable for Caver::Proto::GameState
+00000000006c6f00 D vtable for Caver::Proto::QuestText
+00000000006c5ae8 D vtable for Caver::Proto::Rectangle
+00000000006d4948 D vtable for Caver::Scene
+00000000006cf210 D vtable for Caver::CoinBar
+00000000006d5210 D vtable for Caver::FWShell
+00000000006d67c0 D vtable for Caver::GUIView
+00000000006d02e0 D vtable for Caver::ManaBar
+00000000006d2d50 D vtable for Caver::MapView
+00000000006d3f60 D vtable for Caver::TabView
+00000000006d7cc0 D vtable for Caver::Texture
+00000000006d5f10 D vtable for Caver::GUILabel
+00000000006bc630 D vtable for Caver::Component
+00000000006d5920 D vtable for Caver::GUIButton
+00000000006d64e0 D vtable for Caver::GUISlider
+00000000006d6650 D vtable for Caver::GUISwitch
+00000000006d69d0 D vtable for Caver::GUIWindow
+00000000006cff80 D vtable for Caver::HealthBar
+00000000006d3330 D vtable for Caver::PauseView
+00000000006ccc40 D vtable for Caver::SceneView
+00000000006d0cc0 D vtable for Caver::StoreView

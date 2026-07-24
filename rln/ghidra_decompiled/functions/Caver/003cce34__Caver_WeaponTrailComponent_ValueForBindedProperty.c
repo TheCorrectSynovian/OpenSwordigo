@@ -1,0 +1,28 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ * Ghidra program: libswordigo.so
+ * Address: 003cce34
+ * Function: Caver::WeaponTrailComponent::ValueForBindedProperty
+ * Signature: undefined __thiscall ValueForBindedProperty(WeaponTrailComponent * this, int param_1)
+ * Thunk: false
+ * External: false
+ *
+ * GENERATED EVIDENCE. NOT CLEAN SOURCE.
+ */
+
+
+/* non-virtual thunk to Caver::WeaponTrailComponent::ValueForBindedProperty(int) */
+
+void __thiscall
+Caver::WeaponTrailComponent::ValueForBindedProperty(WeaponTrailComponent *this,int param_1)
+
+{
+  if (param_1 != 0) {
+    Component::ValueForBindedProperty((int)this + -0x10);
+    return;
+  }
+  BindingValue::ValueWithFloatColor((BindingValue *)(this + 0xa0),(FloatColor *)0x0);
+  return;
+}
+
+

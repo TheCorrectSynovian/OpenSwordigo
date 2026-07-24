@@ -1,0 +1,213 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ * Ghidra program: libswordigo.so
+ * Address: 00533d98
+ * Function: std::_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>::_M_get_insert_hint_unique_pos
+ * Signature: undefined __thiscall _M_get_insert_hint_unique_pos(_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>> * this, _Rb_tree_const_iterator param_1, string * param_2)
+ * Thunk: false
+ * External: false
+ *
+ * GENERATED EVIDENCE. NOT CLEAN SOURCE.
+ */
+
+
+/* std::_Rb_tree<std::string, std::pair<std::string const,
+   std::vector<Caver::QuestsView::LabelGroup, std::allocator<Caver::QuestsView::LabelGroup> > >,
+   std::_Select1st<std::pair<std::string const, std::vector<Caver::QuestsView::LabelGroup,
+   std::allocator<Caver::QuestsView::LabelGroup> > > >, std::less<std::string >,
+   std::allocator<std::pair<std::string const, std::vector<Caver::QuestsView::LabelGroup,
+   std::allocator<Caver::QuestsView::LabelGroup> > > >
+   >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::string const,
+   std::vector<Caver::QuestsView::LabelGroup, std::allocator<Caver::QuestsView::LabelGroup> > > >,
+   std::string const&) */
+
+undefined1  [16] __thiscall
+std::
+_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+::_M_get_insert_hint_unique_pos
+          (_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+           *this,_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                 *param_2,string *param_3)
+
+{
+  long lVar1;
+  int iVar2;
+  _Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+  *p_Var3;
+  _Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+  *p_Var4;
+  size_t sVar5;
+  void *__s1;
+  void *__s2;
+  _Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+  *p_Var6;
+  size_t __n;
+  ulong uVar7;
+  undefined1 auVar8 [16];
+  
+                    /* catch() { ... } // from try @ 00533e0c with catch @ 00533dbc */
+  if (this + 8 == param_2) {
+    if (*(long *)(this + 0x28) != 0) {
+      p_Var3 = *(_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                 **)(this + 0x20);
+      sVar5 = *(ulong *)((long)*(void **)param_3 + -0x18);
+      uVar7 = *(ulong *)((long)*(void **)(p_Var3 + 0x20) + -0x18);
+      lVar1 = uVar7 - sVar5;
+      if (uVar7 < sVar5 || lVar1 == 0) {
+        sVar5 = uVar7;
+      }
+      iVar2 = memcmp(*(void **)(p_Var3 + 0x20),*(void **)param_3,sVar5);
+      if (iVar2 != 0) {
+        if (-1 < iVar2) goto LAB_00533f84;
+LAB_00533f54:
+        p_Var6 = (_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                  *)0x0;
+        goto LAB_00533f98;
+      }
+                    /* try { // try from 00533f34 to 00633f37 has its CatchHandler @ 00533f88 */
+                    /* try { // try from 00533f38 to 00633f9f has its CatchHandler @ 00533e18 */
+      if (lVar1 < 0x80000000) {
+        iVar2 = (int)lVar1;
+        if (lVar1 < -0x7fffffff) {
+          iVar2 = -0x80000000;
+        }
+        if (iVar2 < 0) goto LAB_00533f54;
+      }
+    }
+LAB_00533f84:
+                    /* catch() { ... } // from try @ 00533f34 with catch @ 00533f88 */
+    auVar8 = _M_get_insert_unique_pos(this,param_3);
+    p_Var6 = auVar8._0_8_;
+    p_Var3 = auVar8._8_8_;
+  }
+  else {
+    __s1 = *(void **)param_3;
+    __s2 = *(void **)(param_2 + 0x20);
+    __n = *(ulong *)((long)__s1 + -0x18);
+    uVar7 = *(ulong *)((long)__s2 + -0x18);
+    lVar1 = __n - uVar7;
+    sVar5 = uVar7;
+    if (__n < uVar7 || lVar1 == 0) {
+      sVar5 = __n;
+    }
+    iVar2 = memcmp(__s1,__s2,sVar5);
+    if (iVar2 == 0) {
+      if (lVar1 < 0x80000000) {
+                    /* try { // try from 00533e78 to 00633e93 has its CatchHandler @ 00533f9c */
+        iVar2 = (int)lVar1;
+        if (lVar1 < -0x7fffffff) {
+          iVar2 = -0x80000000;
+        }
+        goto joined_r0x00533e80;
+      }
+    }
+    else {
+joined_r0x00533e80:
+      if (iVar2 < 0) {
+        p_Var6 = *(_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                   **)(this + 0x18);
+        p_Var3 = p_Var6;
+        if (p_Var6 == param_2) goto LAB_00533f98;
+                    /* catch() { ... } // from try @ 00533df0 with catch @ 00533e00 */
+                    /* try { // try from 00533e04 to 00633e0b has its CatchHandler @ 00533e14 */
+        p_Var3 = (_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                  *)FUN_0064c700(param_2);
+                    /* try { // try from 00533e0c to 00633e17 has its CatchHandler @ 00533dbc */
+                    /* catch() { ... } // from try @ 00533e04 with catch @ 00533e14 */
+        uVar7 = *(ulong *)((long)*(void **)(p_Var3 + 0x20) + -0x18);
+                    /* try { // try from 00533e18 to 00633e77 has its CatchHandler @ 00533e18
+                       catch() { ... } // from try @ 00533e18 with catch @ 00533e18
+                       catch() { ... } // from try @ 00533e94 with catch @ 00533e18
+                       catch() { ... } // from try @ 00533f38 with catch @ 00533e18
+                       catch() { ... } // from try @ 00533fa8 with catch @ 00533e18 */
+        lVar1 = uVar7 - __n;
+        if (uVar7 < __n || lVar1 == 0) {
+          __n = uVar7;
+        }
+        iVar2 = memcmp(*(void **)(p_Var3 + 0x20),__s1,__n);
+        if (iVar2 == 0) {
+          if (0x7fffffff < lVar1) goto LAB_00533f84;
+          iVar2 = (int)lVar1;
+          if (lVar1 < -0x7fffffff) {
+            iVar2 = -0x80000000;
+          }
+        }
+        if (iVar2 < 0) {
+          p_Var6 = (_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                    *)0x0;
+          if (*(long *)(p_Var3 + 0x18) != 0) {
+            p_Var6 = param_2;
+            p_Var3 = param_2;
+          }
+          goto LAB_00533f98;
+        }
+        goto LAB_00533f84;
+      }
+    }
+    lVar1 = uVar7 - __n;
+    sVar5 = __n;
+    if (uVar7 < __n || lVar1 == 0) {
+      sVar5 = uVar7;
+    }
+                    /* try { // try from 00533e94 to 00633f33 has its CatchHandler @ 00533e18 */
+    iVar2 = memcmp(__s2,__s1,sVar5);
+    if (iVar2 == 0) {
+      if (lVar1 < 0x80000000) {
+        iVar2 = (int)lVar1;
+        if (lVar1 < -0x7fffffff) {
+          iVar2 = -0x80000000;
+        }
+        goto joined_r0x00533f28;
+      }
+    }
+    else {
+joined_r0x00533f28:
+      if (iVar2 < 0) {
+        p_Var3 = *(_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                   **)(this + 0x20);
+        if (p_Var3 == param_2) goto LAB_00533f54;
+        p_Var4 = (_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                  *)FUN_0064c640(param_2);
+        sVar5 = *(ulong *)((long)*(void **)(p_Var4 + 0x20) + -0x18);
+        lVar1 = __n - sVar5;
+        if (__n < sVar5 || lVar1 == 0) {
+          sVar5 = __n;
+        }
+        iVar2 = memcmp(__s1,*(void **)(p_Var4 + 0x20),sVar5);
+        if (iVar2 == 0) {
+          if (0x7fffffff < lVar1) goto LAB_00533f84;
+          iVar2 = (int)lVar1;
+          if (lVar1 < -0x7fffffff) {
+            iVar2 = -0x80000000;
+          }
+        }
+        if (iVar2 < 0) {
+          p_Var6 = (_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+                    *)0x0;
+          p_Var3 = param_2;
+          if (*(long *)(param_2 + 0x18) != 0) {
+            p_Var6 = p_Var4;
+            p_Var3 = p_Var4;
+          }
+          goto LAB_00533f98;
+        }
+        goto LAB_00533f84;
+      }
+    }
+    p_Var6 = param_2;
+    p_Var3 = (_Rb_tree<std::string,std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>,std::_Select1st<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,std::vector<Caver::QuestsView::LabelGroup,std::allocator<Caver::QuestsView::LabelGroup>>>>>
+              *)0x0;
+  }
+LAB_00533f98:
+  auVar8._8_8_ = p_Var3;
+  auVar8._0_8_ = p_Var6;
+                    /* catch() { ... } // from try @ 00533e78 with catch @ 00533f9c */
+                    /* try { // try from 00533fa0 to 00633fa7 has its CatchHandler @ 00533fb0 */
+                    /* try { // try from 00533fa8 to 00633fb3 has its CatchHandler @ 00533e18 */
+                    /* catch() { ... } // from try @ 00533fa0 with catch @ 00533fb0 */
+                    /* catch() { ... } // from try @ 00534040 with catch @ 00533fb4
+                       catch() { ... } // from try @ 005340c8 with catch @ 00533fb4 */
+  return auVar8;
+}
+
+

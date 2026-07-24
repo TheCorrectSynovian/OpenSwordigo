@@ -1,0 +1,54 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ * Ghidra program: libswordigo.so
+ * Address: 0064a7fc
+ * Function: FUN_0064a7fc
+ * Signature: undefined FUN_0064a7fc(void)
+ * Thunk: false
+ * External: false
+ *
+ * GENERATED EVIDENCE. NOT CLEAN SOURCE.
+ */
+
+
+void FUN_0064a7fc(exception *param_1)
+
+{
+  char cVar1;
+  bool bVar2;
+  int iVar3;
+  long lVar4;
+  int *piVar5;
+  
+  *(undefined ***)param_1 = &PTR_FUN_007b7560;
+                    /* try { // try from 0064a81c to 0074a843 has its CatchHandler @ 0064a91c */
+  lVar4 = *(long *)(param_1 + 8);
+  if ((undefined *)(lVar4 + -0x18) != PTR_DAT_007e5de8) {
+    if (PTR_pthread_create_007e4e78 == (undefined *)0x0) {
+      iVar3 = *(int *)(lVar4 + -8);
+      *(int *)(lVar4 + -8) = iVar3 + -1;
+                    /* try { // try from 0064a88c to 0074a93f has its CatchHandler @ 0064a508 */
+    }
+    else {
+      piVar5 = (int *)(lVar4 + -8);
+      do {
+        iVar3 = *piVar5;
+                    /* try { // try from 0064a864 to 0074a88b has its CatchHandler @ 0064a98c */
+        cVar1 = '\x01';
+        bVar2 = (bool)ExclusiveMonitorPass(piVar5,0x10);
+        if (bVar2) {
+          *piVar5 = iVar3 + -1;
+          cVar1 = ExclusiveMonitorsStatus();
+        }
+      } while (cVar1 != '\0');
+    }
+    if (iVar3 < 1) {
+      operator_delete((undefined *)(lVar4 + -0x18));
+    }
+  }
+  std::exception::~exception(param_1);
+  operator_delete(param_1);
+  return;
+}
+
+

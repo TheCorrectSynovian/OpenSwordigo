@@ -1,0 +1,44 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ * Ghidra program: libswordigo.so
+ * Address: 0047fe8c
+ * Function: std::_Rb_tree<std::string,std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>,std::_Select1st<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>>::_M_create_node
+ * Signature: undefined __thiscall _M_create_node(_Rb_tree<std::string,std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>,std::_Select1st<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>> * this, pair * param_1)
+ * Thunk: false
+ * External: false
+ *
+ * GENERATED EVIDENCE. NOT CLEAN SOURCE.
+ */
+
+
+/* std::_Rb_tree<std::string, std::pair<std::string const, boost::shared_ptr<Caver::Achievement> >,
+   std::_Select1st<std::pair<std::string const, boost::shared_ptr<Caver::Achievement> > >,
+   std::less<std::string >, std::allocator<std::pair<std::string const,
+   boost::shared_ptr<Caver::Achievement> > > >::_M_create_node(std::pair<std::string const,
+   boost::shared_ptr<Caver::Achievement> > const&) */
+
+void * __thiscall
+std::
+_Rb_tree<std::string,std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>,std::_Select1st<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>>
+::_M_create_node(_Rb_tree<std::string,std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>,std::_Select1st<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>,std::less<std::string>,std::allocator<std::pair<std::string_const,boost::shared_ptr<Caver::Achievement>>>>
+                 *this,pair *param_1)
+
+{
+  void *pvVar1;
+  long lVar2;
+  
+                    /* try { // try from 0047fe9c to 0057feaf has its CatchHandler @ 0047fed4 */
+  pvVar1 = operator_new(0x38);
+                    /* try { // try from 0047feb0 to 0057fed7 has its CatchHandler @ 0047fe80 */
+  FUN_0066a528((long)pvVar1 + 0x20,param_1);
+  *(undefined8 *)((long)pvVar1 + 0x28) = *(undefined8 *)(param_1 + 8);
+  lVar2 = *(long *)(param_1 + 0x10);
+  *(long *)((long)pvVar1 + 0x30) = lVar2;
+  if (lVar2 != 0) {
+    *(long *)(lVar2 + 8) = *(long *)(lVar2 + 8) + 1;
+  }
+                    /* catch() { ... } // from try @ 0047fe9c with catch @ 0047fed4 */
+  return pvVar1;
+}
+
+
