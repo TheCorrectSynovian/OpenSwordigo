@@ -12,18 +12,6 @@ void ModelComponent::render(RenderingContext& ctx) {
     }
     if (!model_) return;
 
-    if (!textureName_.empty() && textureId_ == 0) {
-        textureId_ = ctx.getTexture(textureName_);
-    }
-
-    if (textureId_) {
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, textureId_);
-        ctx.getShader().setUseTexture(true);
-    } else {
-        ctx.getShader().setUseTexture(false);
-    }
-
     // Build Object Model Matrix from position, depth, rotation, scale
     Vector2 pos(0, 0);
     float depth = 0.0f;
@@ -38,7 +26,7 @@ void ModelComponent::render(RenderingContext& ctx) {
     }
 
     Matrix4 translation = Matrix4::translation(Vector3(pos.x, pos.y, depth));
-    Matrix4 rotation = Matrix4::rotationZ(rot);
+    Matrix4 rotation = Matrix4::rotationY(rot);
     Matrix4 scaling = Matrix4::scale(Vector3(scale, scale, scale));
 
     Matrix4 modelMat = translation * rotation * scaling;
@@ -46,6 +34,18 @@ void ModelComponent::render(RenderingContext& ctx) {
 
     ctx.getShader().setMVP(mvp);
     ctx.getShader().setColor(FloatColor(1, 1, 1, 1));
+
+    // If component has explicit texture override, bind it for all meshes
+    if (!textureName_.empty()) {
+        uint32_t tex = ctx.getTexture(textureName_);
+        if (tex != 0) {
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, tex);
+            ctx.getShader().setUseTexture(true);
+        } else {
+            ctx.getShader().setUseTexture(false);
+        }
+    }
 
     model_->draw();
 }

@@ -1,0 +1,159 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x000000000036ACA4
+ * Mangled: _ZN5Caver22MainMenuViewControllerC2Ev
+ * Demangled: Caver::MainMenuViewController::MainMenuViewController(void)
+ *
+ * Callers: 2
+ *   0x00000000001FAC50  Caver::MainMenuViewController::MainMenuViewController(void)
+ *   0x000000000036AB34  Caver::LevelUpViewController::~LevelUpViewController()
+ *
+ * Callees: 9
+ *   0x00000000001F40B0  Caver::GUIViewController::GUIViewController(void)
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x00000000001F6590  Caver::GUIViewController::~GUIViewController()
+ *   0x00000000001F72B0  operator delete(void *)
+ *   0x00000000001F85A0  Caver::GameOptions::GameOptions(void)
+ *   0x000000000020E1A4  Caver::NewCaverShell(int,char **)
+ *   0x000000000056A3A4  operator delete(void *)
+ *   0x00000000005818C4  sub_5818C4
+ *   0x00000000006FE668  pthread_create
+ *
+ * Referenced strings: 102
+ *   insn=0x000000000036ACB8 string=0x00000000001F40B0 "P'"
+ *   insn=0x000000000036ACBC string=0x000000000036ACC0 "}@"
+ *   insn=0x000000000036ACC0 string=0x000000000036ACC4 "`"
+ *   insn=0x000000000036ACC8 string=0x000000000036ACCC "\tA"
+ *   insn=0x000000000036ACCC string=0x000000000036ACD0 "i"
+ *   insn=0x000000000036ACD0 string=0x000000000036ACD4 "\t!"
+ *   insn=0x000000000036ACD4 string=0x000000000036ACD8 " "
+ *   insn=0x000000000036ACD8 string=0x000000000036ACDC "\t"
+ *   insn=0x000000000036ACDC string=0x000000000036ACE0 " "
+ *   insn=0x000000000036ACE0 string=0x000000000036ACE4 "\t"
+ *   insn=0x000000000036ACE4 string=0x000000000036ACE8 "`"
+ *   insn=0x000000000036ACE8 string=0x000000000036ACEC " "
+ *   insn=0x000000000036ACEC string=0x000000000036ACF0 "\t"
+ *   insn=0x000000000036ACF0 string=0x000000000036ACF4 "A"
+ *   insn=0x000000000036ACF4 string=0x000000000036ACF8 " "
+ *   insn=0x000000000036ACF8 string=0x000000000036ACFC "h6"
+ *   insn=0x000000000036ACFC string=0x000000000036AD00 "`"
+ *   insn=0x000000000036AD00 string=0x000000000036AD04 "'6"
+ *   insn=0x000000000036AD04 string=0x00000000001F85A0 "0'"
+ *   insn=0x000000000036AD10 string=0x000000000036AD14 ")"
+ *   insn=0x000000000036AD14 string=0x000000000036AD18 ""
+ *   insn=0x000000000036AD20 string=0x000000000036AD24 "h"
+ *   insn=0x000000000036AD24 string=0x000000000036AD28 "(a"
+ *   insn=0x000000000036AD28 string=0x000000000036AD2C "`"
+ *   insn=0x000000000036AD2C string=0x000000000036AD30 "`"
+ *   insn=0x000000000036AD30 string=0x000000000036AD34 "`"
+ *   insn=0x000000000036AD34 string=0x000000000036AD38 "a"
+ *   insn=0x000000000036AD38 string=0x000000000036AD3C "h"
+ *   insn=0x000000000036AD54 string=0x000000000036AD58 "5"
+ *   insn=0x000000000036AD5C string=0x000000000036AD60 ""
+ *   insn=0x000000000036AD6C string=0x000000000036AD70 "\t@"
+ *   insn=0x000000000036AD7C string=0x000000000036AD80 ""
+ *   insn=0x000000000036AD8C string=0x000000000036AD90 "@"
+ *   insn=0x000000000036ADA0 string=0x00000000001F6590 "0'"
+ *   insn=0x000000000036ADA8 string=0x000000000036ADAC "h"
+ *   insn=0x000000000036ADC4 string=0x000000000036ADC8 "V"
+ *   insn=0x000000000036ADD4 string=0x000000000036ADD8 "t&@"
+ *   insn=0x000000000036ADD8 string=0x000000000036ADDC "4"
+ *   insn=0x000000000036ADDC string=0x000000000036AE20 "t"
+ *   insn=0x000000000036ADE0 string=0x000000000036ADE4 ""
+ *   insn=0x000000000036ADF0 string=0x000000000036ADF4 "\t@"
+ *   insn=0x000000000036AE00 string=0x000000000036AE04 ""
+ *   insn=0x000000000036AE10 string=0x000000000036AE14 "@"
+ *   insn=0x000000000036AE20 string=0x000000000036AE24 "4"
+ *   insn=0x000000000036AE24 string=0x000000000036AE68 "t"
+ *   insn=0x000000000036AE28 string=0x000000000036AE2C ""
+ *   insn=0x000000000036AE38 string=0x000000000036AE3C "\t@"
+ *   insn=0x000000000036AE48 string=0x000000000036AE4C ""
+ *   insn=0x000000000036AE58 string=0x000000000036AE5C "@"
+ *   insn=0x000000000036AE70 string=0x000000000036AECC "t"
+ *   insn=0x000000000036AE74 string=0x000000000036AE78 "5"
+ *   insn=0x000000000036AE7C string=0x000000000036AE80 ""
+ *   insn=0x000000000036AE8C string=0x000000000036AE90 "\t@"
+ *   insn=0x000000000036AE9C string=0x000000000036AEA0 ""
+ *   insn=0x000000000036AEAC string=0x000000000036AEB0 "@"
+ *   insn=0x000000000036AEC4 string=0x000000000036AEC8 "t"
+ *   insn=0x000000000036AECC string=0x000000000036AED8 "h"
+ *   insn=0x000000000036AED4 string=0x00000000001F72B0 "0'"
+ *   insn=0x000000000036AEDC string=0x000000000036AEE0 ")"
+ *   insn=0x000000000036AEE8 string=0x000000000036AEEC "a"
+ *   insn=0x000000000036AF18 string=0x000000000036AF1C ")=G"
+ *   insn=0x000000000036AF1C string=0x000000000036AF20 "!"
+ *   insn=0x000000000036AF24 string=0x000000000036AF28 "\t"
+ *   insn=0x000000000036AF24 string=0x000000000036AF3C "\t"
+ *   insn=0x000000000036AF28 string=0x000000000036AF2C "*"
+ *   insn=0x000000000036AF2C string=0x000000000036AF30 "\n"
+ *   insn=0x000000000036AF38 string=0x000000000036AF48 "?"
+ *   insn=0x000000000036AF3C string=0x000000000036AF40 "*"
+ *   insn=0x000000000036AF40 string=0x000000000036AF44 "\n"
+ *   insn=0x000000000036AF48 string=0x000000000036AF4C ","
+ *   insn=0x000000000036AF5C string=0x00000000001F62D0 "0'"
+ *   insn=0x000000000036AF64 string=0x000000000036AFB4 "u"
+ *   insn=0x000000000036AF6C string=0x000000000036AF70 "5"
+ *   insn=0x000000000036AF74 string=0x000000000036AF78 ""
+ *   insn=0x000000000036AF84 string=0x000000000036AF88 "\t@"
+ *   insn=0x000000000036AF94 string=0x000000000036AF98 ""
+ *   insn=0x000000000036AFA4 string=0x000000000036AFA8 "@"
+ *   insn=0x000000000036AFC0 string=0x000000000036AFC4 "6"
+ *   insn=0x000000000036AFC8 string=0x000000000036AFCC ""
+ *   insn=0x000000000036AFD8 string=0x000000000036AFDC "\t@"
+ *   insn=0x000000000036AFE8 string=0x000000000036AFEC ""
+ *   insn=0x000000000036AFF8 string=0x000000000036AFFC "@"
+ *   insn=0x000000000036B010 string=0x000000000036B014 "u"
+ *   insn=0x000000000036B018 string=0x000000000036B068 "h"
+ *   insn=0x000000000036B02C string=0x000000000036B030 "h"
+ *   insn=0x000000000036B034 string=0x000000000036B038 "h"
+ *   insn=0x000000000036B050 string=0x000000000036B054 "h"
+ *   insn=0x000000000036B058 string=0x000000000036B05C "h"
+ *   insn=0x000000000036B06C string=0x000000000036B070 ")"
+ *   insn=0x000000000036B080 string=0x000000000036B084 ")=G"
+ *   insn=0x000000000036B084 string=0x000000000036B088 "!"
+ *   insn=0x000000000036B088 string=0x000000000036B08C "i"
+ *   insn=0x000000000036B08C string=0x000000000036B090 "\t"
+ *   insn=0x000000000036B08C string=0x000000000036B0B8 "\t"
+ *   insn=0x000000000036B090 string=0x000000000036B094 "*"
+ *   insn=0x000000000036B094 string=0x000000000036B098 "\n"
+ *   insn=0x000000000036B09C string=0x000000000036B0A0 "?"
+ *   insn=0x000000000036B0A0 string=0x000000000036B0A4 "l"
+ *   insn=0x000000000036B0B8 string=0x000000000036B0BC "*"
+ *   insn=0x000000000036B0BC string=0x000000000036B0C0 "\n"
+ *   insn=0x000000000036B0C0 string=0x000000000036B0C4 "?"
+ *   insn=0x000000000036B0C4 string=0x000000000036B0C8 ""
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+long double __fastcall Caver::MainMenuViewController::MainMenuViewController(Caver::MainMenuViewController *this)
+{
+  __int128 v2; // q0
+  long double result; // q0
+
+  Caver::GUIViewController::GUIViewController(this);
+  *((_QWORD *)this + 14) = 0;
+  *((_QWORD *)this + 15) = 0;
+  *(_QWORD *)this = off_6CC610;
+  *(_QWORD *)&v2 = &off_6CC6C8;
+  *((_QWORD *)&v2 + 1) = off_6CC6E8;
+  *(_OWORD *)((char *)this + 72) = v2;
+  *(_QWORD *)&v2 = &off_6CC720;
+  *((_QWORD *)&v2 + 1) = &off_6CC738;
+  *((_QWORD *)this + 13) = &off_6CC750;
+  *(_OWORD *)((char *)this + 88) = v2;
+  Caver::GameOptions::GameOptions((Caver::MainMenuViewController *)((char *)this + 128));
+  *((_WORD *)this + 140) = 0;
+  *((_DWORD *)this + 71) = 0;
+  *(_OWORD *)&result = 0u;
+  *((_QWORD *)this + 34) = 0xFFFFFFFFLL;
+  *(_OWORD *)((char *)this + 248) = 0u;
+  *(_OWORD *)((char *)this + 232) = 0u;
+  *(_OWORD *)((char *)this + 216) = 0u;
+  *((_QWORD *)this + 33) = -1;
+  *((_QWORD *)this + 36) = &byte_6FD2F8;
+  return result;
+}
+

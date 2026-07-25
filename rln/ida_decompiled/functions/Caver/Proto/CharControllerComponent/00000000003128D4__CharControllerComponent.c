@@ -1,0 +1,175 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000003128D4
+ * Mangled: _ZN5Caver5Proto23CharControllerComponentC2ERKS1_
+ * Demangled: Caver::Proto::CharControllerComponent::CharControllerComponent(Caver::Proto::CharControllerComponent const&)
+ *
+ * Callers: 0
+ *
+ * Callees: 12
+ *   0x00000000001F4F60  operator delete[](void *)
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x00000000001F63F0  google::protobuf::internal::LogMessage::LogMessage(google::protobuf::LogLevel,char const*,int)
+ *   0x00000000001F7600  google::protobuf::MessageLite::~MessageLite()
+ *   0x00000000001F8570  operator new[](ulong)
+ *   0x00000000001FA1F0  google::protobuf::internal::LogMessage::~LogMessage()
+ *   0x00000000001FA500  google::protobuf::internal::LogFinisher::operator=(google::protobuf::internal::LogMessage &)
+ *   0x00000000001FC210  google::protobuf::internal::LogMessage::operator<<(char const*)
+ *   0x00000000002013A0  Caver::Proto::CharControllerComponent::MergeFrom(Caver::Proto::CharControllerComponent const&)
+ *   0x0000000000201760  .memcpy
+ *   0x000000000020E1A4  Caver::NewCaverShell(int,char **)
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 125
+ *   insn=0x00000000003128E0 string=0x00000000003128E4 ""
+ *   insn=0x00000000003128E8 string=0x00000000003128EC " 9B"
+ *   insn=0x00000000003128F0 string=0x00000000003128F4 "tb"
+ *   insn=0x00000000003128F4 string=0x00000000003128F8 "A"
+ *   insn=0x000000000031290C string=0x0000000000312910 "t&"
+ *   insn=0x0000000000312910 string=0x0000000000312914 "h~"
+ *   insn=0x0000000000312914 string=0x0000000000312918 "`*"
+ *   insn=0x000000000031293C string=0x0000000000312940 "h"
+ *   insn=0x0000000000312948 string=0x00000000001F4F60 "P'"
+ *   insn=0x000000000031294C string=0x0000000000312950 ","
+ *   insn=0x0000000000312950 string=0x00000000001F7600 "0'"
+ *   insn=0x0000000000312958 string=0x000000000031295C "|"
+ *   insn=0x0000000000312978 string=0x000000000031297C "V"
+ *   insn=0x0000000000312994 string=0x00000000003129D4 "xR@"
+ *   insn=0x0000000000312998 string=0x000000000058BAA0 "./../../../../Source/Caver/Content/Proto/Scene.pb.cc"
+ *   insn=0x00000000003129AC string=0x00000000001F63F0 "0'"
+ *   insn=0x00000000003129B0 string=0x000000000058A3F2 "CHECK failed: (&from) != (this): "
+ *   insn=0x00000000003129BC string=0x00000000001FC210 "0'"
+ *   insn=0x00000000003129C8 string=0x00000000001FA500 "0'"
+ *   insn=0x00000000003129CC string=0x00000000003129D0 ""
+ *   insn=0x00000000003129D0 string=0x00000000001FA1F0 "0'"
+ *   insn=0x00000000003129D8 string=0x00000000003129DC ""
+ *   insn=0x00000000003129DC string=0x00000000003129E0 "?"
+ *   insn=0x00000000003129E0 string=0x00000000003129E4 "J"
+ *   insn=0x00000000003129E4 string=0x00000000003129E8 ")y"
+ *   insn=0x00000000003129E8 string=0x00000000003129EC "?"
+ *   insn=0x00000000003129EC string=0x00000000003129F0 ""
+ *   insn=0x00000000003129F0 string=0x00000000003129F4 "\t}@"
+ *   insn=0x00000000003129FC string=0x0000000000312A00 ")}"
+ *   insn=0x0000000000312A04 string=0x0000000000312A08 "}~"
+ *   insn=0x0000000000312A18 string=0x0000000000312A1C """
+ *   insn=0x0000000000312A18 string=0x00000000001F8570 "0'"
+ *   insn=0x0000000000312A24 string=0x0000000000312A28 "N"
+ *   insn=0x0000000000312A3C string=0x0000000000312A40 "H"
+ *   insn=0x0000000000312A44 string=0x0000000000312A48 "xR@"
+ *   insn=0x0000000000312A4C string=0x0000000000312A50 "a&@"
+ *   insn=0x0000000000312A58 string=0x0000000000312A5C "A"
+ *   insn=0x0000000000312A5C string=0x0000000000312A60 "hR@"
+ *   insn=0x0000000000312A64 string=0x0000000000312A68 "("
+ *   insn=0x0000000000312A6C string=0x0000000000312A70 "h~@"
+ *   insn=0x0000000000312A78 string=0x0000000000312A7C "H"
+ *   insn=0x0000000000312A7C string=0x0000000000312A80 "7"
+ *   insn=0x0000000000312A88 string=0x0000000000312A8C "H\t 7\n(7"
+ *   insn=0x0000000000312A8C string=0x0000000000312A90 "\n(7"
+ *   insn=0x0000000000312A9C string=0x0000000000312AA0 "i*@"
+ *   insn=0x0000000000312AA0 string=0x0000000000312AA4 ""
+ *   insn=0x0000000000312AAC string=0x0000000000312AB0 "h~@"
+ *   insn=0x0000000000312ABC string=0x0000000000312AC0 "HH7"
+ *   insn=0x0000000000312AC0 string=0x0000000000312AC4 ""
+ *   insn=0x0000000000312ACC string=0x0000000000312AD0 "H"
+ *   insn=0x0000000000312AD8 string=0x0000000000312ADC "ij@"
+ *   insn=0x0000000000312ADC string=0x0000000000312AE0 ""
+ *   insn=0x0000000000312AE8 string=0x0000000000312AEC "h~@"
+ *   insn=0x0000000000312AF0 string=0x0000000000312AF4 " "
+ *   insn=0x0000000000312AF4 string=0x0000000000312AF8 ""
+ *   insn=0x0000000000312B08 string=0x0000000000312B0C "iz@"
+ *   insn=0x0000000000312B0C string=0x0000000000312B10 ""
+ *   insn=0x0000000000312B20 string=0x0000000000312B24 "a"
+ *   insn=0x0000000000312B24 string=0x0000000000312D10 "p"
+ *   insn=0x0000000000312B44 string=0x0000000000312B48 "i"
+ *   insn=0x0000000000312B48 string=0x0000000000312B4C ""
+ *   insn=0x0000000000312B54 string=0x0000000000312B58 "h~@"
+ *   insn=0x0000000000312B58 string=0x0000000000312B5C "H"
+ *   insn=0x0000000000312B60 string=0x0000000000312B64 "i"
+ *   insn=0x0000000000312B64 string=0x0000000000312B68 ""
+ *   insn=0x0000000000312B70 string=0x0000000000312B74 "h~@"
+ *   insn=0x0000000000312B7C string=0x0000000000312B80 "i"
+ *   insn=0x0000000000312B80 string=0x0000000000312B84 ""
+ *   insn=0x0000000000312B8C string=0x0000000000312B90 "h~@"
+ *   insn=0x0000000000312B98 string=0x0000000000312B9C "i"
+ *   insn=0x0000000000312B9C string=0x0000000000312BA0 ""
+ *   insn=0x0000000000312BA8 string=0x0000000000312BAC "h~@"
+ *   insn=0x0000000000312BAC string=0x0000000000312BB0 ""
+ *   insn=0x0000000000312BB4 string=0x0000000000312BB8 "i"
+ *   insn=0x0000000000312BB8 string=0x0000000000312BBC ""
+ *   insn=0x0000000000312BC4 string=0x0000000000312BC8 "h~@"
+ *   insn=0x0000000000312BC8 string=0x0000000000312BCC "H"
+ *   insn=0x0000000000312BD0 string=0x0000000000312BD4 "i"@"
+ *   insn=0x0000000000312BD4 string=0x0000000000312BD8 ""
+ *   insn=0x0000000000312BE0 string=0x0000000000312BE4 "h~@"
+ *   insn=0x0000000000312BEC string=0x0000000000312BF0 "i&@"
+ *   insn=0x0000000000312BF0 string=0x0000000000312BF4 ""
+ *   insn=0x0000000000312BFC string=0x0000000000312C00 "h~@"
+ *   insn=0x0000000000312C0C string=0x0000000000312C10 "i.@"
+ *   insn=0x0000000000312C10 string=0x0000000000312C14 ""
+ *   insn=0x0000000000312C1C string=0x0000000000312C20 "h~@"
+ *   insn=0x0000000000312C20 string=0x0000000000312C24 ""
+ *   insn=0x0000000000312C28 string=0x0000000000312C2C "i2@"
+ *   insn=0x0000000000312C2C string=0x0000000000312C30 ""
+ *   insn=0x0000000000312C38 string=0x0000000000312C3C "h~@"
+ *   insn=0x0000000000312C3C string=0x0000000000312C40 "H"
+ *   insn=0x0000000000312C44 string=0x0000000000312C48 "i6@"
+ *   insn=0x0000000000312C48 string=0x0000000000312C4C ""
+ *   insn=0x0000000000312C54 string=0x0000000000312C58 "h~@"
+ *   insn=0x0000000000312C60 string=0x0000000000312C64 "i:@"
+ *   insn=0x0000000000312C64 string=0x0000000000312C68 ""
+ *   insn=0x0000000000312C70 string=0x0000000000312C74 "h~@"
+ *   insn=0x0000000000312C7C string=0x0000000000312C80 "i>@"
+ *   insn=0x0000000000312C80 string=0x0000000000312C84 ""
+ *   insn=0x0000000000312C8C string=0x0000000000312C90 "h~@"
+ *   insn=0x0000000000312C90 string=0x0000000000312C94 ""
+ *   insn=0x0000000000312C98 string=0x0000000000312C9C "iB@"
+ *   insn=0x0000000000312C9C string=0x0000000000312CA0 ""
+ *   insn=0x0000000000312CA8 string=0x0000000000312CAC "h~@"
+ *   insn=0x0000000000312CAC string=0x0000000000312CB0 "H"
+ *   insn=0x0000000000312CB8 string=0x0000000000312CBC "in@"
+ *   insn=0x0000000000312CBC string=0x0000000000312CC0 ""
+ *   insn=0x0000000000312CC8 string=0x0000000000312CCC "h~@"
+ *   insn=0x0000000000312CD4 string=0x0000000000312CD8 "ir@"
+ *   insn=0x0000000000312CD8 string=0x0000000000312CDC ""
+ *   insn=0x0000000000312CE4 string=0x0000000000312CE8 "h~@"
+ *   insn=0x0000000000312CF0 string=0x0000000000312CF4 "iv@"
+ *   insn=0x0000000000312CF4 string=0x0000000000312CF8 ""
+ *   insn=0x0000000000312D00 string=0x0000000000312D04 "h~@"
+ *   insn=0x0000000000312D04 string=0x0000000000312D08 ""
+ *   insn=0x0000000000312D10 string=0x00000000001F62D0 "0'"
+ *   insn=0x0000000000312D18 string=0x0000000000312D1C "5"
+ *   insn=0x0000000000312D3C string=0x0000000000312D40 "`&@"
+ *   insn=0x0000000000312D40 string=0x0000000000312D44 ""
+ *   insn=0x0000000000312D44 string=0x0000000000312D48 "ib"
+ *   insn=0x0000000000312D4C string=0x0000000000312D50 "A"
+ *   insn=0x0000000000312D50 string=0x0000000000312D54 "h"
+ *   insn=0x0000000000312D54 string=0x0000000000312D58 "`"
+ *   insn=0x0000000000312D58 string=0x0000000000312D5C "@"
+ *   insn=0x0000000000312D6C string=0x0000000000312D70 "$"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+void __fastcall Caver::Proto::CharControllerComponent::CharControllerComponent(
+        Caver::Proto::CharControllerComponent *this,
+        const Caver::Proto::CharControllerComponent *a2)
+{
+  *((_QWORD *)this + 6) = 0;
+  *((_QWORD *)this + 7) = 0;
+  *((_QWORD *)this + 4) = 0;
+  *((_QWORD *)this + 5) = 0;
+  *((_QWORD *)this + 2) = 0;
+  *((_QWORD *)this + 3) = 0;
+  *((_DWORD *)this + 16) = 0;
+  *((_QWORD *)this + 14) = 0;
+  *((_QWORD *)this + 15) = 0;
+  *((_QWORD *)this + 9) = (char *)this + 88;
+  *(_QWORD *)this = off_6C7F38;
+  *((_QWORD *)this + 1) = 0;
+  *((_QWORD *)this + 10) = 0x400000000LL;
+  *((_QWORD *)this + 13) = 0;
+  Caver::Proto::CharControllerComponent::MergeFrom();
+}
+

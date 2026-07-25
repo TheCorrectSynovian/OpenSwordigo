@@ -1,0 +1,259 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x0000000000364534
+ * Mangled: _ZN5Caver19GameSceneControllerD2Ev
+ * Demangled: Caver::GameSceneController::~GameSceneController()
+ *
+ * Callers: 1
+ *   0x00000000001F89D0  Caver::GameSceneController::~GameSceneController()
+ *
+ * Callees: 6
+ *   0x00000000001F5020  Caver::CameraController::~CameraController()
+ *   0x00000000001F72B0  operator delete(void *)
+ *   0x00000000002006B0  Caver::HeroEquipmentManager::~HeroEquipmentManager()
+ *   0x000000000020E1A4  Caver::NewCaverShell(int,char **)
+ *   0x0000000000364A54  boost::shared_ptr<Caver::GameSceneView>::shared_ptr<Caver::GameSceneView>(Caver::GameSceneView *)
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 156
+ *   insn=0x0000000000364544 string=0x0000000000364548 ""
+ *   insn=0x0000000000364548 string=0x000000000036454C "`"
+ *   insn=0x000000000036454C string=0x0000000000364550 ""
+ *   insn=0x0000000000364550 string=0x0000000000364554 "A"
+ *   insn=0x0000000000364554 string=0x0000000000364558 "h"
+ *   insn=0x000000000036455C string=0x0000000000364560 "@"
+ *   insn=0x000000000036455C string=0x000000000036457C "t"
+ *   insn=0x0000000000364560 string=0x0000000000364564 ""
+ *   insn=0x0000000000364564 string=0x0000000000364568 ""
+ *   insn=0x000000000036456C string=0x0000000000364570 ""
+ *   insn=0x0000000000364570 string=0x0000000000364574 ""
+ *   insn=0x000000000036457C string=0x0000000000364580 "4"
+ *   insn=0x0000000000364580 string=0x00000000003645C4 "`"
+ *   insn=0x0000000000364584 string=0x0000000000364588 ""
+ *   insn=0x0000000000364594 string=0x0000000000364598 "\t@"
+ *   insn=0x00000000003645A4 string=0x00000000003645A8 ""
+ *   insn=0x00000000003645B4 string=0x00000000003645B8 "@"
+ *   insn=0x00000000003645C4 string=0x00000000003645C8 ":p"
+ *   insn=0x00000000003645C8 string=0x00000000003645CC "`n@"
+ *   insn=0x00000000003645D0 string=0x00000000003645D4 "@"
+ *   insn=0x00000000003645D0 string=0x00000000003645F0 "`"
+ *   insn=0x00000000003645D4 string=0x00000000003645D8 ""
+ *   insn=0x00000000003645D8 string=0x00000000003645DC ""
+ *   insn=0x00000000003645E0 string=0x00000000003645E4 ""
+ *   insn=0x00000000003645E4 string=0x00000000003645E8 ""
+ *   insn=0x00000000003645F4 string=0x00000000003645F8 "t"
+ *   insn=0x00000000003645F4 string=0x00000000001F5020 "P'"
+ *   insn=0x00000000003645F8 string=0x00000000003645FC "4"
+ *   insn=0x00000000003645FC string=0x0000000000364640 "s\n@"
+ *   insn=0x0000000000364600 string=0x0000000000364604 ""
+ *   insn=0x0000000000364610 string=0x0000000000364614 "\t@"
+ *   insn=0x0000000000364620 string=0x0000000000364624 ""
+ *   insn=0x0000000000364630 string=0x0000000000364634 "@"
+ *   insn=0x0000000000364644 string=0x0000000000364648 "h"
+ *   insn=0x0000000000364648 string=0x000000000036464C ""
+ *   insn=0x000000000036464C string=0x0000000000364650 "h"
+ *   insn=0x0000000000364650 string=0x0000000000364654 "!"
+ *   insn=0x0000000000364654 string=0x0000000000364658 "h"
+ *   insn=0x000000000036465C string=0x0000000000364660 "\t@"
+ *   insn=0x0000000000364664 string=0x0000000000364668 "h\n@"
+ *   insn=0x0000000000364668 string=0x000000000036466C ""
+ *   insn=0x000000000036466C string=0x0000000000364670 "h\n"
+ *   insn=0x0000000000364674 string=0x0000000000364688 "h"
+ *   insn=0x000000000036469C string=0x00000000003646A0 " "
+ *   insn=0x00000000003646A4 string=0x00000000003646A8 "+"
+ *   insn=0x00000000003646A8 string=0x0000000000364754 "`"
+ *   insn=0x00000000003646B4 string=0x0000000000364710 "`"
+ *   insn=0x00000000003646B8 string=0x00000000003646BC ""
+ *   insn=0x00000000003646C0 string=0x00000000003646C4 "a"
+ *   insn=0x00000000003646C8 string=0x00000000003646CC "\t@"
+ *   insn=0x00000000003646D8 string=0x00000000003646DC ""
+ *   insn=0x00000000003646E0 string=0x00000000003646E4 "a"
+ *   insn=0x00000000003646E8 string=0x00000000003646EC "@"
+ *   insn=0x00000000003646FC string=0x0000000000364700 "s\n@"
+ *   insn=0x0000000000364700 string=0x0000000000364704 "S"
+ *   insn=0x0000000000364704 string=0x0000000000364708 "9"
+ *   insn=0x0000000000364704 string=0x00000000003647AC "h"
+ *   insn=0x0000000000364718 string=0x0000000000364730 "`n@"
+ *   insn=0x000000000036471C string=0x0000000000364720 "u"
+ *   insn=0x0000000000364728 string=0x00000000003647A4 "s\n@"
+ *   insn=0x0000000000364734 string=0x0000000000364738 "@"
+ *   insn=0x0000000000364738 string=0x000000000036473C ""
+ *   insn=0x000000000036473C string=0x0000000000364740 ""
+ *   insn=0x0000000000364744 string=0x0000000000364748 ""
+ *   insn=0x0000000000364748 string=0x000000000036474C ""
+ *   insn=0x0000000000364754 string=0x0000000000364758 "2B"
+ *   insn=0x0000000000364758 string=0x000000000036475C "u"
+ *   insn=0x000000000036475C string=0x0000000000364760 "5"
+ *   insn=0x0000000000364764 string=0x0000000000364768 ""
+ *   insn=0x0000000000364774 string=0x0000000000364778 "\t@"
+ *   insn=0x0000000000364784 string=0x0000000000364788 ""
+ *   insn=0x0000000000364794 string=0x0000000000364798 "@"
+ *   insn=0x00000000003647A4 string=0x00000000003647A8 "3"
+ *   insn=0x00000000003647AC string=0x00000000003647B0 ""
+ *   insn=0x00000000003647B0 string=0x00000000003647B4 "h"
+ *   insn=0x00000000003647B8 string=0x00000000003647BC "h"
+ *   insn=0x00000000003647BC string=0x00000000003647C0 "\t@"
+ *   insn=0x00000000003647C8 string=0x00000000003647CC "h\n@"
+ *   insn=0x00000000003647CC string=0x00000000003647D0 ""
+ *   insn=0x00000000003647D0 string=0x00000000003647D4 "h\n"
+ *   insn=0x00000000003647D8 string=0x00000000003647DC "h"
+ *   insn=0x00000000003647DC string=0x00000000003647E0 "@"
+ *   insn=0x00000000003647EC string=0x00000000003647F0 "5t"
+ *   insn=0x0000000000364808 string=0x000000000036480C "tVC"
+ *   insn=0x0000000000364814 string=0x000000000036484C "t"
+ *   insn=0x000000000036481C string=0x0000000000364820 "@"
+ *   insn=0x0000000000364820 string=0x0000000000364824 ""
+ *   insn=0x0000000000364824 string=0x0000000000364828 ""
+ *   insn=0x000000000036482C string=0x0000000000364830 ""
+ *   insn=0x0000000000364830 string=0x0000000000364834 ""
+ *   insn=0x0000000000364844 string=0x0000000000364848 "t"
+ *   insn=0x000000000036484C string=0x0000000000364858 "t"
+ *   insn=0x0000000000364854 string=0x00000000001F72B0 "0'"
+ *   insn=0x0000000000364860 string=0x0000000000364898 "t"
+ *   insn=0x0000000000364868 string=0x000000000036486C "@"
+ *   insn=0x000000000036486C string=0x0000000000364870 ""
+ *   insn=0x0000000000364870 string=0x0000000000364874 ""
+ *   insn=0x0000000000364878 string=0x000000000036487C ""
+ *   insn=0x000000000036487C string=0x0000000000364880 ""
+ *   insn=0x0000000000364890 string=0x0000000000364894 "t"
+ *   insn=0x0000000000364898 string=0x00000000003648A4 "`\n@"
+ *   insn=0x00000000003648A8 string=0x00000000003648AC "@"
+ *   insn=0x00000000003648A8 string=0x00000000003648C8 "s"
+ *   insn=0x00000000003648AC string=0x00000000003648B0 ""
+ *   insn=0x00000000003648B0 string=0x00000000003648B4 ""
+ *   insn=0x00000000003648B8 string=0x00000000003648BC ""
+ *   insn=0x00000000003648BC string=0x00000000003648C0 ""
+ *   insn=0x00000000003648CC string=0x00000000003648D0 "h"
+ *   insn=0x00000000003648D0 string=0x00000000003648D4 ""
+ *   insn=0x00000000003648D4 string=0x00000000003648D8 "h"
+ *   insn=0x00000000003648D8 string=0x00000000003648DC "!"
+ *   insn=0x00000000003648DC string=0x00000000003648E0 "h"
+ *   insn=0x00000000003648E4 string=0x00000000003648E8 "\t@"
+ *   insn=0x00000000003648EC string=0x00000000003648F0 "h\n@"
+ *   insn=0x00000000003648F0 string=0x00000000003648F4 ""
+ *   insn=0x00000000003648F4 string=0x00000000003648F8 "h\n"
+ *   insn=0x00000000003648FC string=0x0000000000364910 "h"
+ *   insn=0x0000000000364924 string=0x0000000000364928 " "
+ *   insn=0x000000000036492C string=0x0000000000364930 "s"
+ *   insn=0x0000000000364930 string=0x0000000000364934 "S"
+ *   insn=0x0000000000364934 string=0x0000000000364938 "!"
+ *   insn=0x0000000000364934 string=0x000000000036497C "h"
+ *   insn=0x0000000000364940 string=0x0000000000364944 "h"
+ *   insn=0x0000000000364944 string=0x0000000000364950 "`\n@"
+ *   insn=0x0000000000364948 string=0x000000000036494C "YJ"
+ *   insn=0x0000000000364954 string=0x0000000000364958 "@"
+ *   insn=0x0000000000364954 string=0x0000000000364974 "s"
+ *   insn=0x0000000000364958 string=0x000000000036495C ""
+ *   insn=0x000000000036495C string=0x0000000000364960 ""
+ *   insn=0x0000000000364964 string=0x0000000000364968 ""
+ *   insn=0x0000000000364968 string=0x000000000036496C ""
+ *   insn=0x0000000000364974 string=0x0000000000364978 "3"
+ *   insn=0x000000000036497C string=0x0000000000364980 ""
+ *   insn=0x0000000000364980 string=0x0000000000364984 "h"
+ *   insn=0x0000000000364988 string=0x000000000036498C "h"
+ *   insn=0x000000000036498C string=0x0000000000364990 "\t@"
+ *   insn=0x0000000000364998 string=0x000000000036499C "h\n@"
+ *   insn=0x000000000036499C string=0x00000000003649A0 ""
+ *   insn=0x00000000003649A0 string=0x00000000003649A4 "h\n"
+ *   insn=0x00000000003649A8 string=0x00000000003649AC "h"
+ *   insn=0x00000000003649AC string=0x00000000003649B0 "@"
+ *   insn=0x00000000003649C8 string=0x00000000003649CC "`"
+ *   insn=0x00000000003649CC string=0x00000000003649D0 "h"
+ *   insn=0x00000000003649D4 string=0x00000000003649D8 "h"
+ *   insn=0x00000000003649D8 string=0x00000000003649E4 "u"
+ *   insn=0x00000000003649DC string=0x00000000003649E0 "4J"
+ *   insn=0x00000000003649EC string=0x0000000000364A24 "u"
+ *   insn=0x00000000003649F4 string=0x00000000003649F8 "@"
+ *   insn=0x00000000003649F8 string=0x00000000003649FC ""
+ *   insn=0x00000000003649FC string=0x0000000000364A00 ""
+ *   insn=0x0000000000364A04 string=0x0000000000364A08 ""
+ *   insn=0x0000000000364A08 string=0x0000000000364A0C ""
+ *   insn=0x0000000000364A1C string=0x0000000000364A20 "u"
+ *   insn=0x0000000000364A34 string=0x0000000000364A38 "h"
+ *   insn=0x0000000000364A3C string=0x0000000000364A40 "C"
+ *   insn=0x0000000000364A4C string=0x0000000000364A50 "?"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+void __fastcall Caver::GameSceneController::~GameSceneController(Caver::GameSceneController *this)
+{
+  _DWORD *v2; // x0
+  int v3; // w8
+  _QWORD *v4; // x20
+  __int64 v5; // x8
+  __int64 v6; // x8
+  _DWORD *v7; // x0
+  int v8; // w8
+  _QWORD *v9; // x20
+  __int64 v10; // x8
+  __int64 v11; // x8
+  _QWORD *v12; // x19
+  __int64 v13; // x8
+  __int64 v14; // x8
+
+  v2 = (_DWORD *)*((_QWORD *)this + 46);
+  *(_QWORD *)this = &off_6CB530;
+  if ( v2 )
+  {
+    v3 = v2[2] - 1;
+    v2[2] = v3;
+    if ( !v3 )
+      (*(void (__fastcall **)(_DWORD *))(*(_QWORD *)v2 + 8LL))(v2);
+  }
+  v4 = (_QWORD *)*((_QWORD *)this + 44);
+  if ( v4 )
+  {
+    v5 = v4[1] - 1LL;
+    v4[1] = v5;
+    if ( !v5 )
+    {
+      (*(void (__fastcall **)(_QWORD *))(*v4 + 16LL))(v4);
+      v6 = v4[2] - 1LL;
+      v4[2] = v6;
+      if ( !v6 )
+        (*(void (__fastcall **)(_QWORD *))(*v4 + 24LL))(v4);
+    }
+  }
+  Caver::HeroEquipmentManager::~HeroEquipmentManager((Caver::GameSceneController *)((char *)this + 256));
+  v7 = (_DWORD *)*((_QWORD *)this + 27);
+  if ( v7 )
+  {
+    v8 = v7[2] - 1;
+    v7[2] = v8;
+    if ( !v8 )
+      (*(void (__fastcall **)(_DWORD *))(*(_QWORD *)v7 + 8LL))(v7);
+  }
+  Caver::CameraController::~CameraController((Caver::GameSceneController *)((char *)this + 56));
+  v9 = (_QWORD *)*((_QWORD *)this + 5);
+  if ( v9 )
+  {
+    v10 = v9[1] - 1LL;
+    v9[1] = v10;
+    if ( !v10 )
+    {
+      (*(void (__fastcall **)(_QWORD *))(*v9 + 16LL))(v9);
+      v11 = v9[2] - 1LL;
+      v9[2] = v11;
+      if ( !v11 )
+        (*(void (__fastcall **)(_QWORD *))(*v9 + 24LL))(v9);
+    }
+  }
+  v12 = (_QWORD *)*((_QWORD *)this + 2);
+  if ( v12 )
+  {
+    v13 = v12[1] - 1LL;
+    v12[1] = v13;
+    if ( !v13 )
+    {
+      (*(void (__fastcall **)(_QWORD *))(*v12 + 16LL))(v12);
+      v14 = v12[2] - 1LL;
+      v12[2] = v14;
+      if ( !v14 )
+        (*(void (__fastcall **)(_QWORD *))(*v12 + 24LL))(v12);
+    }
+  }
+}
+

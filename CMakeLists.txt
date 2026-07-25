@@ -101,13 +101,26 @@ set(OPENSWORDIGO_SOURCES
     src/graphics/pod_loader.cpp
     src/graphics/shader_program.cpp
     src/graphics/rendering_context.cpp
+    src/graphics/gl_render_device.cpp
     src/components/background_component.cpp
     src/components/model_component.cpp
     src/components/ground_mesh_component.cpp
+    src/components/light_component.cpp
+    src/resource/texture_library.cpp
+    src/resource/model_library.cpp
+    src/gui/gui_view.cpp
+    src/gui/gui_button.cpp
+    src/gui/gui_frame_view.cpp
+    src/gui/gui_navigation_controller.cpp
+    src/gui/main_menu_view_controller.cpp
+    src/game/game_view_controller.cpp
+    src/engine/app_runtime.cpp
 )
 
+find_package(ZLIB REQUIRED)
+
 add_library(openswordigo_core STATIC ${OPENSWORDIGO_SOURCES})
-target_link_libraries(openswordigo_core PUBLIC lua_static luafilesystem luasocket toml_c ${OPENGL_LIBRARIES})
+target_link_libraries(openswordigo_core PUBLIC lua_static luafilesystem luasocket toml_c ${OPENGL_LIBRARIES} ZLIB::ZLIB)
 
 # Native driver executable (CLI scene parser)
 add_executable(openswordigo_native src/main.cpp)

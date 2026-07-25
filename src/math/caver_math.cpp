@@ -1,5 +1,6 @@
 #include "caver/math/caver_math.h"
 #include <cmath>
+#include <cstring>
 
 namespace caver {
 
@@ -19,12 +20,71 @@ Matrix4 Matrix4::scale(const Vector3& s) {
     return res;
 }
 
+Matrix4 Matrix4::rotationX(float radians) {
+    Matrix4 res = identity();
+    float c = std::cos(radians);
+    float s = std::sin(radians);
+    res.m[5] = c;   res.m[9] = -s;
+    res.m[6] = s;   res.m[10] = c;
+    return res;
+}
+
+Matrix4 Matrix4::rotationY(float radians) {
+    Matrix4 res = identity();
+    float c = std::cos(radians);
+    float s = std::sin(radians);
+    res.m[0] = c;   res.m[8] = s;
+    res.m[2] = -s;  res.m[10] = c;
+    return res;
+}
+
 Matrix4 Matrix4::rotationZ(float radians) {
     Matrix4 res = identity();
     float c = std::cos(radians);
     float s = std::sin(radians);
     res.m[0] = c;  res.m[4] = -s;
     res.m[1] = s;  res.m[5] = c;
+    return res;
+}
+
+Matrix4 Matrix4::perspectiveFov(float fovDeg, float aspect, float nearP, float farP) {
+    Matrix4 res;
+    std::memset(res.m, 0, sizeof(res.m));
+    float fovRad = fovDeg * 0.017453292519943295f;
+    float f = 1.0f / std::tan(fovRad * 0.5f);
+
+    res.m[0]  = f / aspect;
+    res.m[5]  = f;
+    res.m[10] = (farP + nearP) / (nearP - farP);
+    res.m[11] = -1.0f;
+    res.m[14] = (2.0f * farP * nearP) / (nearP - farP);
+    return res;
+}
+
+Matrix4 Matrix4::lookAt(const Vector3& eye, const Vector3& target, const Vector3& up) {
+    Vector3 f = (target - eye).normalized();
+    Vector3 s = f.cross(up).normalized();
+    Vector3 u = s.cross(f);
+
+    Matrix4 res = identity();
+    res.m[0] = s.x;  res.m[4] = s.y;  res.m[8]  = s.z;
+    res.m[1] = u.x;  res.m[5] = u.y;  res.m[9]  = u.z;
+    res.m[2] = -f.x; res.m[6] = -f.y; res.m[10] = -f.z;
+
+    res.m[12] = -s.dot(eye);
+    res.m[13] = -u.dot(eye);
+    res.m[14] =  f.dot(eye);
+    return res;
+}
+
+Matrix4 Matrix4::ortho(float left, float right, float bottom, float top, float nearP, float farP) {
+    Matrix4 res = identity();
+    res.m[0]  = 2.0f / (right - left);
+    res.m[5]  = 2.0f / (top - bottom);
+    res.m[10] = -2.0f / (farP - nearP);
+    res.m[12] = -(right + left) / (right - left);
+    res.m[13] = -(top + bottom) / (top - bottom);
+    res.m[14] = -(farP + nearP) / (farP - nearP);
     return res;
 }
 

@@ -20,7 +20,7 @@ public:
     std::shared_ptr<Component> createFromProtobuf(const ProtoMessage& compMsg);
 
 private:
-    ComponentFactory() = default;
+    ComponentFactory();
     std::unordered_map<std::string, Creator> creators_;
 };
 

@@ -5,6 +5,7 @@
 #include "caver/components/background_component.h"
 #include "caver/components/model_component.h"
 #include "caver/components/ground_mesh_component.h"
+#include "caver/components/texture_mapping_component.h"
 #include <iostream>
 
 namespace caver {
@@ -56,6 +57,9 @@ bool Scene::loadFromProtobuf(const ProtoMessage& sceneMsg) {
         });
         ComponentFactory::instance().registerComponent("GroundMeshGenerator", []() {
             return std::make_shared<GroundMeshComponent>();
+        });
+        ComponentFactory::instance().registerComponent("TextureMapping", []() {
+            return std::make_shared<TextureMappingComponent>();
         });
         factoryInitialized = true;
     }

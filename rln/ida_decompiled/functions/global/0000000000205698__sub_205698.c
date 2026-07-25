@@ -1,0 +1,63 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x0000000000205698
+ * Mangled: sub_205698
+ * Demangled: sub_205698
+ *
+ * Callers: 0
+ *
+ * Callees: 9
+ *   0x00000000001F4C40  .__cxa_atexit
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x000000000020559C  sub_20559C
+ *   0x0000000000522294  sub_522294
+ *   0x000000000052296C  sub_52296C
+ *   0x0000000000566BB8  sub_566BB8
+ *   0x000000000056A3A4  operator delete(void *)
+ *   0x00000000005818C4  sub_5818C4
+ *   0x00000000006FE668  pthread_create
+ *
+ * Referenced strings: 27
+ *   insn=0x00000000002056A4 string=0x00000000002056A8 "T"
+ *   insn=0x00000000002056D4 string=0x00000000002056D8 "Z"
+ *   insn=0x00000000002056D8 string=0x00000000001F4C40 "P'"
+ *   insn=0x00000000002056E4 string=0x0000000000587E20 "enemy"
+ *   insn=0x00000000002056F0 string=0x00000000002056F4 "1"
+ *   insn=0x00000000002056F8 string=0x00000000002056FC "`""
+ *   insn=0x00000000002056F8 string=0x0000000000587E26 "friendly"
+ *   insn=0x00000000002056FC string=0x0000000000205700 "!"
+ *   insn=0x0000000000205704 string=0x0000000000205708 ","
+ *   insn=0x0000000000205714 string=0x0000000000205718 "B"
+ *   insn=0x000000000020571C string=0x0000000000205720 "H"
+ *   insn=0x0000000000205744 string=0x00000000001F62D0 "0'"
+ *   insn=0x0000000000205748 string=0x000000000020574C "\t"
+ *   insn=0x000000000020574C string=0x0000000000205750 "\n'"
+ *   insn=0x0000000000205750 string=0x0000000000205754 "J"
+ *   insn=0x0000000000205758 string=0x000000000020575C "(a"
+ *   insn=0x0000000000205768 string=0x000000000020576C "J=G"
+ *   insn=0x000000000020576C string=0x0000000000205770 ")!"
+ *   insn=0x0000000000205774 string=0x0000000000205778 "*"
+ *   insn=0x0000000000205774 string=0x00000000002057A4 "*"
+ *   insn=0x0000000000205778 string=0x000000000020577C "K"
+ *   insn=0x000000000020577C string=0x0000000000205780 "+"
+ *   insn=0x0000000000205784 string=0x0000000000205788 "_"
+ *   insn=0x000000000020579C string=0x00000000002057A0 "I"
+ *   insn=0x00000000002057A4 string=0x00000000002057A8 "K"
+ *   insn=0x00000000002057A8 string=0x00000000002057AC "+"
+ *   insn=0x00000000002057AC string=0x00000000002057B0 "_"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 sub_205698()
+{
+  _ReadStatusReg(TPIDR_EL0);
+  sub_522294(&unk_6E8B90);
+  __cxa_atexit((void (*)(void *))sub_52296C, &unk_6E8B90, &off_6E8000);
+  sub_566BB8((int)&qword_6E8B98, "enemy");
+  sub_566BB8((int)&qword_6E8BA0, "friendly");
+  return __cxa_atexit((void (*)(void *))sub_20559C, 0, &off_6E8000);
+}
+

@@ -1,0 +1,113 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000005219C8
+ * Mangled: sub_5219C8
+ * Demangled: sub_5219C8
+ *
+ * Callers: 37
+ *   0x0000000000522294  sub_522294
+ *   0x0000000000525D94  sub_525D94
+ *   0x0000000000525F20  sub_525F20
+ *   0x0000000000525F4C  sub_525F4C
+ *   0x0000000000541CE4  sub_541CE4
+ *   0x0000000000541D0C  sub_541D0C
+ *   0x0000000000541E9C  sub_541E9C
+ *   0x000000000054230C  sub_54230C
+ *   0x0000000000548378  sub_548378
+ *   0x000000000054862C  sub_54862C
+ *   0x00000000005487CC  sub_5487CC
+ *   0x0000000000548C68  sub_548C68
+ *   0x0000000000548F10  sub_548F10
+ *   0x00000000005490A8  sub_5490A8
+ *   0x0000000000549540  sub_549540
+ *   0x0000000000549880  sub_549880
+ *   0x0000000000549A70  sub_549A70
+ *   0x00000000005630F0  sub_5630F0
+ *   0x00000000005631CC  sub_5631CC
+ *   0x0000000000563478  sub_563478
+ *   0x000000000056354C  sub_56354C
+ *   0x00000000005637F4  sub_5637F4
+ *   0x000000000056392C  sub_56392C
+ *   0x0000000000563F40  sub_563F40
+ *   0x0000000000564084  sub_564084
+ *   0x00000000005641F0  sub_5641F0
+ *   0x000000000056432C  sub_56432C
+ *   0x0000000000564494  sub_564494
+ *   0x0000000000564634  sub_564634
+ *   0x00000000005647E8  sub_5647E8
+ *   0x000000000056492C  sub_56492C
+ *   0x0000000000564A98  sub_564A98
+ *   0x0000000000564BD4  sub_564BD4
+ *   0x0000000000564D3C  sub_564D3C
+ *   0x0000000000564EDC  sub_564EDC
+ *   0x0000000000571B20  sub_571B20
+ *   0x0000000000571CF8  sub_571CF8
+ *
+ * Callees: 7
+ *   0x0000000000522C5C  sub_522C5C
+ *   0x000000000054F6AC  sub_54F6AC
+ *   0x00000000005503C0  sub_5503C0
+ *   0x0000000000550428  sub_550428
+ *   0x0000000000551634  sub_551634
+ *   0x00000000005517E4  sub_5517E4
+ *   0x0000000000551850  sub_551850
+ *
+ * Referenced strings: 12
+ *   insn=0x00000000005219F8 string=0x00000000005219FC ","
+ *   insn=0x00000000005219FC string=0x0000000000521A00 "`z"
+ *   insn=0x0000000000521A04 string=0x0000000000521A08 "w"
+ *   insn=0x0000000000521A14 string=0x0000000000521A18 "j"
+ *   insn=0x0000000000521A18 string=0x0000000000521A1C "`~"
+ *   insn=0x0000000000521A28 string=0x0000000000521A2C "@"
+ *   insn=0x0000000000521A30 string=0x0000000000521A34 "}"
+ *   insn=0x0000000000521A34 string=0x0000000000521A38 "`"
+ *   insn=0x0000000000521A3C string=0x0000000000521A40 "uv"
+ *   insn=0x0000000000521A54 string=0x0000000000521A58 "`""
+ *   insn=0x0000000000521A70 string=0x0000000000521A74 "\"
+ *   insn=0x0000000000521A84 string=0x0000000000521A88 "r"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+bool __fastcall sub_5219C8(__int64 a1, __int64 a2)
+{
+  __int64 v4; // x20
+  _BOOL8 result; // x0
+
+  v4 = a1 + 208;
+  sub_522C5C(a1);
+  if ( (unsigned __int8)sub_551634(v4) )
+  {
+    *(_QWORD *)(a1 + 240) = sub_54F6AC(v4);
+    if ( (unsigned __int8)sub_5517E4(v4) )
+      goto LABEL_3;
+LABEL_7:
+    *(_QWORD *)(a1 + 248) = 0;
+    if ( (unsigned __int8)sub_551850(v4) )
+      goto LABEL_4;
+LABEL_8:
+    *(_QWORD *)(a1 + 256) = 0;
+    goto LABEL_5;
+  }
+  *(_QWORD *)(a1 + 240) = 0;
+  if ( !(unsigned __int8)sub_5517E4(v4) )
+    goto LABEL_7;
+LABEL_3:
+  *(_QWORD *)(a1 + 248) = sub_5503C0(v4);
+  if ( !(unsigned __int8)sub_551850(v4) )
+    goto LABEL_8;
+LABEL_4:
+  *(_QWORD *)(a1 + 256) = sub_550428(v4);
+LABEL_5:
+  *(_QWORD *)(a1 + 232) = a2;
+  *(_DWORD *)(a1 + 224) = 0;
+  result = a2 == 0;
+  *(_BYTE *)(a1 + 228) = 0;
+  *(_QWORD *)(a1 + 216) = 0;
+  *(_DWORD *)(a1 + 28) = 0;
+  *(_DWORD *)(a1 + 32) = result;
+  return result;
+}
+

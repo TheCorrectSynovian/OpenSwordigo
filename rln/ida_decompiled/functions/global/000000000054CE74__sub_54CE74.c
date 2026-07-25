@@ -1,0 +1,22 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x000000000054CE74
+ * Mangled: sub_54CE74
+ * Demangled: sub_54CE74
+ *
+ * Callers: 0
+ *
+ * Callees: 0
+ *
+ * Referenced strings: 0
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 __fastcall sub_54CE74(__int64 a1)
+{
+  return *(unsigned int *)(*(_QWORD *)(a1 + 16) + 104LL);
+}
+

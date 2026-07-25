@@ -1,8 +1,19 @@
 #include "caver/scene/component_factory.h"
+#include "caver/components/ground_mesh_component.h"
+#include "caver/components/background_component.h"
+#include "caver/components/light_component.h"
 #include "caver/components/unknown_component.h"
-#include <iostream>
 
 namespace caver {
+
+ComponentFactory::ComponentFactory() {
+    registerComponent("GroundMesh", []() { return std::make_shared<GroundMeshComponent>(); });
+    registerComponent("GroundMeshGenerator", []() { return std::make_shared<UnknownComponent>("GroundMeshGenerator"); });
+    registerComponent("Light", []() { return std::make_shared<LightComponent>(); });
+    registerComponent("LightComponent", []() { return std::make_shared<LightComponent>(); });
+    registerComponent("Background", []() { return std::make_shared<BackgroundComponent>(); });
+    registerComponent("BackgroundComponent", []() { return std::make_shared<BackgroundComponent>(); });
+}
 
 ComponentFactory& ComponentFactory::instance() {
     static ComponentFactory instance;

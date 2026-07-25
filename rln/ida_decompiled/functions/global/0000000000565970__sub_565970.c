@@ -1,0 +1,45 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x0000000000565970
+ * Mangled: sub_565970
+ * Demangled: sub_565970
+ *
+ * Callers: 0
+ *
+ * Callees: 8
+ *   0x00000000001F41F0  .__cxa_free_exception
+ *   0x00000000001F9460  .__cxa_allocate_exception
+ *   0x00000000001FB4A0  .__cxa_throw
+ *   0x000000000054A0B0  sub_54A0B0
+ *   0x000000000054ABB4  sub_54ABB4
+ *   0x0000000000565220  sub_565220
+ *   0x0000000000566BB8  sub_566BB8
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 7
+ *   insn=0x0000000000565988 string=0x00000000001F9460 "0'"
+ *   insn=0x00000000005659B4 string=0x00000000005659B8 "!"
+ *   insn=0x00000000005659CC string=0x00000000005659D0 "!"
+ *   insn=0x00000000005659D0 string=0x00000000005659D4 "B"
+ *   insn=0x00000000005659D8 string=0x00000000001FB4A0 "0'"
+ *   insn=0x00000000005659F0 string=0x00000000001F41F0 "P'"
+ *   insn=0x0000000000565A04 string=0x0000000000565A08 "!"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+void __fastcall __noreturn sub_565970(char *a1)
+{
+  _QWORD *exception; // x19
+  __int64 v3; // [xsp+48h] [xbp+48h] BYREF
+
+  exception = __cxa_allocate_exception(0x10u);
+  sub_566BB8((int)&v3, a1);
+  sub_54ABB4(exception, (__int64)&v3);
+  if ( (__int64 *)(v3 - 24) != &qword_6FD2E0 )
+    sub_565220((unsigned int *)(v3 - 24));
+  __cxa_throw(exception, (struct type_info *)&`typeinfo for'std::overflow_error, (void (*)(void *))sub_54A0B0);
+}
+

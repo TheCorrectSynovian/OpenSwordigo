@@ -1,0 +1,22 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000002C33D4
+ * Mangled: _ZNK5Caver18WaterMeshComponent14RequiresUpdateEv
+ * Demangled: Caver::WaterMeshComponent::RequiresUpdate(void)
+ *
+ * Callers: 0
+ *
+ * Callees: 0
+ *
+ * Referenced strings: 0
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 __fastcall Caver::WaterMeshComponent::RequiresUpdate(Caver::WaterMeshComponent *this)
+{
+  return 1;
+}
+

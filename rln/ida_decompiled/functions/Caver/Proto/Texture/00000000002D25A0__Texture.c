@@ -1,0 +1,182 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000002D25A0
+ * Mangled: _ZN5Caver5Proto7TextureC2ERKS1_
+ * Demangled: Caver::Proto::Texture::Texture(Caver::Proto::Texture const&)
+ *
+ * Callers: 0
+ *
+ * Callees: 17
+ *   0x00000000001F4F60  operator delete[](void *)
+ *   0x00000000001F55E0  operator new(ulong)
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x00000000001F63F0  google::protobuf::internal::LogMessage::LogMessage(google::protobuf::LogLevel,char const*,int)
+ *   0x00000000001F72B0  operator delete(void *)
+ *   0x00000000001F7410  Caver::Proto::Texture_ConversionInfo::MergeFrom(Caver::Proto::Texture_ConversionInfo const&)
+ *   0x00000000001F7600  google::protobuf::MessageLite::~MessageLite()
+ *   0x00000000001FA1F0  google::protobuf::internal::LogMessage::~LogMessage()
+ *   0x00000000001FA500  google::protobuf::internal::LogFinisher::operator=(google::protobuf::internal::LogMessage &)
+ *   0x00000000001FC210  google::protobuf::internal::LogMessage::operator<<(char const*)
+ *   0x00000000001FEBC0  google::protobuf::RepeatedPtrField<Caver::Proto::Texture_Subtexture>::MergeFrom(google::protobuf::RepeatedPtrField<Caver::Proto::Texture_Subtexture> const&)
+ *   0x00000000002019F0  Caver::Proto::Texture::MergeFrom(Caver::Proto::Texture const&)
+ *   0x000000000020E1A4  Caver::NewCaverShell(int,char **)
+ *   0x000000000056A3A4  operator delete(void *)
+ *   0x000000000056A6A8  sub_56A6A8
+ *   0x00000000005818C4  sub_5818C4
+ *   0x00000000006FE668  pthread_create
+ *
+ * Referenced strings: 133
+ *   insn=0x00000000002D25B8 string=0x00000000002D25BC "mD"
+ *   insn=0x00000000002D25BC string=0x00000000002D25C0 "i2"
+ *   insn=0x00000000002D25C4 string=0x00000000002D25C8 ")"
+ *   insn=0x00000000002D25C8 string=0x00000000002D25CC "t"
+ *   insn=0x00000000002D25CC string=0x00000000002D25D0 "A"
+ *   insn=0x00000000002D25D0 string=0x00000000002D25D4 "t~"
+ *   insn=0x00000000002D25D4 string=0x00000000002D25D8 "i\n"
+ *   insn=0x00000000002D25DC string=0x00000000002D25E0 "i"
+ *   insn=0x00000000002D25EC string=0x00000000002D25F0 "h"
+ *   insn=0x00000000002D260C string=0x00000000002D2610 "h"
+ *   insn=0x00000000002D2614 string=0x00000000002D2618 "?"
+ *   insn=0x00000000002D2628 string=0x00000000002D262C ""
+ *   insn=0x00000000002D262C string=0x00000000002D2630 ""
+ *   insn=0x00000000002D2634 string=0x00000000002D2638 "i.@"
+ *   insn=0x00000000002D2638 string=0x00000000002D263C "h"
+ *   insn=0x00000000002D2650 string=0x00000000002D2654 "h"
+ *   insn=0x00000000002D2658 string=0x00000000002D265C "A"
+ *   insn=0x00000000002D265C string=0x00000000001F4F60 "P'"
+ *   insn=0x00000000002D2664 string=0x00000000001F7600 "0'"
+ *   insn=0x00000000002D266C string=0x00000000002D2670 "7"
+ *   insn=0x00000000002D2670 string=0x00000000002D2674 "6"
+ *   insn=0x00000000002D2688 string=0x00000000002D268C "V"
+ *   insn=0x00000000002D26A8 string=0x000000000058A3BC "./../../../../Source/Caver/Content/Proto/Common.pb.cc"
+ *   insn=0x00000000002D26B8 string=0x00000000002D26BC "M"
+ *   insn=0x00000000002D26BC string=0x00000000001F63F0 "0'"
+ *   insn=0x00000000002D26C0 string=0x000000000058A3F2 "CHECK failed: (&from) != (this): "
+ *   insn=0x00000000002D26CC string=0x00000000001FC210 "0'"
+ *   insn=0x00000000002D26D8 string=0x00000000001FA500 "0'"
+ *   insn=0x00000000002D26E0 string=0x00000000001FA1F0 "0'"
+ *   insn=0x00000000002D26E4 string=0x00000000002D26E8 "a"
+ *   insn=0x00000000002D26E8 string=0x00000000002D26EC "5"
+ *   insn=0x00000000002D26EC string=0x00000000002D26F0 "h"
+ *   insn=0x00000000002D26F8 string=0x00000000002D26FC ""
+ *   insn=0x00000000002D2704 string=0x00000000002D2708 "8"
+ *   insn=0x00000000002D2714 string=0x00000000002D2718 "u\n@"
+ *   insn=0x00000000002D2718 string=0x00000000002D271C ")"
+ *   insn=0x00000000002D271C string=0x00000000002D2720 ""
+ *   insn=0x00000000002D2734 string=0x00000000001F55E0 "P'"
+ *   insn=0x00000000002D2738 string=0x00000000002D273C ""
+ *   insn=0x00000000002D273C string=0x00000000002D2740 "a"
+ *   insn=0x00000000002D2740 string=0x00000000002D2744 ""
+ *   insn=0x00000000002D2750 string=0x00000000002D2754 "hj@"
+ *   insn=0x00000000002D2754 string=0x00000000002D2758 "H"
+ *   insn=0x00000000002D275C string=0x00000000002D2760 "i"
+ *   insn=0x00000000002D2760 string=0x00000000002D2764 ""
+ *   insn=0x00000000002D276C string=0x00000000002D2770 "hj@"
+ *   insn=0x00000000002D2778 string=0x00000000002D277C "iZ@"
+ *   insn=0x00000000002D277C string=0x00000000002D2780 ""
+ *   insn=0x00000000002D2788 string=0x00000000002D278C "hj@"
+ *   insn=0x00000000002D2798 string=0x00000000002D279C ""
+ *   insn=0x00000000002D27A0 string=0x00000000002D27A4 " "
+ *   insn=0x00000000002D27B0 string=0x00000000002D27B4 ""
+ *   insn=0x00000000002D27B8 string=0x00000000002D27BC "A"
+ *   insn=0x00000000002D27BC string=0x00000000002D27C0 "|"
+ *   insn=0x00000000002D27C8 string=0x00000000002D27CC "h2@"
+ *   insn=0x00000000002D27CC string=0x00000000002D27D0 ")"
+ *   insn=0x00000000002D27D4 string=0x00000000002D27D8 ")"
+ *   insn=0x00000000002D27D8 string=0x00000000002D27DC "("
+ *   insn=0x00000000002D27E0 string=0x00000000002D27E4 ""
+ *   insn=0x00000000002D27E4 string=0x00000000001F7410 "0'"
+ *   insn=0x00000000002D280C string=0x00000000001F62D0 "0'"
+ *   insn=0x00000000002D2814 string=0x00000000002D2818 "v"
+ *   insn=0x00000000002D281C string=0x00000000002D2820 ")"
+ *   insn=0x00000000002D2838 string=0x00000000002D283C "U"
+ *   insn=0x00000000002D2850 string=0x00000000002D2854 "t\n@"
+ *   insn=0x00000000002D2854 string=0x00000000002D2858 "mD"
+ *   insn=0x00000000002D2858 string=0x00000000002D285C ")"
+ *   insn=0x00000000002D285C string=0x00000000002D2860 "A"
+ *   insn=0x00000000002D2864 string=0x00000000002D2868 "h"
+ *   insn=0x00000000002D2868 string=0x00000000002D286C "@"
+ *   insn=0x00000000002D286C string=0x00000000002D2870 "4"
+ *   insn=0x00000000002D2878 string=0x00000000002D287C ")"
+ *   insn=0x00000000002D2890 string=0x00000000001F72B0 "0'"
+ *   insn=0x00000000002D2894 string=0x00000000002D2898 ""
+ *   insn=0x00000000002D2898 string=0x00000000002D289C ""
+ *   insn=0x00000000002D28A4 string=0x00000000002D28A8 "`2@"
+ *   insn=0x00000000002D28A4 string=0x00000000002D28BC "i.@"
+ *   insn=0x00000000002D28AC string=0x00000000002D28B0 ""
+ *   insn=0x00000000002D28B0 string=0x00000000002D28B4 ""
+ *   insn=0x00000000002D28BC string=0x00000000002D28C0 "`"
+ *   insn=0x00000000002D28C0 string=0x00000000002D28C4 "?"
+ *   insn=0x00000000002D28C8 string=0x00000000002D28FC "h"
+ *   insn=0x00000000002D28CC string=0x00000000002D28D0 "xt"
+ *   insn=0x00000000002D28D4 string=0x00000000002D28D8 "\t"
+ *   insn=0x00000000002D28D8 string=0x00000000002D28DC ")"
+ *   insn=0x00000000002D28E0 string=0x00000000002D28E4 " "
+ *   insn=0x00000000002D28E4 string=0x00000000002D28E8 "i.@"
+ *   insn=0x00000000002D28E8 string=0x00000000002D28EC "`"
+ *   insn=0x00000000002D2900 string=0x00000000002D2904 "`"
+ *   insn=0x00000000002D2904 string=0x00000000002D2908 "@"
+ *   insn=0x00000000002D2910 string=0x00000000002D2914 ";"
+ *   insn=0x00000000002D2924 string=0x00000000002D2980 "T"
+ *   insn=0x00000000002D293C string=0x00000000002D2940 ")=G"
+ *   insn=0x00000000002D2940 string=0x00000000002D2944 "!"
+ *   insn=0x00000000002D2948 string=0x00000000002D294C "\t"
+ *   insn=0x00000000002D2948 string=0x00000000002D2960 "\t"
+ *   insn=0x00000000002D294C string=0x00000000002D2950 "*"
+ *   insn=0x00000000002D2950 string=0x00000000002D2954 "\n"
+ *   insn=0x00000000002D295C string=0x00000000002D296C "?"
+ *   insn=0x00000000002D2960 string=0x00000000002D2964 "*"
+ *   insn=0x00000000002D2964 string=0x00000000002D2968 "\n"
+ *   insn=0x00000000002D2984 string=0x00000000002D2988 "h"
+ *   insn=0x00000000002D298C string=0x00000000002D2990 "?"
+ *   insn=0x00000000002D2994 string=0x00000000002D29C4 "i"
+ *   insn=0x00000000002D29A0 string=0x00000000002D29A4 ""
+ *   insn=0x00000000002D29A4 string=0x00000000002D29A8 ""
+ *   insn=0x00000000002D29AC string=0x00000000002D29B0 "i.@"
+ *   insn=0x00000000002D29B0 string=0x00000000002D29B4 "h"
+ *   insn=0x00000000002D29D4 string=0x00000000002D29D8 "b"
+ *   insn=0x00000000002D29F4 string=0x00000000002D29F8 "U"
+ *   insn=0x00000000002D2A08 string=0x00000000002D2A0C "T"
+ *   insn=0x00000000002D2A1C string=0x00000000002D2A20 "`\n@"
+ *   insn=0x00000000002D2A20 string=0x00000000002D2A24 ""
+ *   insn=0x00000000002D2A28 string=0x00000000002D2A2C " "
+ *   insn=0x00000000002D2A30 string=0x00000000002D2A34 "\t"
+ *   insn=0x00000000002D2A38 string=0x00000000002D2A3C "J"
+ *   insn=0x00000000002D2A3C string=0x00000000002D2A40 "(a"
+ *   insn=0x00000000002D2A50 string=0x00000000002D2A54 ""
+ *   insn=0x00000000002D2A54 string=0x00000000002D2A58 ""
+ *   insn=0x00000000002D2A60 string=0x00000000002D2A64 "`2@"
+ *   insn=0x00000000002D2A68 string=0x00000000002D2A6C ""
+ *   insn=0x00000000002D2A6C string=0x00000000002D2A70 ""
+ *   insn=0x00000000002D2A80 string=0x00000000002D2A84 "!"
+ *   insn=0x00000000002D2A98 string=0x00000000002D2A9C "J=G"
+ *   insn=0x00000000002D2A9C string=0x00000000002D2AA0 ")!"
+ *   insn=0x00000000002D2AA4 string=0x00000000002D2AA8 "*"
+ *   insn=0x00000000002D2AA4 string=0x00000000002D2ABC "*"
+ *   insn=0x00000000002D2AA8 string=0x00000000002D2AAC "K"
+ *   insn=0x00000000002D2AAC string=0x00000000002D2AB0 "+"
+ *   insn=0x00000000002D2AB8 string=0x00000000002D2AC8 "_"
+ *   insn=0x00000000002D2ABC string=0x00000000002D2AC0 "K"
+ *   insn=0x00000000002D2AC0 string=0x00000000002D2AC4 "+"
+ *   insn=0x00000000002D2AD8 string=0x00000000002D2ADC "2^\n"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+void __fastcall Caver::Proto::Texture::Texture(Caver::Proto::Texture *this, const Caver::Proto::Texture *a2)
+{
+  *((_DWORD *)this + 12) = 4;
+  *((_QWORD *)this + 4) = (char *)this + 56;
+  *((_QWORD *)this + 5) = 0;
+  *((_QWORD *)this + 2) = &Caver::Proto::Texture::_default_name_;
+  *((_DWORD *)this + 6) = 1;
+  *((_DWORD *)this + 2) = 0;
+  *((_DWORD *)this + 22) = 0;
+  *((_QWORD *)this + 12) = 0;
+  *(_QWORD *)this = off_6C5E40;
+  *((_DWORD *)this + 26) = 0;
+  Caver::Proto::Texture::MergeFrom(this, a2);
+}
+

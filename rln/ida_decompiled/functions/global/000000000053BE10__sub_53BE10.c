@@ -1,0 +1,78 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x000000000053BE10
+ * Mangled: sub_53BE10
+ * Demangled: sub_53BE10
+ *
+ * Callers: 27
+ *   0x0000000000520050  sub_520050
+ *   0x000000000052010C  sub_52010C
+ *   0x000000000052CE9C  sub_52CE9C
+ *   0x000000000052CFDC  sub_52CFDC
+ *   0x000000000052D0C8  sub_52D0C8
+ *   0x000000000052D268  sub_52D268
+ *   0x0000000000530504  sub_530504
+ *   0x0000000000530F68  sub_530F68
+ *   0x0000000000531318  sub_531318
+ *   0x0000000000536300  sub_536300
+ *   0x00000000005372A4  sub_5372A4
+ *   0x00000000005374EC  sub_5374EC
+ *   0x0000000000537734  sub_537734
+ *   0x000000000053CB20  sub_53CB20
+ *   0x000000000054F1F4  sub_54F1F4
+ *   0x000000000054F334  sub_54F334
+ *   0x000000000054F420  sub_54F420
+ *   0x000000000054F5C0  sub_54F5C0
+ *   0x0000000000552738  sub_552738
+ *   0x00000000005532C0  sub_5532C0
+ *   0x0000000000553630  sub_553630
+ *   0x000000000055857C  sub_55857C
+ *   0x0000000000559434  sub_559434
+ *   0x0000000000559690  sub_559690
+ *   0x00000000005598EC  sub_5598EC
+ *   0x0000000000570964  sub_570964
+ *   0x0000000000570A0C  sub_570A0C
+ *
+ * Callees: 4
+ *   0x00000000001F60A0  .pthread_once
+ *   0x000000000053B7C4  sub_53B7C4
+ *   0x0000000000570710  sub_570710
+ *   0x00000000006FE668  pthread_create
+ *
+ * Referenced strings: 9
+ *   insn=0x000000000053BE20 string=0x000000000053BE24 "`"
+ *   insn=0x000000000053BE30 string=0x000000000053BE34 "!"
+ *   insn=0x000000000053BE38 string=0x00000000001F60A0 "0'"
+ *   insn=0x000000000053BE50 string=0x000000000053BE54 "a"
+ *   insn=0x000000000053BE54 string=0x000000000053BE58 "`"
+ *   insn=0x000000000053BE58 string=0x000000000053BE5C "@"
+ *   insn=0x000000000053BE64 string=0x000000000059E440 "C"
+ *   insn=0x000000000053BE6C string=0x000000000053BE70 "("
+ *   insn=0x000000000053BE70 string=0x000000000053BE74 "`"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 sub_53BE10()
+{
+  __int64 result; // x0
+
+  if ( &pthread_create )
+  {
+    pthread_once(dword_6FBE50, (void (*)(void))sub_53B7C4);
+    return qword_6FBE28;
+  }
+  else
+  {
+    result = qword_6FBE28;
+    if ( !qword_6FBE28 )
+    {
+      sub_570710((int)&qword_6FBE28, "C");
+      return qword_6FBE28;
+    }
+  }
+  return result;
+}
+

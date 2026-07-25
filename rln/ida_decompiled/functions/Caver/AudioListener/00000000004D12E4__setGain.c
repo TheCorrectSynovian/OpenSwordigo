@@ -1,0 +1,134 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000004D12E4
+ * Mangled: _ZN5Caver13AudioListener7setGainEf
+ * Demangled: Caver::AudioListener::setGain(float)
+ *
+ * Callers: 0
+ *
+ * Callees: 9
+ *   0x00000000001F4330  .alGetError
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x00000000001F6320  .alListenerf
+ *   0x00000000001FD220  .alListener3f
+ *   0x0000000000203B70  Caver::AudioListener::UpdateOrientation(void)
+ *   0x0000000000566BB8  sub_566BB8
+ *   0x000000000056A3A4  operator delete(void *)
+ *   0x00000000005818C4  sub_5818C4
+ *   0x00000000006FE668  pthread_create
+ *
+ * Referenced strings: 77
+ *   insn=0x00000000004D12F0 string=0x00000000004D12F4 "S"
+ *   insn=0x00000000004D12F4 string=0x00000000004D12F8 "h"
+ *   insn=0x00000000004D1300 string=0x00000000004D1304 "@"
+ *   insn=0x00000000004D1308 string=0x00000000004D130C "!"
+ *   insn=0x00000000004D1308 string=0x00000000001F6320 "0'"
+ *   insn=0x00000000004D130C string=0x0000000000598070 "alListenerf"
+ *   insn=0x00000000004D1318 string=0x00000000004D131C "'V"
+ *   insn=0x00000000004D1320 string=0x00000000001F4330 "P'"
+ *   insn=0x00000000004D1328 string=0x00000000004D132C ")"
+ *   insn=0x00000000004D1334 string=0x00000000004D1338 "!"
+ *   insn=0x00000000004D1338 string=0x00000000004D133C "h"
+ *   insn=0x00000000004D135C string=0x00000000004D1360 ")=G"
+ *   insn=0x00000000004D1360 string=0x00000000004D1364 "!"
+ *   insn=0x00000000004D1368 string=0x00000000004D136C "\t"
+ *   insn=0x00000000004D1368 string=0x00000000004D1380 "\t"
+ *   insn=0x00000000004D136C string=0x00000000004D1370 "*"
+ *   insn=0x00000000004D1370 string=0x00000000004D1374 "\n"
+ *   insn=0x00000000004D137C string=0x00000000004D138C "?"
+ *   insn=0x00000000004D1380 string=0x00000000004D1384 "*"
+ *   insn=0x00000000004D1384 string=0x00000000004D1388 "\n"
+ *   insn=0x00000000004D138C string=0x00000000004D1390 "l"
+ *   insn=0x00000000004D13A0 string=0x00000000001F62D0 "0'"
+ *   insn=0x00000000004D13A8 string=0x00000000004D13AC "J"
+ *   insn=0x00000000004D13B0 string=0x00000000004D13B4 "(a"
+ *   insn=0x00000000004D13C0 string=0x00000000004D13C4 "J=G"
+ *   insn=0x00000000004D13C4 string=0x00000000004D13C8 ")!"
+ *   insn=0x00000000004D13CC string=0x00000000004D13D0 "*"
+ *   insn=0x00000000004D13CC string=0x00000000004D13FC "*"
+ *   insn=0x00000000004D13D0 string=0x00000000004D13D4 "K"
+ *   insn=0x00000000004D13D4 string=0x00000000004D13D8 "+"
+ *   insn=0x00000000004D13DC string=0x00000000004D13E0 "_"
+ *   insn=0x00000000004D13F4 string=0x00000000004D13F8 "3"
+ *   insn=0x00000000004D13FC string=0x00000000004D1400 "K"
+ *   insn=0x00000000004D1400 string=0x00000000004D1404 "+"
+ *   insn=0x00000000004D1404 string=0x00000000004D1408 "_"
+ *   insn=0x00000000004D1424 string=0x00000000004D1428 "S"
+ *   insn=0x00000000004D1428 string=0x00000000004D142C "h"
+ *   insn=0x00000000004D1430 string=0x00000000004D1434 "("
+ *   insn=0x00000000004D1434 string=0x00000000004D1438 "@"
+ *   insn=0x00000000004D1438 string=0x00000000004D143C "(@"
+ *   insn=0x00000000004D143C string=0x00000000004D1440 ""
+ *   insn=0x00000000004D1440 string=0x00000000004D1444 " "
+ *   insn=0x00000000004D1444 string=0x00000000004D1448 ""@"
+ *   insn=0x00000000004D144C string=0x00000000004D1450 "t"
+ *   insn=0x00000000004D1450 string=0x00000000004D1454 "!"
+ *   insn=0x00000000004D1450 string=0x00000000001FD220 "0'"
+ *   insn=0x00000000004D1454 string=0x000000000059807C "alListener3f"
+ *   insn=0x00000000004D1470 string=0x00000000004D1474 ")"
+ *   insn=0x00000000004D147C string=0x00000000004D1480 "!"
+ *   insn=0x00000000004D1480 string=0x00000000004D1484 "h"
+ *   insn=0x00000000004D1490 string=0x00000000004D14E8 "z"
+ *   insn=0x00000000004D14A4 string=0x00000000004D14A8 ")=G"
+ *   insn=0x00000000004D14A8 string=0x00000000004D14AC "!"
+ *   insn=0x00000000004D14B0 string=0x00000000004D14B4 "\t"
+ *   insn=0x00000000004D14B0 string=0x00000000004D14C8 "\t"
+ *   insn=0x00000000004D14B4 string=0x00000000004D14B8 "*"
+ *   insn=0x00000000004D14B8 string=0x00000000004D14BC "\n"
+ *   insn=0x00000000004D14C4 string=0x00000000004D14D4 "?"
+ *   insn=0x00000000004D14C8 string=0x00000000004D14CC "*"
+ *   insn=0x00000000004D14CC string=0x00000000004D14D0 "\n"
+ *   insn=0x00000000004D14D4 string=0x00000000004D14D8 "l"
+ *   insn=0x00000000004D14F0 string=0x00000000004D14F4 "J"
+ *   insn=0x00000000004D14F8 string=0x00000000004D14FC "(a"
+ *   insn=0x00000000004D1508 string=0x00000000004D150C "J=G"
+ *   insn=0x00000000004D150C string=0x00000000004D1510 ")!"
+ *   insn=0x00000000004D1514 string=0x00000000004D1518 "*"
+ *   insn=0x00000000004D1514 string=0x00000000004D1544 "*"
+ *   insn=0x00000000004D1518 string=0x00000000004D151C "K"
+ *   insn=0x00000000004D151C string=0x00000000004D1520 "+"
+ *   insn=0x00000000004D1524 string=0x00000000004D1528 "_"
+ *   insn=0x00000000004D1544 string=0x00000000004D1548 "K"
+ *   insn=0x00000000004D1548 string=0x00000000004D154C "+"
+ *   insn=0x00000000004D154C string=0x00000000004D1550 "_"
+ *   insn=0x00000000004D155C string=0x00000000004D1560 "("
+ *   insn=0x00000000004D1560 string=0x00000000004D1564 ""
+ *   insn=0x00000000004D1564 string=0x00000000004D1568 "(@"
+ *   insn=0x00000000004D1568 string=0x00000000004D156C ""
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+void __fastcall Caver::AudioListener::setGain(Caver::AudioListener *this, float a2)
+{
+  void *v2; // x0
+  unsigned int *v3; // x8
+  int v4; // w9
+  _QWORD v5[3]; // [xsp+40h] [xbp-28h] BYREF
+
+  v5[2] = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
+  *(float *)this = a2;
+  alListenerf();
+  sub_566BB8((int)v5, "alListenerf");
+  alGetError();
+  v2 = (void *)(v5[0] - 24LL);
+  if ( (__int64 *)(v5[0] - 24LL) != &qword_6FD2E0 )
+  {
+    v3 = (unsigned int *)(v5[0] - 8LL);
+    if ( &pthread_create )
+    {
+      do
+        v4 = __ldaxr(v3);
+      while ( __stlxr(v4 - 1, v3) );
+    }
+    else
+    {
+      v4 = (*v3)--;
+    }
+    if ( v4 <= 0 )
+      operator delete(v2);
+  }
+}
+

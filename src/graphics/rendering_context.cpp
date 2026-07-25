@@ -1,5 +1,6 @@
 #include "caver/graphics/rendering_context.h"
 #include "caver/graphics/gl_inc.h"
+#include "caver/resource/vfs.h"
 #include <iostream>
 
 namespace caver {
@@ -75,22 +76,19 @@ void RenderingContext::setViewport(int width, int height) {
     glViewport(0, 0, width, height);
 
     float aspect = (height > 0) ? (float)width / (float)height : 1.0f;
-    float halfH = 500.0f;
-    float halfW = halfH * aspect;
+    projection_ = Matrix4::perspectiveFov(20.0f, aspect, 50.0f, 20000.0f);
 
-    projection_ = Matrix4::identity();
-    projection_.m[0]  = 1.0f / halfW;
-    projection_.m[5]  = 1.0f / halfH;
-    projection_.m[10] = -1.0f / 2000.0f;
-
-    setCamera(Vector2(0, 0));
+    setCamera(Vector2(3535.16f, 407.499f));
 }
 
 void RenderingContext::setCamera(const Vector2& center, float zoom) {
-    view_ = Matrix4::translation(Vector3(-center.x, -center.y, 0.0f));
-    if (zoom != 1.0f && zoom > 0.0001f) {
-        view_ = Matrix4::scale(Vector3(zoom, zoom, 1.0f)) * view_;
-    }
+    cameraPos_ = center;
+    float camZ = 2835.6f / (zoom > 0.0001f ? zoom : 1.0f);
+    Vector3 eye(center.x, center.y, camZ);
+    Vector3 target(center.x, center.y, 0.0f);
+    Vector3 up(0.0f, 1.0f, 0.0f);
+
+    view_ = Matrix4::lookAt(eye, target, up);
     viewProjection_ = projection_ * view_;
 }
 
@@ -116,9 +114,63 @@ uint32_t RenderingContext::getTexture(const std::string& textureName) {
         return it->second.glTextureId;
     }
 
-    TextureData tex = PVRTextureLoader::loadTexture(textureName);
+    std::vector<std::string> candidates;
+    candidates.push_back(textureName);
+
+    // Strip existing extension if present
+    std::string stem = textureName;
+    std::string ext = "";
+    size_t dotPos = textureName.rfind('.');
+    if (dotPos != std::string::npos) {
+        stem = textureName.substr(0, dotPos);
+        ext = textureName.substr(dotPos);
+    }
+
+    if (stem.size() > 3 && stem.substr(stem.size() - 3) == "_2x") {
+        std::string baseStem = stem.substr(0, stem.size() - 3);
+        candidates.push_back(baseStem + ext);
+    } else {
+        candidates.push_back(stem + "_2x" + ext);
+        candidates.push_back(stem + "_2x.pvr");
+        candidates.push_back(stem + "_2x.tex.png");
+        candidates.push_back(stem + "_2x.png");
+    }
+
+    candidates.push_back(stem + ".pvr");
+    candidates.push_back(stem + ".tex.png");
+    candidates.push_back(stem + ".png");
+    candidates.push_back(stem + ".tex");
+
+    std::optional<std::vector<uint8_t>> data;
+    std::string matchedPath;
+
+    for (const auto& cand : candidates) {
+        data = VFS::instance().readFile(cand);
+        if (data && !data->empty()) {
+            matchedPath = cand;
+            break;
+        }
+    }
+
+    uint32_t texId = 0;
+    int w = 0, h = 0;
+    if (data && !data->empty()) {
+        texId = pvr_load_texture_from_memory(data->data(), data->size(), &w, &h);
+    }
+
+    TextureData tex;
+    tex.name = textureName;
+    tex.glTextureId = texId;
+    tex.width = w;
+    tex.height = h;
+
     textureCache_[textureName] = tex;
-    return tex.glTextureId;
+    if (texId != 0) {
+        std::cout << "[RenderingContext] Loaded texture '" << textureName << "' (via " << matchedPath << ", " << w << "x" << h << ") -> GL ID " << texId << std::endl;
+    } else {
+        std::cerr << "[RenderingContext] Failed to load texture '" << textureName << "'" << std::endl;
+    }
+    return texId;
 }
 
 std::shared_ptr<Model> RenderingContext::getModel(const std::string& modelName) {

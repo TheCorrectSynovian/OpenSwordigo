@@ -1,0 +1,196 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x000000000043E760
+ * Mangled: _ZN5boost20checked_array_deleteINS_10shared_ptrIN5Caver12MenuItemSlotEEEEEvPT_
+ * Demangled: boost::checked_array_delete<boost::shared_ptr<Caver::MenuItemSlot>>(boost::shared_ptr<Caver::MenuItemSlot> *)
+ *
+ * Callers: 1
+ *   0x00000000001F4910  boost::checked_array_delete<boost::shared_ptr<Caver::MenuItemSlot>>(boost::shared_ptr<Caver::MenuItemSlot> *)
+ *
+ * Callees: 15
+ *   0x00000000001F4F60  operator delete[](void *)
+ *   0x00000000001F5840  Caver::GUILabel::UpdateBounds(void)
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x00000000001FA350  Caver::TextureLibrary::sharedLibrary(void)
+ *   0x00000000001FB170  Caver::GUIView::SetFrame(Caver::Rectangle const&)
+ *   0x00000000001FC000  Caver::GUIFrameView::~GUIFrameView()
+ *   0x00000000001FCEA0  Caver::GUIFrameView::GUIFrameView(void)
+ *   0x00000000001FF5B0  Caver::TextureLibrary::TextureForName(std::string const&,bool)
+ *   0x0000000000200E90  Caver::GUIFrameView::LayoutSubviews(void)
+ *   0x0000000000201F70  Caver::GUIFrameView::SetFrameTexture(boost::intrusive_ptr<Caver::Texture> const&,bool)
+ *   0x000000000020E1A4  Caver::NewCaverShell(int,char **)
+ *   0x0000000000566BB8  sub_566BB8
+ *   0x000000000056A3A4  operator delete(void *)
+ *   0x00000000005818C4  sub_5818C4
+ *   0x00000000006FE668  pthread_create
+ *
+ * Referenced strings: 125
+ *   insn=0x000000000043E77C string=0x000000000043E780 "h"
+ *   insn=0x000000000043E790 string=0x000000000043E794 "5"
+ *   insn=0x000000000043E798 string=0x000000000043E79C ""
+ *   insn=0x000000000043E7A8 string=0x000000000043E7AC "\t@"
+ *   insn=0x000000000043E7B8 string=0x000000000043E7BC ""
+ *   insn=0x000000000043E7C8 string=0x000000000043E7CC "@"
+ *   insn=0x000000000043E7F4 string=0x00000000001F4F60 "P'"
+ *   insn=0x000000000043E81C string=0x000000000043E820 "6"
+ *   insn=0x000000000043E824 string=0x000000000043E828 ""
+ *   insn=0x000000000043E834 string=0x000000000043E838 "\t@"
+ *   insn=0x000000000043E844 string=0x000000000043E848 ""
+ *   insn=0x000000000043E854 string=0x000000000043E858 "@"
+ *   insn=0x000000000043E868 string=0x000000000043E86C "a"
+ *   insn=0x000000000043E8A0 string=0x000000000043E8A4 "h"
+ *   insn=0x000000000043E8B4 string=0x000000000043E8B8 "5"
+ *   insn=0x000000000043E8BC string=0x000000000043E8C0 ""
+ *   insn=0x000000000043E8CC string=0x000000000043E8D0 "\t@"
+ *   insn=0x000000000043E8DC string=0x000000000043E8E0 ""
+ *   insn=0x000000000043E8EC string=0x000000000043E8F0 "@"
+ *   insn=0x000000000043E940 string=0x000000000043E944 "6"
+ *   insn=0x000000000043E948 string=0x000000000043E94C ""
+ *   insn=0x000000000043E958 string=0x000000000043E95C "\t@"
+ *   insn=0x000000000043E968 string=0x000000000043E96C ""
+ *   insn=0x000000000043E978 string=0x000000000043E97C "@"
+ *   insn=0x000000000043E98C string=0x000000000043E990 "a"
+ *   insn=0x000000000043E994 string=0x000000000043E998 "r"
+ *   insn=0x000000000043E9A0 string=0x000000000043E9A4 "j>"
+ *   insn=0x000000000043E9B8 string=0x000000000043E9BC "U"
+ *   insn=0x000000000043E9C8 string=0x000000000043E9CC "5"
+ *   insn=0x000000000043E9CC string=0x000000000043E9D0 "H"
+ *   insn=0x000000000043E9CC string=0x00000000001FCEA0 "0'"
+ *   insn=0x000000000043E9D0 string=0x000000000043E9D4 ""
+ *   insn=0x000000000043E9E0 string=0x000000000043E9E4 "A"
+ *   insn=0x000000000043E9E4 string=0x000000000043E9E8 "h"
+ *   insn=0x000000000043E9E8 string=0x000000000043E9EC "Y"
+ *   insn=0x000000000043E9EC string=0x00000000001FA350 "0'"
+ *   insn=0x000000000043E9F4 string=0x0000000000593A44 "ui_menu_stripe"
+ *   insn=0x000000000043EA00 string=0x000000000043EA04 "m"
+ *   insn=0x000000000043EA1C string=0x000000000043EA20 ")"
+ *   insn=0x000000000043EA20 string=0x000000000043EA24 ")"
+ *   insn=0x000000000043EA30 string=0x000000000043EAA8 ")"
+ *   insn=0x000000000043EA3C string=0x000000000043EA40 "L"
+ *   insn=0x000000000043EA44 string=0x000000000043EA48 "iBG"
+ *   insn=0x000000000043EA48 string=0x000000000043EA4C "AE"
+ *   insn=0x000000000043EA5C string=0x00000000001FB170 "0'"
+ *   insn=0x000000000043EA64 string=0x000000000043EA68 "@"
+ *   insn=0x000000000043EA68 string=0x000000000043EA6C ""
+ *   insn=0x000000000043EA6C string=0x000000000043EA70 ""
+ *   insn=0x000000000043EA74 string=0x000000000043EA78 ""
+ *   insn=0x000000000043EA78 string=0x000000000043EA7C ""
+ *   insn=0x000000000043EAA8 string=0x000000000043EAAC ")=G"
+ *   insn=0x000000000043EAAC string=0x000000000043EAB0 "!"
+ *   insn=0x000000000043EAB4 string=0x000000000043EAB8 "\t"
+ *   insn=0x000000000043EAB4 string=0x000000000043EACC "\t"
+ *   insn=0x000000000043EAB8 string=0x000000000043EABC "*"
+ *   insn=0x000000000043EABC string=0x000000000043EAC0 "\n"
+ *   insn=0x000000000043EAC8 string=0x000000000043EAD8 "?"
+ *   insn=0x000000000043EACC string=0x000000000043EAD0 "*"
+ *   insn=0x000000000043EAD0 string=0x000000000043EAD4 "\n"
+ *   insn=0x000000000043EAE0 string=0x000000000043EAE4 "0"
+ *   insn=0x000000000043EAEC string=0x00000000001F62D0 "0'"
+ *   insn=0x000000000043EAF8 string=0x000000000043EAFC "`"
+ *   insn=0x000000000043EAFC string=0x000000000043EB00 "@"
+ *   insn=0x000000000043EAFC string=0x000000000043EBA8 "u"
+ *   insn=0x000000000043EB00 string=0x000000000043EB04 ""
+ *   insn=0x000000000043EB04 string=0x000000000043EB08 ""
+ *   insn=0x000000000043EB0C string=0x000000000043EB10 ""
+ *   insn=0x000000000043EB10 string=0x000000000043EB14 ""
+ *   insn=0x000000000043EB18 string=0x000000000043EB1C "#"
+ *   insn=0x000000000043EB20 string=0x000000000043EB24 "*"
+ *   insn=0x000000000043EB24 string=0x000000000043EB28 "J"
+ *   insn=0x000000000043EB2C string=0x000000000043EB30 "(a"
+ *   insn=0x000000000043EB38 string=0x000000000043EB3C "*"
+ *   insn=0x000000000043EB3C string=0x000000000043EB40 "J=G"
+ *   insn=0x000000000043EB40 string=0x000000000043EB44 ")!"
+ *   insn=0x000000000043EB48 string=0x000000000043EB4C "*"
+ *   insn=0x000000000043EB48 string=0x000000000043EB7C "*"
+ *   insn=0x000000000043EB4C string=0x000000000043EB50 "K"
+ *   insn=0x000000000043EB50 string=0x000000000043EB54 "+"
+ *   insn=0x000000000043EB58 string=0x000000000043EB5C "_"
+ *   insn=0x000000000043EB5C string=0x000000000043EB60 "L"
+ *   insn=0x000000000043EB6C string=0x000000000043EB70 "u"
+ *   insn=0x000000000043EB78 string=0x000000000043EBF0 "u"
+ *   insn=0x000000000043EB7C string=0x000000000043EB80 "K"
+ *   insn=0x000000000043EB80 string=0x000000000043EB84 "+"
+ *   insn=0x000000000043EB84 string=0x000000000043EB88 "_"
+ *   insn=0x000000000043EB94 string=0x000000000043EB98 "u"
+ *   insn=0x000000000043EBA8 string=0x000000000043EBAC "5"
+ *   insn=0x000000000043EBB0 string=0x000000000043EBB4 ""
+ *   insn=0x000000000043EBC0 string=0x000000000043EBC4 "\t@"
+ *   insn=0x000000000043EBD0 string=0x000000000043EBD4 ""
+ *   insn=0x000000000043EBE0 string=0x000000000043EBE4 "@"
+ *   insn=0x000000000043EBF0 string=0x000000000043EBF4 "5"
+ *   insn=0x000000000043EBF8 string=0x000000000043EBFC ""
+ *   insn=0x000000000043EC08 string=0x000000000043EC0C "\t@"
+ *   insn=0x000000000043EC18 string=0x000000000043EC1C ""
+ *   insn=0x000000000043EC28 string=0x000000000043EC2C "@"
+ *   insn=0x000000000043EC3C string=0x00000000001FC000 "0'"
+ *   insn=0x000000000043EC40 string=0x000000000043EC44 " "
+ *   insn=0x000000000043EC58 string=0x000000000043EC5C "T"
+ *   insn=0x000000000043EC6C string=0x000000000043EC70 "`"
+ *   insn=0x000000000043EC70 string=0x000000000043EC74 " "
+ *   insn=0x000000000043EC74 string=0x000000000043EC78 "`"
+ *   insn=0x000000000043EC74 string=0x000000000043ECB8 "`"
+ *   insn=0x000000000043EC78 string=0x000000000043EC7C ""
+ *   insn=0x000000000043EC7C string=0x000000000043EC80 "a"
+ *   insn=0x000000000043EC84 string=0x000000000043EC88 "j2A"
+ *   insn=0x000000000043EC8C string=0x000000000043EC90 "#"
+ *   insn=0x000000000043EC90 string=0x000000000043EC94 "b""
+ *   insn=0x000000000043EC94 string=0x000000000043EC98 " ( "
+ *   insn=0x000000000043ECB0 string=0x000000000043ECB4 "/"
+ *   insn=0x000000000043ECBC string=0x000000000043ECC0 "h"
+ *   insn=0x000000000043ECC4 string=0x000000000043ECC8 "`2A"
+ *   insn=0x000000000043ECC4 string=0x000000000043ECDC "`2A"
+ *   insn=0x000000000043ECC8 string=0x000000000043ECCC "a6A"
+ *   insn=0x000000000043ECCC string=0x000000000043ECD0 "b"
+ *   insn=0x000000000043ECD0 string=0x000000000043ECD4 "}@"
+ *   insn=0x000000000043ECDC string=0x000000000043ECE0 "a6A"
+ *   insn=0x000000000043ECE0 string=0x000000000043ECE4 "b"
+ *   insn=0x000000000043ECE4 string=0x000000000043ECE8 "h"
+ *   insn=0x000000000043ECF0 string=0x000000000043ECF4 "A(#"
+ *   insn=0x000000000043ED08 string=0x000000000043ED0C "`"
+ *   insn=0x000000000043ED10 string=0x000000000043ED14 "0"
+ *   insn=0x000000000043ED18 string=0x00000000001F5840 "P'"
+ *   insn=0x000000000043ED28 string=0x000000000043ED3C "e"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+void __fastcall boost::checked_array_delete<boost::shared_ptr<Caver::MenuItemSlot>>(_QWORD *a1)
+{
+  __int64 v2; // x8
+  __int64 v3; // x23
+  _QWORD *v4; // x21
+  __int64 v5; // x8
+  __int64 v6; // x8
+
+  if ( a1 )
+  {
+    v2 = *(a1 - 1);
+    if ( v2 )
+    {
+      v3 = 2 * v2;
+      do
+      {
+        v4 = (_QWORD *)a1[v3 - 1];
+        if ( v4 )
+        {
+          v5 = v4[1] - 1LL;
+          v4[1] = v5;
+          if ( !v5 )
+          {
+            (*(void (__fastcall **)(_QWORD *))(*v4 + 16LL))(v4);
+            v6 = v4[2] - 1LL;
+            v4[2] = v6;
+            if ( !v6 )
+              (*(void (__fastcall **)(_QWORD *))(*v4 + 24LL))(v4);
+          }
+        }
+        v3 -= 2;
+      }
+      while ( v3 * 8 );
+    }
+    operator delete[](a1 - 1);
+  }
+}
+

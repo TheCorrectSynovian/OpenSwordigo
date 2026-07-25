@@ -1,0 +1,68 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x000000000054EC54
+ * Mangled: sub_54EC54
+ * Demangled: sub_54EC54
+ *
+ * Callers: 2
+ *   0x000000000053CB20  sub_53CB20
+ *   0x000000000054EBF4  sub_54EBF4
+ *
+ * Callees: 12
+ *   0x00000000001F45E0  .__cxa_begin_catch
+ *   0x00000000001F4F60  operator delete[](void *)
+ *   0x00000000001F8570  operator new[](ulong)
+ *   0x00000000001FA120  .strcmp
+ *   0x00000000001FD590  .__cxa_end_catch
+ *   0x0000000000201760  .memcpy
+ *   0x0000000000202B70  .__cxa_rethrow
+ *   0x0000000000203230  .strlen
+ *   0x000000000053B7BC  nullsub_2
+ *   0x000000000053BE7C  sub_53BE7C
+ *   0x000000000054C268  sub_54C268
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 28
+ *   insn=0x000000000054EC54 string=0x000000000054EC58 "_"
+ *   insn=0x000000000054EC68 string=0x000000000054EC6C "`\n"
+ *   insn=0x000000000054EC6C string=0x000000000054EC70 "@"
+ *   insn=0x000000000054EC70 string=0x000000000054EC74 "a\n"
+ *   insn=0x000000000054EC78 string=0x000000000054EC7C "`"
+ *   insn=0x000000000054EC80 string=0x000000000054EC84 "`"
+ *   insn=0x000000000054EC8C string=0x000000000054EC90 "v"
+ *   insn=0x000000000054ECD4 string=0x000000000054ECD8 "`\n"
+ *   insn=0x000000000054ECD8 string=0x000000000054ECDC "@"
+ *   insn=0x000000000054ECE4 string=0x000000000054ECE8 "`"
+ *   insn=0x000000000054ECEC string=0x000000000054ECF0 "c"
+ *   insn=0x000000000054ECFC string=0x000000000054ED00 ""
+ *   insn=0x000000000054ED00 string=0x000000000054ED04 "@"
+ *   insn=0x000000000054ED00 string=0x00000000001FA120 "0'"
+ *   insn=0x000000000054ED04 string=0x000000000054ED08 "t"
+ *   insn=0x000000000054ED10 string=0x000000000054ED14 "U"
+ *   insn=0x000000000054ED2C string=0x000000000054ED30 "@"
+ *   insn=0x000000000054ED38 string=0x000000000054ED3C ""
+ *   insn=0x000000000054ED3C string=0x00000000001F8570 "0'"
+ *   insn=0x000000000054ED48 string=0x000000000054ED4C "`"
+ *   insn=0x000000000054ED68 string=0x000000000054ED6C "`"
+ *   insn=0x000000000054ED68 string=0x00000000001F45E0 "P'"
+ *   insn=0x000000000054ED70 string=0x000000000054ED74 "`"
+ *   insn=0x000000000054ED74 string=0x000000000054ED78 "@"
+ *   insn=0x000000000054ED74 string=0x000000000054ED80 "|"
+ *   insn=0x000000000054ED78 string=0x000000000054ED7C "y"
+ *   insn=0x000000000054ED7C string=0x00000000001F4F60 "P'"
+ *   insn=0x000000000054ED88 string=0x00000000001FD590 "0'"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+const char *__fastcall sub_54EC54(__int64 a1, __int64 a2, __int64 a3)
+{
+  *(_DWORD *)(a1 + 8) = a3 != 0;
+  *(_QWORD *)(a1 + 16) = a2;
+  *(_QWORD *)a1 = off_6B79E0;
+  *(_QWORD *)(a1 + 32) = sub_53BE7C();
+  return sub_54C268(a1);
+}
+

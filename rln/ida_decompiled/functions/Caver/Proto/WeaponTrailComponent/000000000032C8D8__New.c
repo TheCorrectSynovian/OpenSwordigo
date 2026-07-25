@@ -1,0 +1,35 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x000000000032C8D8
+ * Mangled: _ZNK5Caver5Proto20WeaponTrailComponent3NewEv
+ * Demangled: Caver::Proto::WeaponTrailComponent::New(void)
+ *
+ * Callers: 0
+ *
+ * Callees: 1
+ *   0x00000000001F55E0  operator new(ulong)
+ *
+ * Referenced strings: 5
+ *   insn=0x000000000032C8E0 string=0x000000000032C8E4 "?#"
+ *   insn=0x000000000032C8E4 string=0x00000000001F55E0 "P'"
+ *   insn=0x000000000032C8E8 string=0x000000000032C8EC ""
+ *   insn=0x000000000032C8F8 string=0x000000000032C8FC "A"
+ *   insn=0x000000000032C8FC string=0x000000000032C900 ""
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 __fastcall Caver::Proto::WeaponTrailComponent::New(Caver::Proto::WeaponTrailComponent *this)
+{
+  __int64 result; // x0
+
+  result = operator new(0x20u);
+  *(_DWORD *)(result + 8) = 0;
+  *(_QWORD *)(result + 16) = 0;
+  *(_DWORD *)(result + 24) = 0;
+  *(_QWORD *)result = off_6C92E8;
+  return result;
+}
+

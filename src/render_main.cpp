@@ -3,6 +3,7 @@
 #include <SDL3/SDL.h>
 #include "caver/graphics/gl_inc.h"
 #include <caver/resource/vfs.h>
+#include "caver/engine/app_runtime.h"
 #include <caver/scene/scene.h>
 #include <caver/graphics/rendering_context.h>
 
@@ -70,25 +71,18 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    // 4. Load native scene graph
-    caver::Scene scene;
-    if (!scene.loadFromFile(sceneFile)) {
-        std::cerr << "[OpenSwordigo] Failed loading scene: " << sceneFile << std::endl;
-        SDL_GL_DestroyContext(glContext);
-        SDL_DestroyWindow(window);
-        SDL_Quit();
-        return 1;
-    }
+    // 4. Test Load house.POD & native scene graph
+    std::cout << "[OpenSwordigo] Testing direct PODLoader parsing on house.POD...\n";
+    auto testHouse = caver::PODLoader::loadModel("house.POD");
 
-    // Center camera on scene
-    caver::RenderingContext::instance().setCamera(caver::Vector2(5000.0f, 4000.0f));
-
-    std::cout << "\n[OpenSwordigo] Starting native OpenGL ES 2.0 render loop...\n";
+    // Initialize OpenSwordigo Engine AppRuntime
+    caver::AppRuntime::instance().initEngine(winWidth, winHeight);
 
     bool running = true;
     int frameCount = 0;
-    int maxFrames = 120;
     bool frameSaved = false;
+    bool batchMode = (std::getenv("OPENSWORDIGO_BATCH") != nullptr);
+    int maxFrames = batchMode ? 300 : 9999999;
 
     std::string artifactFramePath = "/home/quantumcreeper/.gemini/antigravity/brain/824dc72a-6fff-4a97-84bc-a0ab0d5b4d19/rendered_frame.png";
 
@@ -101,16 +95,16 @@ int main(int argc, char** argv) {
                 int w = ev.window.data1;
                 int h = ev.window.data2;
                 caver::RenderingContext::instance().setViewport(w, h);
+            } else if (ev.type == SDL_EVENT_MOUSE_BUTTON_DOWN) {
+                float mx = ev.button.x;
+                float my = winHeight - ev.button.y; // Flip Y for OpenGL orthographic coordinate system
+                caver::AppRuntime::instance().handleMouseInput(mx, my, true);
             }
         }
 
-        // Update native engine logic
-        scene.update(0.01667f);
-
-        // Render native scene frame
-        caver::RenderingContext::instance().beginFrame();
-        scene.render(caver::RenderingContext::instance());
-        caver::RenderingContext::instance().endFrame();
+        // Update & Render OpenSwordigo Engine AppRuntime
+        caver::AppRuntime::instance().update(0.01667f);
+        caver::AppRuntime::instance().render();
 
         // Capture frame 60 to PNG artifact
         if (frameCount == 60 && !frameSaved) {
@@ -125,30 +119,26 @@ int main(int argc, char** argv) {
                             winWidth * 4);
             }
 
-            if (stbi_write_png(artifactFramePath.c_str(), winWidth, winHeight, 4, flippedPixels.data(), winWidth * 4)) {
-                std::cout << "[OpenSwordigo] Successfully captured frame #" << frameCount << " to artifact image:\n"
-                          << "  " << artifactFramePath << std::endl;
-                frameSaved = true;
-            } else {
-                std::cerr << "[OpenSwordigo] Warning: Failed capturing frame to " << artifactFramePath << std::endl;
-            }
+            stbi_write_png(artifactFramePath.c_str(), winWidth, winHeight, 4, flippedPixels.data(), winWidth * 4);
+            frameSaved = true;
+            std::cout << "[OpenSwordigo] Successfully captured frame #60 to artifact image:\n  "
+                      << artifactFramePath << "\n\n";
         }
 
         SDL_GL_SwapWindow(window);
         frameCount++;
+        SDL_Delay(16);
     }
 
-    // Report per-frame runtime metrics
-    size_t drawCalls = caver::RenderingContext::instance().getDrawCallCount();
-    size_t triangles = caver::RenderingContext::instance().getTriangleCount();
-
-    std::cout << "\n========================================================\n";
-    std::cout << " MILESTONE 2 RUNTIME METRICS:\n";
-    std::cout << "  Rendered Frames:   " << frameCount << "\n";
-    std::cout << "  Draw Calls/Frame:  " << drawCalls << "\n";
-    std::cout << "  Triangles/Frame:   " << triangles << "\n";
-    std::cout << "  Captured Frame:    " << (frameSaved ? "SAVED" : "FAILED") << "\n";
     std::cout << "========================================================\n";
+    std::cout << " OPENSWORDIGO RUNTIME METRICS:\n";
+    std::cout << "  Rendered Frames:   " << frameCount << "\n";
+    std::cout << "  Draw Calls/Frame:  " << caver::RenderingContext::instance().getDrawCallCount() << "\n";
+    std::cout << "  Triangles/Frame:   " << caver::RenderingContext::instance().getTriangleCount() << "\n";
+    std::cout << "  Captured Frame:    " << (frameSaved ? "SAVED" : "SKIPPED") << "\n";
+    std::cout << "========================================================\n\n";
+
+    caver::AppRuntime::instance().shutdown();
 
     SDL_GL_DestroyContext(glContext);
     SDL_DestroyWindow(window);

@@ -1,0 +1,53 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000001F8810
+ * Mangled: .__cxa_bad_cast
+ * Demangled: .__cxa_bad_cast
+ *
+ * Callers: 28
+ *   0x000000000052D354  sub_52D354
+ *   0x000000000052DAB8  sub_52DAB8
+ *   0x000000000052DB20  sub_52DB20
+ *   0x000000000052DB88  sub_52DB88
+ *   0x000000000052E184  sub_52E184
+ *   0x000000000052E1EC  sub_52E1EC
+ *   0x000000000052E254  sub_52E254
+ *   0x000000000052E7EC  sub_52E7EC
+ *   0x000000000052ED44  sub_52ED44
+ *   0x000000000052EDAC  sub_52EDAC
+ *   0x000000000052EE14  sub_52EE14
+ *   0x000000000052EF88  sub_52EF88
+ *   0x000000000052EFF0  sub_52EFF0
+ *   0x000000000052F058  sub_52F058
+ *   0x000000000054F6AC  sub_54F6AC
+ *   0x000000000054FD60  sub_54FD60
+ *   0x000000000054FDC8  sub_54FDC8
+ *   0x000000000054FE30  sub_54FE30
+ *   0x00000000005503C0  sub_5503C0
+ *   0x0000000000550428  sub_550428
+ *   0x0000000000550490  sub_550490
+ *   0x0000000000550BB0  sub_550BB0
+ *   0x00000000005512D0  sub_5512D0
+ *   0x0000000000551338  sub_551338
+ *   0x00000000005513A0  sub_5513A0
+ *   0x00000000005514FC  sub_5514FC
+ *   0x0000000000551564  sub_551564
+ *   0x00000000005515CC  sub_5515CC
+ *
+ * Callees: 1
+ *   0x000000000056FC2C  __cxa_bad_cast
+ *
+ * Referenced strings: 1
+ *   insn=0x00000000001F8818 string=0x00000000001F881C " "
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+// attributes: thunk
+void __noreturn __cxa_bad_cast(void)
+{
+  _cxa_bad_cast();
+}
+

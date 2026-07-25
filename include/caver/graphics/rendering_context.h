@@ -11,6 +11,13 @@
 
 namespace caver {
 
+struct TextureData {
+    std::string name;
+    uint32_t glTextureId{0};
+    int width{0};
+    int height{0};
+};
+
 class RenderingContext {
 public:
     static RenderingContext& instance();
@@ -26,6 +33,7 @@ public:
     void endFrame();
 
     void setCamera(const Vector2& center, float zoom = 1.0f);
+    const Vector2& getCameraPosition() const { return cameraPos_; }
 
     ShaderProgram& getShader() { return defaultShader_; }
     const Matrix4& getViewProjection() const { return viewProjection_; }
@@ -45,6 +53,7 @@ private:
     int width_{1280};
     int height_{720};
 
+    Vector2 cameraPos_{3535.16f, 407.5f};
     Matrix4 projection_;
     Matrix4 view_;
     Matrix4 viewProjection_;

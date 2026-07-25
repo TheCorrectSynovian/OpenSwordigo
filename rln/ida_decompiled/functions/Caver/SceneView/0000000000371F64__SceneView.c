@@ -1,0 +1,99 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x0000000000371F64
+ * Mangled: _ZN5Caver9SceneViewC2Ev
+ * Demangled: Caver::SceneView::SceneView(void)
+ *
+ * Callers: 1
+ *   0x0000000000203850  Caver::SceneView::SceneView(void)
+ *
+ * Callees: 7
+ *   0x00000000001F4EA0  Caver::CameraController::CameraController(void)
+ *   0x00000000001F58D0  Caver::CameraController::RegisterProgramLibrary(Caver::ProgramState *)
+ *   0x00000000001FEE30  Caver::GUIView::~GUIView()
+ *   0x0000000000200550  Caver::Camera::SetPerspectiveProjection(float,float,float,float)
+ *   0x0000000000203B40  Caver::GUIView::GUIView(void)
+ *   0x000000000020E1A4  Caver::NewCaverShell(int,char **)
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 61
+ *   insn=0x0000000000371F7C string=0x0000000000371F80 "9E"
+ *   insn=0x0000000000371F80 string=0x0000000000371F84 "`"
+ *   insn=0x0000000000371F88 string=0x0000000000371F8C "A"
+ *   insn=0x0000000000371F8C string=0x0000000000371F90 "h"
+ *   insn=0x0000000000371F94 string=0x00000000001F4EA0 "P'"
+ *   insn=0x0000000000371FB0 string=0x0000000000371FB4 "5"
+ *   insn=0x0000000000371FB8 string=0x0000000000371FBC ""
+ *   insn=0x0000000000371FC8 string=0x0000000000371FCC "\t@"
+ *   insn=0x0000000000371FD8 string=0x0000000000371FDC ""
+ *   insn=0x0000000000371FE8 string=0x0000000000371FEC "@"
+ *   insn=0x0000000000372000 string=0x0000000000372004 "0>"
+ *   insn=0x0000000000372018 string=0x000000000037201C ") @"
+ *   insn=0x0000000000372024 string=0x0000000000372028 "\n"
+ *   insn=0x0000000000372024 string=0x0000000000372034 "t~@"
+ *   insn=0x0000000000372028 string=0x000000000037202C "J"
+ *   insn=0x000000000037202C string=0x0000000000372030 "\n"
+ *   insn=0x0000000000372034 string=0x0000000000372038 "i""
+ *   insn=0x0000000000372038 string=0x000000000037203C "4"
+ *   insn=0x0000000000372040 string=0x0000000000372044 ""
+ *   insn=0x0000000000372054 string=0x0000000000372058 "\t@"
+ *   insn=0x0000000000372060 string=0x0000000000372064 ""
+ *   insn=0x0000000000372074 string=0x0000000000372078 "@"
+ *   insn=0x0000000000372088 string=0x000000000037208C "`"
+ *   insn=0x0000000000372090 string=0x0000000000372094 """
+ *   insn=0x0000000000372094 string=0x0000000000372098 "C"
+ *   insn=0x000000000037209C string=0x00000000003720A0 "t"
+ *   insn=0x00000000003720A0 string=0x00000000003720A4 "+9"
+ *   insn=0x00000000003720AC string=0x00000000003720B0 "h"
+ *   insn=0x00000000003720B0 string=0x00000000003720B4 "jz@"
+ *   insn=0x00000000003720C8 string=0x00000000003720CC "k"
+ *   insn=0x00000000003720CC string=0x00000000003720D0 "`"
+ *   insn=0x00000000003720D0 string=0x00000000003720D4 "l."
+ *   insn=0x00000000003720D8 string=0x00000000003720DC "+"
+ *   insn=0x00000000003720D8 string=0x00000000003720E8 "U%A"
+ *   insn=0x00000000003720DC string=0x00000000003720E0 "k"
+ *   insn=0x00000000003720E0 string=0x00000000003720E4 "+"
+ *   insn=0x00000000003720E8 string=0x00000000003720EC "H!"
+ *   insn=0x00000000003720EC string=0x00000000003720F0 "I%"
+ *   insn=0x00000000003720F0 string=0x00000000003720F4 "5"
+ *   insn=0x00000000003720F4 string=0x0000000000372138 "hz@"
+ *   insn=0x00000000003720F8 string=0x00000000003720FC ""
+ *   insn=0x000000000037210C string=0x0000000000372110 "\t@"
+ *   insn=0x0000000000372118 string=0x000000000037211C ""
+ *   insn=0x000000000037212C string=0x0000000000372130 "@"
+ *   insn=0x0000000000372144 string=0x00000000001F58D0 "P'"
+ *   insn=0x000000000037214C string=0x0000000000372150 "t"
+ *   insn=0x0000000000372154 string=0x0000000000583734 "o"
+ *   insn=0x000000000037215C string=0x0000000000372160 "a"
+ *   insn=0x0000000000372160 string=0x0000000000372164 ""
+ *   insn=0x0000000000372164 string=0x000000000037216C "h"
+ *   insn=0x000000000037216C string=0x0000000000372170 "  ""
+ *   insn=0x0000000000372174 string=0x0000000000372178 "h"
+ *   insn=0x000000000037217C string=0x0000000000372180 "-@"
+ *   insn=0x0000000000372188 string=0x000000000037218C "a"
+ *   insn=0x0000000000372198 string=0x000000000037219C "!(#"
+ *   insn=0x00000000003721AC string=0x00000000003721B0 "h"
+ *   insn=0x00000000003721B4 string=0x00000000003721B8 "b"
+ *   insn=0x00000000003721C0 string=0x00000000003721C4 "`"
+ *   insn=0x00000000003721C4 string=0x00000000003721C8 "a"
+ *   insn=0x00000000003721C8 string=0x00000000003721CC "`"
+ *   insn=0x00000000003721CC string=0x00000000003721D0 "a:"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 __fastcall Caver::SceneView::SceneView(Caver::SceneView *this)
+{
+  __int64 result; // x0
+
+  Caver::GUIView::GUIView(this);
+  *((_QWORD *)this + 30) = 0;
+  *((_QWORD *)this + 31) = 0;
+  *(_QWORD *)this = off_6CCC50;
+  result = Caver::CameraController::CameraController((Caver::SceneView *)((char *)this + 256));
+  *((_BYTE *)this + 416) = 0;
+  return result;
+}
+

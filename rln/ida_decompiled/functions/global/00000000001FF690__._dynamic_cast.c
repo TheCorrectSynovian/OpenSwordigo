@@ -1,0 +1,85 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000001FF690
+ * Mangled: .__dynamic_cast
+ * Demangled: .__dynamic_cast
+ *
+ * Callers: 56
+ *   0x000000000040B21C  Caver::InventoryItemPanel::HitTest(Caver::Vector2 const&)
+ *   0x000000000040B614  Caver::InventoryItemPanel::DraggableItemDidDropIntoView(Caver::GUIDraggableItem *)
+ *   0x000000000052D354  sub_52D354
+ *   0x000000000052DAB8  sub_52DAB8
+ *   0x000000000052DB20  sub_52DB20
+ *   0x000000000052DB88  sub_52DB88
+ *   0x000000000052E184  sub_52E184
+ *   0x000000000052E1EC  sub_52E1EC
+ *   0x000000000052E254  sub_52E254
+ *   0x000000000052E7EC  sub_52E7EC
+ *   0x000000000052ED44  sub_52ED44
+ *   0x000000000052EDAC  sub_52EDAC
+ *   0x000000000052EE14  sub_52EE14
+ *   0x000000000052EF88  sub_52EF88
+ *   0x000000000052EFF0  sub_52EFF0
+ *   0x000000000052F058  sub_52F058
+ *   0x000000000052F0C0  sub_52F0C0
+ *   0x000000000052F12C  sub_52F12C
+ *   0x000000000052F198  sub_52F198
+ *   0x000000000052F204  sub_52F204
+ *   0x000000000052F270  sub_52F270
+ *   0x000000000052F2DC  sub_52F2DC
+ *   0x000000000052F348  sub_52F348
+ *   0x000000000052F3B4  sub_52F3B4
+ *   0x000000000052F420  sub_52F420
+ *   0x000000000052F48C  sub_52F48C
+ *   0x000000000052F4F8  sub_52F4F8
+ *   0x000000000052F564  sub_52F564
+ *   0x000000000052F5D0  sub_52F5D0
+ *   0x000000000054F6AC  sub_54F6AC
+ *   0x000000000054FD60  sub_54FD60
+ *   0x000000000054FDC8  sub_54FDC8
+ *   0x000000000054FE30  sub_54FE30
+ *   0x00000000005503C0  sub_5503C0
+ *   0x0000000000550428  sub_550428
+ *   0x0000000000550490  sub_550490
+ *   0x0000000000550BB0  sub_550BB0
+ *   0x00000000005512D0  sub_5512D0
+ *   0x0000000000551338  sub_551338
+ *   0x00000000005513A0  sub_5513A0
+ *   0x00000000005514FC  sub_5514FC
+ *   0x0000000000551564  sub_551564
+ *   0x00000000005515CC  sub_5515CC
+ *   0x0000000000551634  sub_551634
+ *   0x00000000005516A0  sub_5516A0
+ *   0x000000000055170C  sub_55170C
+ *   0x0000000000551778  sub_551778
+ *   0x00000000005517E4  sub_5517E4
+ *   0x0000000000551850  sub_551850
+ *   0x00000000005518BC  sub_5518BC
+ *   0x0000000000551928  sub_551928
+ *   0x0000000000551994  sub_551994
+ *   0x0000000000551A00  sub_551A00
+ *   0x0000000000551A6C  sub_551A6C
+ *   0x0000000000551AD8  sub_551AD8
+ *   0x0000000000551B44  sub_551B44
+ *
+ * Callees: 1
+ *   0x000000000051CC88  __dynamic_cast
+ *
+ * Referenced strings: 1
+ *   insn=0x00000000001FF698 string=0x00000000001FF69C " "
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+// attributes: thunk
+void *__dynamic_cast(
+        const void *lpsrc,
+        const struct __class_type_info *lpstype,
+        const struct __class_type_info *lpdtype,
+        ptrdiff_t s2d)
+{
+  return _dynamic_cast(lpsrc, lpstype, lpdtype, s2d);
+}
+

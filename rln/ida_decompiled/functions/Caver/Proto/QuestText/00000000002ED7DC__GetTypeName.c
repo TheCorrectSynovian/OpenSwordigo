@@ -1,0 +1,58 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000002ED7DC
+ * Mangled: _ZNK5Caver5Proto9QuestText11GetTypeNameEv
+ * Demangled: Caver::Proto::QuestText::GetTypeName(void)
+ *
+ * Callers: 0
+ *
+ * Callees: 3
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x0000000000566BB8  sub_566BB8
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 32
+ *   insn=0x00000000002ED7E8 string=0x00000000002ED7EC "S"
+ *   insn=0x00000000002ED7EC string=0x00000000002ED7F0 "i"
+ *   insn=0x00000000002ED7F8 string=0x000000000058B1A4 "Caver.Proto.QuestText"
+ *   insn=0x00000000002ED808 string=0x00000000002ED80C "h"
+ *   insn=0x00000000002ED82C string=0x00000000001F62D0 "0'"
+ *   insn=0x00000000002ED834 string=0x00000000002ED838 "\t"
+ *   insn=0x00000000002ED838 string=0x00000000002ED83C "MD"
+ *   insn=0x00000000002ED844 string=0x00000000002ED848 ")"
+ *   insn=0x00000000002ED848 string=0x00000000002ED84C "\n`"
+ *   insn=0x00000000002ED854 string=0x00000000002ED858 "\t"
+ *   insn=0x00000000002ED858 string=0x00000000002ED85C "\t"
+ *   insn=0x00000000002ED85C string=0x00000000002ED860 "\tp"
+ *   insn=0x00000000002ED864 string=0x00000000002ED868 "\t("
+ *   insn=0x00000000002ED868 string=0x00000000002ED86C "\t"
+ *   insn=0x00000000002ED86C string=0x00000000002ED870 "\t"
+ *   insn=0x00000000002ED874 string=0x00000000002ED878 ")"
+ *   insn=0x00000000002ED878 string=0x00000000002ED87C "A"
+ *   insn=0x00000000002ED87C string=0x00000000002ED880 "\t("
+ *   insn=0x00000000002ED884 string=0x00000000002ED888 ")"
+ *   insn=0x00000000002ED894 string=0x00000000002ED898 " "
+ *   insn=0x00000000002ED89C string=0x00000000002ED8A0 ")9C"
+ *   insn=0x00000000002ED8A0 string=0x00000000002ED8A4 " "
+ *   insn=0x00000000002ED8A8 string=0x00000000002ED8AC ")"
+ *   insn=0x00000000002ED8B0 string=0x00000000002ED8B4 " "
+ *   insn=0x00000000002ED8B8 string=0x00000000002ED8BC ")aG"
+ *   insn=0x00000000002ED8C4 string=0x00000000002ED8C8 ")UC"
+ *   insn=0x00000000002ED8CC string=0x00000000002ED8D0 " "
+ *   insn=0x00000000002ED8D4 string=0x00000000002ED8D8 ")"
+ *   insn=0x00000000002ED8DC string=0x00000000002ED8E0 " "
+ *   insn=0x00000000002ED8E4 string=0x00000000002ED8E8 ")"
+ *   insn=0x00000000002ED8E8 string=0x00000000002ED8EC ""
+ *   insn=0x00000000002ED8F0 string=0x00000000002ED8F4 " "
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 __usercall Caver::Proto::QuestText::GetTypeName@<X0>(int a1@<W8>)
+{
+  _ReadStatusReg(TPIDR_EL0);
+  return sub_566BB8(a1, "Caver.Proto.QuestText");
+}
+

@@ -1,0 +1,436 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x00000000004A5E88
+ * Mangled: _ZN5Caver12GUIAnimation14AlphaAnimationEfff
+ * Demangled: Caver::GUIAnimation::AlphaAnimation(float,float,float)
+ *
+ * Callers: 2
+ *   0x0000000000200B40  Caver::GUIAnimation::AlphaAnimation(float,float,float)
+ *   0x00000000004A5D34  Caver::GUIAnimation::GUIAnimation(void)
+ *
+ * Callees: 16
+ *   0x00000000001F3930  Caver::GUIAnimationCurve::ValueAtTime(float)
+ *   0x00000000001F55E0  operator new(ulong)
+ *   0x00000000001F62D0  .__stack_chk_fail
+ *   0x00000000001F72B0  operator delete(void *)
+ *   0x00000000001F8090  Caver::GUIPropertyValue::ValueWithFloat(float)
+ *   0x00000000001FA7B0  Caver::GUIAnimation::GUIAnimation(void)
+ *   0x00000000001FAAD0  Caver::GUIPropertyValue::InterpolatedValue(Caver::GUIPropertyValue const&,Caver::GUIPropertyValue const&,float)
+ *   0x00000000001FABF0  boost::detail::shared_count::shared_count<Caver::GUIAnimation>(Caver::GUIAnimation *)
+ *   0x0000000000200970  Caver::GUITargetAction::Send(void *,Caver::GUIEvent const&)
+ *   0x00000000002009B0  boost::bad_function_call::bad_function_call(void)
+ *   0x0000000000202950  boost::detail::sp_enable_shared_from_this(...)
+ *   0x0000000000202A00  boost::throw_exception<boost::bad_function_call>(boost::bad_function_call const&)
+ *   0x0000000000202FC0  Caver::GUIPropertyValue::ValueWithRectangle(Caver::Rectangle const&)
+ *   0x000000000020E1A4  Caver::NewCaverShell(int,char **)
+ *   0x000000000054A024  sub_54A024
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 283
+ *   insn=0x00000000004A5EA0 string=0x00000000004A5EA4 "V"
+ *   insn=0x00000000004A5EB0 string=0x00000000004A5EB4 "H"
+ *   insn=0x00000000004A5EB4 string=0x00000000004A5EB8 ")"
+ *   insn=0x00000000004A5EB8 string=0x00000000004A5EBC "\n"
+ *   insn=0x00000000004A5EC4 string=0x00000000001F55E0 "P'"
+ *   insn=0x00000000004A5EC8 string=0x00000000004A5ECC "9R"
+ *   insn=0x00000000004A5ECC string=0x00000000001FA7B0 "0'"
+ *   insn=0x00000000004A5ED8 string=0x00000000004A5EDC "ES"
+ *   insn=0x00000000004A5EDC string=0x00000000001FABF0 "0'"
+ *   insn=0x00000000004A5EEC string=0x00000000004A5EF0 "u"
+ *   insn=0x00000000004A5EFC string=0x00000000004A5F00 "@"
+ *   insn=0x00000000004A5F00 string=0x00000000004A5F04 "cH"
+ *   insn=0x00000000004A5F04 string=0x00000000001F8090 "0'"
+ *   insn=0x00000000004A5F14 string=0x00000000004A5F18 "\n"
+ *   insn=0x00000000004A5F18 string=0x00000000004A5F1C "J"
+ *   insn=0x00000000004A5F1C string=0x00000000004A5F20 "\n"
+ *   insn=0x00000000004A5F28 string=0x00000000004A5F2C "4"
+ *   insn=0x00000000004A5F30 string=0x00000000004A5F34 ""
+ *   insn=0x00000000004A5F40 string=0x00000000004A5F44 "\t@"
+ *   insn=0x00000000004A5F50 string=0x00000000004A5F54 ""
+ *   insn=0x00000000004A5F60 string=0x00000000004A5F64 "@"
+ *   insn=0x00000000004A5F70 string=0x00000000004A5F74 "4"
+ *   insn=0x00000000004A5F74 string=0x00000000004A5FB8 "u"
+ *   insn=0x00000000004A5F78 string=0x00000000004A5F7C ""
+ *   insn=0x00000000004A5F88 string=0x00000000004A5F8C "\t@"
+ *   insn=0x00000000004A5F98 string=0x00000000004A5F9C ""
+ *   insn=0x00000000004A5FA8 string=0x00000000004A5FAC "@"
+ *   insn=0x00000000004A5FBC string=0x00000000004A5FC0 " "
+ *   insn=0x00000000004A5FC0 string=0x00000000004A5FC4 "3H"
+ *   insn=0x00000000004A5FD4 string=0x00000000004A5FD8 "\n"
+ *   insn=0x00000000004A5FD8 string=0x00000000004A5FDC "J"
+ *   insn=0x00000000004A5FDC string=0x00000000004A5FE0 "\n"
+ *   insn=0x00000000004A5FE8 string=0x00000000004A5FEC "4"
+ *   insn=0x00000000004A5FF0 string=0x00000000004A5FF4 ""
+ *   insn=0x00000000004A6000 string=0x00000000004A6004 "\t@"
+ *   insn=0x00000000004A6010 string=0x00000000004A6014 ""
+ *   insn=0x00000000004A6020 string=0x00000000004A6024 "@"
+ *   insn=0x00000000004A6030 string=0x00000000004A6034 "4"
+ *   insn=0x00000000004A6034 string=0x00000000004A6078 "h"
+ *   insn=0x00000000004A6038 string=0x00000000004A603C ""
+ *   insn=0x00000000004A6048 string=0x00000000004A604C "\t@"
+ *   insn=0x00000000004A6058 string=0x00000000004A605C ""
+ *   insn=0x00000000004A6068 string=0x00000000004A606C "@"
+ *   insn=0x00000000004A6078 string=0x00000000004A607C "]"
+ *   insn=0x00000000004A60AC string=0x00000000001F62D0 "0'"
+ *   insn=0x00000000004A60B8 string=0x00000000004A6178 "s"
+ *   insn=0x00000000004A60BC string=0x00000000004A60C0 ""
+ *   insn=0x00000000004A60CC string=0x00000000004A60D0 "\t@"
+ *   insn=0x00000000004A60DC string=0x00000000004A60E0 ""
+ *   insn=0x00000000004A60EC string=0x00000000004A60F0 "@"
+ *   insn=0x00000000004A610C string=0x00000000004A6110 ""
+ *   insn=0x00000000004A611C string=0x00000000004A6120 "\t@"
+ *   insn=0x00000000004A612C string=0x00000000004A6130 ""
+ *   insn=0x00000000004A613C string=0x00000000004A6140 "@"
+ *   insn=0x00000000004A6148 string=0x00000000004A614C ""
+ *   insn=0x00000000004A6154 string=0x00000000004A6158 "VD"
+ *   insn=0x00000000004A6158 string=0x00000000001F72B0 "0'"
+ *   insn=0x00000000004A6164 string=0x00000000004A6168 "s"
+ *   insn=0x00000000004A616C string=0x00000000004A6180 "h"
+ *   insn=0x00000000004A6178 string=0x00000000004A617C "3"
+ *   insn=0x00000000004A6180 string=0x00000000004A6184 ""
+ *   insn=0x00000000004A6184 string=0x00000000004A6188 "h"
+ *   insn=0x00000000004A618C string=0x00000000004A6190 "h"
+ *   insn=0x00000000004A6190 string=0x00000000004A6194 "\t@"
+ *   insn=0x00000000004A619C string=0x00000000004A61A0 "h\n@"
+ *   insn=0x00000000004A61A0 string=0x00000000004A61A4 ""
+ *   insn=0x00000000004A61A4 string=0x00000000004A61A8 "h\n"
+ *   insn=0x00000000004A61AC string=0x00000000004A61B0 "h"
+ *   insn=0x00000000004A61B0 string=0x00000000004A61B4 "@"
+ *   insn=0x00000000004A61C4 string=0x00000000004A61C8 "a"
+ *   insn=0x00000000004A61E4 string=0x00000000004A61E8 "V"
+ *   insn=0x00000000004A61F4 string=0x00000000004A61F8 "H"
+ *   insn=0x00000000004A61F8 string=0x00000000004A61FC ")"
+ *   insn=0x00000000004A61FC string=0x00000000004A6200 "\n"
+ *   insn=0x00000000004A620C string=0x00000000004A6210 "hQ"
+ *   insn=0x00000000004A621C string=0x00000000004A6220 "tR"
+ *   insn=0x00000000004A6230 string=0x00000000004A6234 "u"
+ *   insn=0x00000000004A6240 string=0x00000000004A6244 "@"
+ *   insn=0x00000000004A6258 string=0x00000000004A625C "\n"
+ *   insn=0x00000000004A625C string=0x00000000004A6260 "J"
+ *   insn=0x00000000004A6260 string=0x00000000004A6264 "\n"
+ *   insn=0x00000000004A626C string=0x00000000004A6270 "4"
+ *   insn=0x00000000004A6274 string=0x00000000004A6278 ""
+ *   insn=0x00000000004A6284 string=0x00000000004A6288 "\t@"
+ *   insn=0x00000000004A6294 string=0x00000000004A6298 ""
+ *   insn=0x00000000004A62A4 string=0x00000000004A62A8 "@"
+ *   insn=0x00000000004A62B4 string=0x00000000004A62B8 "4"
+ *   insn=0x00000000004A62B8 string=0x00000000004A62FC "u"
+ *   insn=0x00000000004A62BC string=0x00000000004A62C0 ""
+ *   insn=0x00000000004A62CC string=0x00000000004A62D0 "\t@"
+ *   insn=0x00000000004A62DC string=0x00000000004A62E0 ""
+ *   insn=0x00000000004A62EC string=0x00000000004A62F0 "@"
+ *   insn=0x00000000004A6300 string=0x00000000004A6304 " "
+ *   insn=0x00000000004A6304 string=0x00000000004A6308 "bG"
+ *   insn=0x00000000004A6318 string=0x00000000004A631C "\n"
+ *   insn=0x00000000004A631C string=0x00000000004A6320 "J"
+ *   insn=0x00000000004A6320 string=0x00000000004A6324 "\n"
+ *   insn=0x00000000004A632C string=0x00000000004A6330 "4"
+ *   insn=0x00000000004A6334 string=0x00000000004A6338 ""
+ *   insn=0x00000000004A6344 string=0x00000000004A6348 "\t@"
+ *   insn=0x00000000004A6354 string=0x00000000004A6358 ""
+ *   insn=0x00000000004A6364 string=0x00000000004A6368 "@"
+ *   insn=0x00000000004A6374 string=0x00000000004A6378 "4"
+ *   insn=0x00000000004A6378 string=0x00000000004A63BC "h"
+ *   insn=0x00000000004A637C string=0x00000000004A6380 ""
+ *   insn=0x00000000004A638C string=0x00000000004A6390 "\t@"
+ *   insn=0x00000000004A639C string=0x00000000004A63A0 ""
+ *   insn=0x00000000004A63AC string=0x00000000004A63B0 "@"
+ *   insn=0x00000000004A63BC string=0x00000000004A63C0 "]"
+ *   insn=0x00000000004A63FC string=0x00000000004A64BC "s"
+ *   insn=0x00000000004A6400 string=0x00000000004A6404 ""
+ *   insn=0x00000000004A6410 string=0x00000000004A6414 "\t@"
+ *   insn=0x00000000004A6420 string=0x00000000004A6424 ""
+ *   insn=0x00000000004A6430 string=0x00000000004A6434 "@"
+ *   insn=0x00000000004A6450 string=0x00000000004A6454 ""
+ *   insn=0x00000000004A6460 string=0x00000000004A6464 "\t@"
+ *   insn=0x00000000004A6470 string=0x00000000004A6474 ""
+ *   insn=0x00000000004A6480 string=0x00000000004A6484 "@"
+ *   insn=0x00000000004A648C string=0x00000000004A6490 ""
+ *   insn=0x00000000004A64A0 string=0x00000000004A64A4 "m"
+ *   insn=0x00000000004A64A8 string=0x00000000004A64AC "s"
+ *   insn=0x00000000004A64B0 string=0x00000000004A64C4 "h"
+ *   insn=0x00000000004A64BC string=0x00000000004A64C0 "3"
+ *   insn=0x00000000004A64C4 string=0x00000000004A64C8 ""
+ *   insn=0x00000000004A64C8 string=0x00000000004A64CC "h"
+ *   insn=0x00000000004A64D0 string=0x00000000004A64D4 "h"
+ *   insn=0x00000000004A64D4 string=0x00000000004A64D8 "\t@"
+ *   insn=0x00000000004A64E0 string=0x00000000004A64E4 "h\n@"
+ *   insn=0x00000000004A64E4 string=0x00000000004A64E8 ""
+ *   insn=0x00000000004A64E8 string=0x00000000004A64EC "h\n"
+ *   insn=0x00000000004A64F0 string=0x00000000004A64F4 "h"
+ *   insn=0x00000000004A64F4 string=0x00000000004A64F8 "@"
+ *   insn=0x00000000004A6528 string=0x00000000004A652C "W"
+ *   insn=0x00000000004A653C string=0x00000000004A6540 ""
+ *   insn=0x00000000004A6548 string=0x00000000004A654C "%<"
+ *   insn=0x00000000004A6574 string=0x00000000004A6578 "v"
+ *   insn=0x00000000004A659C string=0x00000000004A65A0 "\n"
+ *   insn=0x00000000004A65A0 string=0x00000000004A65A4 "J"
+ *   insn=0x00000000004A65A4 string=0x00000000004A65A8 "\n"
+ *   insn=0x00000000004A65B0 string=0x00000000004A65B4 "5"
+ *   insn=0x00000000004A65B8 string=0x00000000004A65BC ""
+ *   insn=0x00000000004A65C8 string=0x00000000004A65CC "\t@"
+ *   insn=0x00000000004A65D8 string=0x00000000004A65DC ""
+ *   insn=0x00000000004A65E8 string=0x00000000004A65EC "@"
+ *   insn=0x00000000004A65F8 string=0x00000000004A65FC "5"
+ *   insn=0x00000000004A65FC string=0x00000000004A6640 "u"
+ *   insn=0x00000000004A6600 string=0x00000000004A6604 ""
+ *   insn=0x00000000004A6610 string=0x00000000004A6614 "\t@"
+ *   insn=0x00000000004A6620 string=0x00000000004A6624 ""
+ *   insn=0x00000000004A6630 string=0x00000000004A6634 "@"
+ *   insn=0x00000000004A6648 string=0x00000000004A664C "]r"
+ *   insn=0x00000000004A665C string=0x00000000004A6660 "\n"
+ *   insn=0x00000000004A6660 string=0x00000000004A6664 "J"
+ *   insn=0x00000000004A6664 string=0x00000000004A6668 "\n"
+ *   insn=0x00000000004A6670 string=0x00000000004A6674 "4"
+ *   insn=0x00000000004A6678 string=0x00000000004A667C ""
+ *   insn=0x00000000004A6688 string=0x00000000004A668C "\t@"
+ *   insn=0x00000000004A6698 string=0x00000000004A669C ""
+ *   insn=0x00000000004A66A8 string=0x00000000004A66AC "@"
+ *   insn=0x00000000004A66B8 string=0x00000000004A66BC "4"
+ *   insn=0x00000000004A66BC string=0x00000000004A6700 "h"
+ *   insn=0x00000000004A66C0 string=0x00000000004A66C4 ""
+ *   insn=0x00000000004A66D0 string=0x00000000004A66D4 "\t@"
+ *   insn=0x00000000004A66E0 string=0x00000000004A66E4 ""
+ *   insn=0x00000000004A66F0 string=0x00000000004A66F4 "@"
+ *   insn=0x00000000004A6700 string=0x00000000004A6704 "]"
+ *   insn=0x00000000004A6740 string=0x00000000004A6800 "s"
+ *   insn=0x00000000004A6744 string=0x00000000004A6748 ""
+ *   insn=0x00000000004A6754 string=0x00000000004A6758 "\t@"
+ *   insn=0x00000000004A6764 string=0x00000000004A6768 ""
+ *   insn=0x00000000004A6774 string=0x00000000004A6778 "@"
+ *   insn=0x00000000004A6794 string=0x00000000004A6798 ""
+ *   insn=0x00000000004A67A4 string=0x00000000004A67A8 "\t@"
+ *   insn=0x00000000004A67B4 string=0x00000000004A67B8 ""
+ *   insn=0x00000000004A67C4 string=0x00000000004A67C8 "@"
+ *   insn=0x00000000004A67D0 string=0x00000000004A67D4 ""
+ *   insn=0x00000000004A67E4 string=0x00000000004A67E8 "7l"
+ *   insn=0x00000000004A67EC string=0x00000000004A67F0 "s"
+ *   insn=0x00000000004A67F4 string=0x00000000004A6808 "h"
+ *   insn=0x00000000004A6800 string=0x00000000004A6804 "3"
+ *   insn=0x00000000004A6808 string=0x00000000004A680C ""
+ *   insn=0x00000000004A680C string=0x00000000004A6810 "h"
+ *   insn=0x00000000004A6814 string=0x00000000004A6818 "h"
+ *   insn=0x00000000004A6818 string=0x00000000004A681C "\t@"
+ *   insn=0x00000000004A6824 string=0x00000000004A6828 "h\n@"
+ *   insn=0x00000000004A6828 string=0x00000000004A682C ""
+ *   insn=0x00000000004A682C string=0x00000000004A6830 "h\n"
+ *   insn=0x00000000004A6834 string=0x00000000004A6838 "h"
+ *   insn=0x00000000004A6838 string=0x00000000004A683C "@"
+ *   insn=0x00000000004A6864 string=0x00000000004A6868 "U"
+ *   insn=0x00000000004A6874 string=0x00000000004A6878 "hRA9h"
+ *   insn=0x00000000004A6878 string=0x00000000004A687C "h"
+ *   insn=0x00000000004A687C string=0x00000000004A6880 "b"
+ *   insn=0x00000000004A6880 string=0x00000000004A6884 "aZ@"
+ *   insn=0x00000000004A6884 string=0x00000000004A6888 "`( "
+ *   insn=0x00000000004A6888 string=0x00000000004A688C "#(""
+ *   insn=0x00000000004A6890 string=0x00000000004A6894 "`b"
+ *   insn=0x00000000004A689C string=0x00000000004A68A0 "`"
+ *   insn=0x00000000004A68A0 string=0x00000000004A68A4 "cb"
+ *   insn=0x00000000004A68A4 string=0x00000000004A68A8 "hR"
+ *   insn=0x00000000004A68B4 string=0x00000000004A68B8 "`"
+ *   insn=0x00000000004A68C0 string=0x00000000004A68C4 "h"
+ *   insn=0x00000000004A68C0 string=0x00000000001F3930 "P'"
+ *   insn=0x00000000004A68C4 string=0x00000000004A68C8 ""
+ *   insn=0x00000000004A68C8 string=0x00000000004A68CC "`""
+ *   insn=0x00000000004A68C8 string=0x00000000004A6948 "`"
+ *   insn=0x00000000004A68CC string=0x00000000004A68D0 "a"
+ *   insn=0x00000000004A68D4 string=0x00000000004A68D8 "~P"
+ *   insn=0x00000000004A68D8 string=0x00000000001FAAD0 "0'"
+ *   insn=0x00000000004A68DC string=0x00000000004A68E0 "h"
+ *   insn=0x00000000004A68E8 string=0x00000000004A68EC "\n"
+ *   insn=0x00000000004A68E8 string=0x00000000004A68F8 "tZ@"
+ *   insn=0x00000000004A68EC string=0x00000000004A68F0 "J"
+ *   insn=0x00000000004A68F0 string=0x00000000004A68F4 "\n"
+ *   insn=0x00000000004A68F8 string=0x00000000004A68FC "i"
+ *   insn=0x00000000004A6904 string=0x00000000004A6908 ""
+ *   insn=0x00000000004A6914 string=0x00000000004A6918 "\t@"
+ *   insn=0x00000000004A6924 string=0x00000000004A6928 ""
+ *   insn=0x00000000004A6934 string=0x00000000004A6938 "@"
+ *   insn=0x00000000004A6948 string=0x00000000004A694C "a""
+ *   insn=0x00000000004A6950 string=0x00000000004A6954 "_P"
+ *   insn=0x00000000004A6958 string=0x00000000004A695C "h"
+ *   insn=0x00000000004A6964 string=0x00000000004A6968 "\n"
+ *   insn=0x00000000004A6964 string=0x00000000004A6974 "tZ@"
+ *   insn=0x00000000004A6968 string=0x00000000004A696C "J"
+ *   insn=0x00000000004A696C string=0x00000000004A6970 "\n"
+ *   insn=0x00000000004A6974 string=0x00000000004A6978 "i"
+ *   insn=0x00000000004A6978 string=0x00000000004A697C "4"
+ *   insn=0x00000000004A6980 string=0x00000000004A6984 ""
+ *   insn=0x00000000004A6990 string=0x00000000004A6994 "\t@"
+ *   insn=0x00000000004A69A0 string=0x00000000004A69A4 ""
+ *   insn=0x00000000004A69B0 string=0x00000000004A69B4 "@"
+ *   insn=0x00000000004A69C0 string=0x00000000004A69C4 "4"
+ *   insn=0x00000000004A69C4 string=0x00000000004A6A08 "hRA9"
+ *   insn=0x00000000004A69C8 string=0x00000000004A69CC ""
+ *   insn=0x00000000004A69DC string=0x00000000004A69E0 "\t@"
+ *   insn=0x00000000004A69E8 string=0x00000000004A69EC ""
+ *   insn=0x00000000004A69FC string=0x00000000004A6A00 "@"
+ *   insn=0x00000000004A6A34 string=0x00000000004A6A4C "!>"
+ *   insn=0x00000000004A6A5C string=0x00000000004A6A60 ""
+ *   insn=0x00000000004A6A64 string=0x00000000004A6A68 "!"
+ *   insn=0x00000000004A6A6C string=0x00000000004A6A70 "\t@"
+ *   insn=0x00000000004A6A7C string=0x00000000004A6A80 ""
+ *   insn=0x00000000004A6A84 string=0x00000000004A6A88 "!"
+ *   insn=0x00000000004A6A8C string=0x00000000004A6A90 "@"
+ *   insn=0x00000000004A6AA4 string=0x00000000004A6AA8 "4"
+ *   insn=0x00000000004A6AAC string=0x00000000004A6AB0 ""
+ *   insn=0x00000000004A6ABC string=0x00000000004A6AC0 "\t@"
+ *   insn=0x00000000004A6ACC string=0x00000000004A6AD0 ""
+ *   insn=0x00000000004A6ADC string=0x00000000004A6AE0 "@"
+ *   insn=0x00000000004A6AEC string=0x00000000004A6AF0 "uk"
+ *   insn=0x00000000004A6B04 string=0x00000000004A6B08 "T"
+ *   insn=0x00000000004A6B18 string=0x00000000004A6B1C "h"
+ *   insn=0x00000000004A6B20 string=0x00000000004A6B24 ""
+ *   insn=0x00000000004A6B24 string=0x00000000004A6B28 "h"
+ *   insn=0x00000000004A6B28 string=0x00000000004A6B2C ""
+ *   insn=0x00000000004A6B2C string=0x00000000004A6B30 "H"
+ *   insn=0x00000000004A6B30 string=0x00000000004A6B34 "@"
+ *   insn=0x00000000004A6B30 string=0x00000000004A6B58 "h"
+ *   insn=0x00000000004A6B38 string=0x00000000004A6B3C "@"
+ *   insn=0x00000000004A6B40 string=0x00000000004A6B44 ""
+ *   insn=0x00000000004A6B44 string=0x00000000004A6B48 ""
+ *   insn=0x00000000004A6B58 string=0x00000000004A6B5C ""
+ *   insn=0x00000000004A6B5C string=0x00000000004A6B60 "h"
+ *   insn=0x00000000004A6B64 string=0x00000000004A6B68 "h"
+ *   insn=0x00000000004A6B6C string=0x00000000004A6B70 "\t@"
+ *   insn=0x00000000004A6B74 string=0x00000000004A6B78 "h\n@"
+ *   insn=0x00000000004A6B78 string=0x00000000004A6B7C ""
+ *   insn=0x00000000004A6B7C string=0x00000000004A6B80 "h\n"
+ *   insn=0x00000000004A6B84 string=0x00000000004A6B88 "h"
+ *   insn=0x00000000004A6B8C string=0x00000000004A6B90 "@"
+ *   insn=0x00000000004A6BBC string=0x00000000004A6BC0 "|g"
+ *   insn=0x00000000004A6BD8 string=0x00000000004A6BE0 "h"
+ *   insn=0x00000000004A6BE0 string=0x00000000004A6BE4 ""
+ *   insn=0x00000000004A6BE4 string=0x00000000004A6BE8 "h"
+ *   insn=0x00000000004A6BEC string=0x00000000004A6BF0 "h"
+ *   insn=0x00000000004A6BF0 string=0x00000000004A6BF4 "\t@"
+ *   insn=0x00000000004A6BFC string=0x00000000004A6C00 "h\n@"
+ *   insn=0x00000000004A6C00 string=0x00000000004A6C04 ""
+ *   insn=0x00000000004A6C04 string=0x00000000004A6C08 "h\n"
+ *   insn=0x00000000004A6C0C string=0x00000000004A6C10 "h"
+ *   insn=0x00000000004A6C10 string=0x00000000004A6C14 "@"
+ *   insn=0x00000000004A6C20 string=0x00000000004A6C24 "(k"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+__int64 *__usercall Caver::GUIAnimation::AlphaAnimation@<X0>(
+        float a1@<S0>,
+        float a2@<S1>,
+        float a3@<S2>,
+        Caver::GUIAnimation **a4@<X8>)
+{
+  Caver::GUIAnimation *v9; // x21
+  Caver::GUIAnimation *v10; // x21
+  Caver::GUIPropertyValue *v11; // x0
+  Caver::GUIPropertyValue *v12; // x0
+  _QWORD *v13; // x8
+  __int64 v14; // x9
+  _QWORD *v15; // x20
+  __int64 v16; // x8
+  __int64 v17; // x8
+  _QWORD *v18; // x20
+  __int64 v19; // x8
+  __int64 v20; // x8
+  Caver::GUIAnimation *v21; // x21
+  __int64 *result; // x0
+  _QWORD *v23; // x8
+  __int64 v24; // x9
+  _QWORD *v25; // x20
+  __int64 v26; // x8
+  __int64 v27; // x8
+  _QWORD *v28; // x20
+  __int64 v29; // x8
+  __int64 v30; // x8
+  __int64 v31; // [xsp+160h] [xbp-60h] BYREF
+  __int64 v32; // [xsp+168h] [xbp-58h]
+  _QWORD *v33; // [xsp+170h] [xbp-50h]
+  __int64 v34; // [xsp+178h] [xbp-48h]
+
+  v34 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
+  v9 = (Caver::GUIAnimation *)operator new(0xC0u);
+  Caver::GUIAnimation::GUIAnimation(v9);
+  *a4 = v9;
+  boost::detail::shared_count::shared_count<Caver::GUIAnimation>();
+  boost::detail::sp_enable_shared_from_this();
+  v10 = *a4;
+  *((_DWORD *)*a4 + 12) = 2;
+  v12 = (Caver::GUIPropertyValue *)Caver::GUIPropertyValue::ValueWithFloat(&v31, v11, a1);
+  *((_DWORD *)v10 + 28) = v31;
+  v14 = v32;
+  v13 = v33;
+  if ( v33 )
+    ++v33[1];
+  v15 = (_QWORD *)*((_QWORD *)v10 + 16);
+  *((_QWORD *)v10 + 15) = v14;
+  *((_QWORD *)v10 + 16) = v13;
+  if ( v15 )
+  {
+    v16 = v15[1] - 1LL;
+    v15[1] = v16;
+    if ( !v16 )
+    {
+      v12 = (Caver::GUIPropertyValue *)(*(__int64 (__fastcall **)(_QWORD *))(*v15 + 16LL))(v15);
+      v17 = v15[2] - 1LL;
+      v15[2] = v17;
+      if ( !v17 )
+        v12 = (Caver::GUIPropertyValue *)(*(__int64 (__fastcall **)(_QWORD *))(*v15 + 24LL))(v15);
+    }
+  }
+  v18 = v33;
+  if ( v33 )
+  {
+    v19 = v33[1] - 1LL;
+    v33[1] = v19;
+    if ( !v19 )
+    {
+      v12 = (Caver::GUIPropertyValue *)(*(__int64 (__fastcall **)(_QWORD *))(*v18 + 16LL))(v18);
+      v20 = v18[2] - 1LL;
+      v18[2] = v20;
+      if ( !v20 )
+        v12 = (Caver::GUIPropertyValue *)(*(__int64 (__fastcall **)(_QWORD *))(*v18 + 24LL))(v18);
+    }
+  }
+  v21 = *a4;
+  result = Caver::GUIPropertyValue::ValueWithFloat(&v31, v12, a2);
+  *((_DWORD *)v21 + 34) = v31;
+  v24 = v32;
+  v23 = v33;
+  if ( v33 )
+    ++v33[1];
+  v25 = (_QWORD *)*((_QWORD *)v21 + 19);
+  *((_QWORD *)v21 + 18) = v24;
+  *((_QWORD *)v21 + 19) = v23;
+  if ( v25 )
+  {
+    v26 = v25[1] - 1LL;
+    v25[1] = v26;
+    if ( !v26 )
+    {
+      result = (__int64 *)(*(__int64 (__fastcall **)(_QWORD *))(*v25 + 16LL))(v25);
+      v27 = v25[2] - 1LL;
+      v25[2] = v27;
+      if ( !v27 )
+        result = (__int64 *)(*(__int64 (__fastcall **)(_QWORD *))(*v25 + 24LL))(v25);
+    }
+  }
+  v28 = v33;
+  if ( v33 )
+  {
+    v29 = v33[1] - 1LL;
+    v33[1] = v29;
+    if ( !v29 )
+    {
+      result = (__int64 *)(*(__int64 (__fastcall **)(_QWORD *))(*v28 + 16LL))(v28);
+      v30 = v28[2] - 1LL;
+      v28[2] = v30;
+      if ( !v30 )
+        result = (__int64 *)(*(__int64 (__fastcall **)(_QWORD *))(*v28 + 24LL))(v28);
+    }
+  }
+  *((float *)*a4 + 23) = a3;
+  return result;
+}
+

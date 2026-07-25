@@ -1,0 +1,81 @@
+/*
+ * OpenSwordigo reverse-engineering evidence
+ *
+ * Source: IDA Pro / Hex-Rays
+ * Address: 0x0000000000565330
+ * Mangled: sub_565330
+ * Demangled: sub_565330
+ *
+ * Callers: 33
+ *   0x000000000052B4F4  sub_52B4F4
+ *   0x000000000052B780  sub_52B780
+ *   0x00000000005459D8  sub_5459D8
+ *   0x0000000000546758  sub_546758
+ *   0x0000000000547030  sub_547030
+ *   0x0000000000547A78  sub_547A78
+ *   0x0000000000547CF0  sub_547CF0
+ *   0x0000000000548A64  sub_548A64
+ *   0x000000000054933C  sub_54933C
+ *   0x0000000000549D84  sub_549D84
+ *   0x000000000054D924  sub_54D924
+ *   0x000000000054DC04  sub_54DC04
+ *   0x0000000000566294  sub_566294
+ *   0x0000000000566784  sub_566784
+ *   0x0000000000566900  sub_566900
+ *   0x0000000000566A7C  sub_566A7C
+ *   0x0000000000566BB8  sub_566BB8
+ *   0x0000000000566E14  sub_566E14
+ *   0x0000000000569E1C  sub_569E1C
+ *   0x000000000056A798  sub_56A798
+ *   0x000000000056AA20  sub_56AA20
+ *   0x000000000056AD8C  sub_56AD8C
+ *   0x000000000056AEBC  sub_56AEBC
+ *   0x000000000056D7F4  sub_56D7F4
+ *   0x000000000056D97C  sub_56D97C
+ *   0x000000000056DA58  sub_56DA58
+ *   0x000000000056DF24  sub_56DF24
+ *   0x000000000056E000  sub_56E000
+ *   0x000000000056E0DC  sub_56E0DC
+ *   0x000000000056EFD4  sub_56EFD4
+ *   0x000000000056F2A0  sub_56F2A0
+ *   0x000000000056F4F8  sub_56F4F8
+ *   0x000000000056F5CC  sub_56F5CC
+ *
+ * Callees: 8
+ *   0x00000000001F41F0  .__cxa_free_exception
+ *   0x00000000001F9460  .__cxa_allocate_exception
+ *   0x00000000001FB4A0  .__cxa_throw
+ *   0x0000000000549F98  sub_549F98
+ *   0x000000000054A9B8  sub_54A9B8
+ *   0x0000000000565220  sub_565220
+ *   0x0000000000566BB8  sub_566BB8
+ *   0x00000000005818C4  sub_5818C4
+ *
+ * Referenced strings: 10
+ *   insn=0x0000000000565344 string=0x0000000000565348 "FP"
+ *   insn=0x0000000000565348 string=0x00000000001F9460 "0'"
+ *   insn=0x0000000000565374 string=0x0000000000565378 "!"
+ *   insn=0x000000000056538C string=0x0000000000565390 "!LF"
+ *   insn=0x0000000000565390 string=0x0000000000565394 "B"
+ *   insn=0x0000000000565394 string=0x0000000000565398 "BX"
+ *   insn=0x0000000000565398 string=0x00000000001FB4A0 "0'"
+ *   insn=0x00000000005653B0 string=0x00000000001F41F0 "P'"
+ *   insn=0x00000000005653B4 string=0x00000000005653B8 "Cq"
+ *   insn=0x00000000005653C4 string=0x00000000005653C8 "!"
+ *
+ * GENERATED EVIDENCE — NOT ORIGINAL SOURCE.
+ */
+
+void __fastcall __noreturn sub_565330(char *a1)
+{
+  _QWORD *exception; // x19
+  __int64 v3; // [xsp+48h] [xbp+48h] BYREF
+
+  exception = __cxa_allocate_exception(0x10u);
+  sub_566BB8((int)&v3, a1);
+  sub_54A9B8(exception, (__int64)&v3);
+  if ( (__int64 *)(v3 - 24) != &qword_6FD2E0 )
+    sub_565220((unsigned int *)(v3 - 24));
+  __cxa_throw(exception, (struct type_info *)&`typeinfo for'std::logic_error, (void (*)(void *))sub_549F98);
+}
+

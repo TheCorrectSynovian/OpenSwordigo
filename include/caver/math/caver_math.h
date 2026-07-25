@@ -112,7 +112,12 @@ struct Matrix4 {
     static Matrix4 identity() { return Matrix4(); }
     static Matrix4 translation(const Vector3& t);
     static Matrix4 scale(const Vector3& s);
+    static Matrix4 rotationX(float radians);
+    static Matrix4 rotationY(float radians);
     static Matrix4 rotationZ(float radians);
+    static Matrix4 perspectiveFov(float fovDeg, float aspect, float nearP, float farP);
+    static Matrix4 lookAt(const Vector3& eye, const Vector3& target, const Vector3& up);
+    static Matrix4 ortho(float left, float right, float bottom, float top, float nearP, float farP);
 
     Matrix4 operator*(const Matrix4& rhs) const;
     Vector3 transformPoint(const Vector3& p) const;
