@@ -55,6 +55,7 @@ rln/*.gzf
 rln/*.html
 rln/*.xml
 rln/libswordigo.c
+resources/
 
 # Large raw extracted symbol dumps (Keep clean text sources)
 swordigo_symbols_raw.txt

@@ -1,9 +1,0 @@
-address	name	reason
-00370bd4	Caver::HealthComponent::TakeDamageWithImpact	
-Low-level Error: Overriding symbol with different type size
-004e8c80	Caver::PurchaseViewController::UpdateView	
-Low-level Error: Overriding symbol with different type size
-005789f0	Java_com_touchfoo_swordigo_Native_setApplicationViewSize	
-Low-level Error: Overriding symbol with different type size
-005cba08	Caver::Texture::InitWithData	
-Recoverable Error: Unable to find unique hash for varnode
