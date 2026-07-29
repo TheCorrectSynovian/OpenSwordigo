@@ -794,19 +794,32 @@ Mesh::~Mesh() {
 
 void Mesh::uploadGLBuffers(const std::vector<Vertex>& vertices, const std::vector<uint16_t>& indices) {
     indexCount_ = indices.size();
-    if (vertices.empty() || indices.empty()) return;
+    vertexCount_ = vertices.size();
+    if (vertices.empty()) return;
+
+    if (vao_ != 0) {
+        glDeleteVertexArrays(1, &vao_);
+        glDeleteBuffers(1, &vbo_);
+        if (ebo_ != 0) glDeleteBuffers(1, &ebo_);
+    }
 
     glGenVertexArrays(1, &vao_);
     glGenBuffers(1, &vbo_);
-    glGenBuffers(1, &ebo_);
+    if (!indices.empty()) {
+        glGenBuffers(1, &ebo_);
+    } else {
+        ebo_ = 0;
+    }
 
     glBindVertexArray(vao_);
 
     glBindBuffer(GL_ARRAY_BUFFER, vbo_);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo_);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(uint16_t), indices.data(), GL_STATIC_DRAW);
+    if (!indices.empty()) {
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo_);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(uint16_t), indices.data(), GL_STATIC_DRAW);
+    }
 
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, position));
@@ -819,11 +832,13 @@ void Mesh::uploadGLBuffers(const std::vector<Vertex>& vertices, const std::vecto
 
     glBindVertexArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    if (!indices.empty()) {
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    }
 }
 
 void Mesh::draw(bool useVAO) const {
-    if (indexCount_ == 0) return;
+    if (vertexCount_ == 0) return;
 
     if (!textureName_.empty()) {
         uint32_t tex = RenderingContext::instance().getTexture(textureName_);
@@ -836,11 +851,17 @@ void Mesh::draw(bool useVAO) const {
 
     if (useVAO && vao_ != 0) {
         glBindVertexArray(vao_);
-        glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indexCount_), GL_UNSIGNED_SHORT, 0);
+        if (indexCount_ > 0) {
+            glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indexCount_), GL_UNSIGNED_SHORT, 0);
+        } else {
+            glDrawArrays(GL_TRIANGLES, 0, static_cast<GLsizei>(vertexCount_));
+        }
         glBindVertexArray(0);
     } else {
         glBindBuffer(GL_ARRAY_BUFFER, vbo_);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo_);
+        if (indexCount_ > 0) {
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo_);
+        }
 
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, position));
@@ -851,9 +872,19 @@ void Mesh::draw(bool useVAO) const {
         glEnableVertexAttribArray(2);
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, uv));
 
-        glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indexCount_), GL_UNSIGNED_SHORT, 0);
+        if (indexCount_ > 0) {
+            glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indexCount_), GL_UNSIGNED_SHORT, 0);
+        } else {
+            glDrawArrays(GL_TRIANGLES, 0, static_cast<GLsizei>(vertexCount_));
+        }
 
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+        glDisableVertexAttribArray(0);
+        glDisableVertexAttribArray(1);
+        glDisableVertexAttribArray(2);
+
+        if (indexCount_ > 0) {
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+        }
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
 
@@ -885,6 +916,10 @@ std::shared_ptr<Model> PODLoader::loadModel(const std::string& filename) {
             Matrix4 nodeTransform;
             std::memcpy(nodeTransform.m, nodeMat, sizeof(nodeMat));
 
+            bool isNPC = (node.name.find("npc") != std::string::npos || 
+                          filename.find("npc") != std::string::npos ||
+                          filename.find("hero") != std::string::npos);
+
             size_t vcount = pod_mesh.positions.size() / 3;
             std::vector<Vertex> parsedVertices(vcount);
 
@@ -892,6 +927,10 @@ std::shared_ptr<Model> PODLoader::loadModel(const std::string& filename) {
                 Vertex v;
                 Vector3 localPos(pod_mesh.positions[i * 3 + 0], pod_mesh.positions[i * 3 + 1], pod_mesh.positions[i * 3 + 2]);
                 v.position = nodeTransform.transformPoint(localPos);
+
+                if (isNPC) {
+                    v.position.y = -v.position.y; // Flip NPC Y coordinate so NPC stands right-side up on their feet
+                }
 
                 if (i * 3 + 2 < pod_mesh.normals.size()) {
                     Vector3 localNorm(pod_mesh.normals[i * 3 + 0], pod_mesh.normals[i * 3 + 1], pod_mesh.normals[i * 3 + 2]);

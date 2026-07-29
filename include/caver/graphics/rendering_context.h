@@ -35,6 +35,12 @@ public:
     void setCamera(const Vector2& center, float zoom = 1.0f);
     const Vector2& getCameraPosition() const { return cameraPos_; }
 
+    void toggleFreecam() { freecamEnabled_ = !freecamEnabled_; }
+    bool isFreecamEnabled() const { return freecamEnabled_; }
+
+    void setMatrix(const Matrix4& model);
+    const Matrix4& getModelMatrix() const { return model_; }
+
     ShaderProgram& getShader() { return defaultShader_; }
     const Matrix4& getViewProjection() const { return viewProjection_; }
 
@@ -53,10 +59,12 @@ private:
     int width_{1280};
     int height_{720};
 
-    Vector2 cameraPos_{3535.16f, 407.5f};
+    Vector2 cameraPos_{0.0f, 0.0f};
+    bool freecamEnabled_{false};
     Matrix4 projection_;
     Matrix4 view_;
     Matrix4 viewProjection_;
+    Matrix4 model_;
 
     ShaderProgram defaultShader_;
 

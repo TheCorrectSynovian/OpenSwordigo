@@ -41,7 +41,7 @@ import traceback
 # ============================================================
 
 OUTPUT_DIR = os.path.expanduser(
-    "~/SwordigoDesktop/OpenSwordigo/rln/ida_decompiled"
+    "~/SwordigoDesktop/OpenSoozis/"
 )
 
 FUNCTION_DIR = os.path.join(OUTPUT_DIR, "functions")

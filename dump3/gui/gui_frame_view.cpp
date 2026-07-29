@@ -6,8 +6,18 @@ namespace caver {
 void GUIFrameView::render(RenderingContext& ctx) {
     if (!visible_) return;
 
+    float uMin = 0.0f, vMin = 0.0f, uMax = 1.0f, vMax = 1.0f;
     if (!textureName_.empty() && textureId_ == 0) {
-        textureId_ = TextureLibrary::sharedLibrary().textureForName(textureName_);
+        auto regionOpt = TextureLibrary::sharedLibrary().getAtlasRegion(textureName_);
+        if (regionOpt) {
+            textureId_ = TextureLibrary::sharedLibrary().textureForName(regionOpt->atlasTextureName);
+            uMin = regionOpt->uMin;
+            vMin = regionOpt->vMin;
+            uMax = regionOpt->uMax;
+            vMax = regionOpt->vMax;
+        } else {
+            textureId_ = TextureLibrary::sharedLibrary().textureForName(textureName_);
+        }
     }
 
     if (!quad_) {
@@ -15,10 +25,10 @@ void GUIFrameView::render(RenderingContext& ctx) {
         float halfW = 0.5f;
         float halfH = 0.5f;
         std::vector<Vertex> verts = {
-            {{-halfW, -halfH, 0.0f}, {0, 0, 1}, {0.0f, 0.0f}},
-            {{ halfW, -halfH, 0.0f}, {0, 0, 1}, {1.0f, 0.0f}},
-            {{ halfW,  halfH, 0.0f}, {0, 0, 1}, {1.0f, 1.0f}},
-            {{-halfW,  halfH, 0.0f}, {0, 0, 1}, {0.0f, 1.0f}}
+            {{-halfW, -halfH, 0.0f}, {0, 0, 1}, {uMin, vMin}},
+            {{ halfW, -halfH, 0.0f}, {0, 0, 1}, {uMax, vMin}},
+            {{ halfW,  halfH, 0.0f}, {0, 0, 1}, {uMax, vMax}},
+            {{-halfW,  halfH, 0.0f}, {0, 0, 1}, {uMin, vMax}}
         };
         std::vector<uint16_t> indices = {0, 1, 2, 0, 2, 3};
         quad_->uploadGLBuffers(verts, indices);

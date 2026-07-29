@@ -20,8 +20,9 @@ Matrix4 Matrix4::scale(const Vector3& s) {
     return res;
 }
 
-Matrix4 Matrix4::rotationX(float radians) {
+Matrix4 Matrix4::rotationX(float degrees) {
     Matrix4 res = identity();
+    float radians = degrees * 0.017453292519943295f;
     float c = std::cos(radians);
     float s = std::sin(radians);
     res.m[5] = c;   res.m[9] = -s;
@@ -29,8 +30,9 @@ Matrix4 Matrix4::rotationX(float radians) {
     return res;
 }
 
-Matrix4 Matrix4::rotationY(float radians) {
+Matrix4 Matrix4::rotationY(float degrees) {
     Matrix4 res = identity();
+    float radians = degrees * 0.017453292519943295f;
     float c = std::cos(radians);
     float s = std::sin(radians);
     res.m[0] = c;   res.m[8] = s;
@@ -38,8 +40,9 @@ Matrix4 Matrix4::rotationY(float radians) {
     return res;
 }
 
-Matrix4 Matrix4::rotationZ(float radians) {
+Matrix4 Matrix4::rotationZ(float degrees) {
     Matrix4 res = identity();
+    float radians = degrees * 0.017453292519943295f;
     float c = std::cos(radians);
     float s = std::sin(radians);
     res.m[0] = c;  res.m[4] = -s;

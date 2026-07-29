@@ -36,8 +36,8 @@ int main(int argc, char** argv) {
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 
-    int winWidth = 1280;
-    int winHeight = 720;
+    int winWidth = 1920;
+    int winHeight = 1080;
 
     SDL_Window* window = SDL_CreateWindow(
         "OpenSwordigo Native Engine — Milestone 2 Audit Pass",
@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
     auto testHouse = caver::PODLoader::loadModel("house.POD");
 
     // Initialize OpenSwordigo Engine AppRuntime
-    caver::AppRuntime::instance().initEngine(winWidth, winHeight);
+    caver::AppRuntime::instance().initEngine(winWidth, winHeight, sceneFile);
 
     bool running = true;
     int frameCount = 0;
@@ -95,6 +95,13 @@ int main(int argc, char** argv) {
                 int w = ev.window.data1;
                 int h = ev.window.data2;
                 caver::RenderingContext::instance().setViewport(w, h);
+            } else if (ev.type == SDL_EVENT_KEY_DOWN) {
+                if (ev.key.key == SDLK_BACKSLASH) {
+                    caver::RenderingContext::instance().toggleFreecam();
+                    std::cout << "[Freecam] Toggled Freecam mode: " 
+                              << (caver::RenderingContext::instance().isFreecamEnabled() ? "ENABLED" : "DISABLED (Locked Game Camera)") 
+                              << std::endl;
+                }
             } else if (ev.type == SDL_EVENT_MOUSE_BUTTON_DOWN) {
                 float mx = ev.button.x;
                 float my = winHeight - ev.button.y; // Flip Y for OpenGL orthographic coordinate system

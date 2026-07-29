@@ -101,15 +101,18 @@ static MeshDataMeta parseMeshDataMeta(const std::vector<uint8_t>& bytes) {
 }
 
 static std::string parseMaterialTextureName(const std::vector<uint8_t>& bytes) {
-    ProtoMessage msg;
-    msg.parseFromBytes(bytes.data(), bytes.size());
-    for (const auto& f : msg.fields) {
-        if (f.fieldNumber == 5 && !f.bytesVal.empty()) {
-            ProtoMessage matMsg;
-            matMsg.parseFromBytes(f.bytesVal.data(), f.bytesVal.size());
-            for (const auto& mf : matMsg.fields) {
-                if (mf.fieldNumber == 1 && !mf.bytesVal.empty()) {
-                    return std::string(mf.bytesVal.begin(), mf.bytesVal.end());
+    ProtoMessage matMsg;
+    matMsg.parseFromBytes(bytes.data(), bytes.size());
+    for (const auto& mf : matMsg.fields) {
+        if (!mf.bytesVal.empty()) {
+            ProtoMessage texMsg;
+            texMsg.parseFromBytes(mf.bytesVal.data(), mf.bytesVal.size());
+            for (const auto& tf : texMsg.fields) {
+                if (tf.fieldNumber == 1 && !tf.bytesVal.empty()) {
+                    std::string res(tf.bytesVal.begin(), tf.bytesVal.end());
+                    if (res.find(".png") != std::string::npos || res.find(".pvr") != std::string::npos) {
+                        return res;
+                    }
                 }
             }
         }
@@ -157,9 +160,9 @@ void GroundMeshComponent::parseGroundMeshBlock(const std::vector<uint8_t>& bytes
     ProtoMessage gmMsg;
     gmMsg.parseFromBytes(bytes.data(), bytes.size());
     for (const auto& f : gmMsg.fields) {
-        if (f.fieldNumber == 8 && !f.bytesVal.empty()) {
+        if ((f.fieldNumber == 8 || f.fieldNumber == 5 || f.fieldNumber == 3) && !f.bytesVal.empty()) {
             parseSingleMesh(f.bytesVal, true);  // SurfaceMesh
-        } else if (f.fieldNumber == 9 && !f.bytesVal.empty()) {
+        } else if ((f.fieldNumber == 9 || f.fieldNumber == 6) && !f.bytesVal.empty()) {
             parseSingleMesh(f.bytesVal, false); // FrontMesh
         }
     }
@@ -176,8 +179,9 @@ void GroundMeshComponent::parseSingleMesh(const std::vector<uint8_t>& bytes, boo
     for (const auto& f : mMsg.fields) {
         if (f.fieldNumber == 1) {
             vertexCountParam = static_cast<int>(f.varintVal);
-        } else if (f.fieldNumber == 16 && !f.bytesVal.empty()) {
-            texName = parseMaterialTextureName(f.bytesVal);
+        } else if ((f.fieldNumber == 16 || f.fieldNumber == 10 || f.fieldNumber == 5) && !f.bytesVal.empty()) {
+            std::string parsed = parseMaterialTextureName(f.bytesVal);
+            if (!parsed.empty()) texName = parsed;
         } else if (f.fieldNumber == 50 && !f.bytesVal.empty()) {
             vertexData = f.bytesVal;
         } else if (f.fieldNumber == 51 && !f.bytesVal.empty()) {
@@ -201,7 +205,17 @@ void GroundMeshComponent::parseSingleMesh(const std::vector<uint8_t>& bytes, boo
         Vertex v;
         v.position = Vector3(floats[i * 8 + 0], floats[i * 8 + 1], floats[i * 8 + 2]);
         v.normal   = Vector3(floats[i * 8 + 3], floats[i * 8 + 4], floats[i * 8 + 5]);
-        v.uv       = Vector2(floats[i * 8 + 6], floats[i * 8 + 7]);
+        
+        float u = floats[i * 8 + 6];
+        float v_coord = floats[i * 8 + 7];
+        
+        if (!isSurface && (u == 0.0f && v_coord == 0.0f)) {
+            // Apply Boulder Engine front face planar UV projection: 0.004f scale + 0.5f offset
+            u = (v.position.x * 0.004f) + 0.5f;
+            v_coord = (v.position.y * 0.004f) + 0.5f;
+        }
+
+        v.uv = Vector2(u, v_coord);
         parsedVertices[i] = v;
     }
 
@@ -210,6 +224,13 @@ void GroundMeshComponent::parseSingleMesh(const std::vector<uint8_t>& bytes, boo
         size_t numIndices = indexData.size() / sizeof(uint16_t);
         parsedIndices.resize(numIndices);
         std::memcpy(parsedIndices.data(), indexData.data(), numIndices * sizeof(uint16_t));
+    } else if (numVertices >= 3) {
+        // Auto-generate triangle fan / strip indices if no index data present in protobuf
+        for (int i = 1; i + 1 < numVertices; ++i) {
+            parsedIndices.push_back(0);
+            parsedIndices.push_back(static_cast<uint16_t>(i));
+            parsedIndices.push_back(static_cast<uint16_t>(i + 1));
+        }
     }
 
     auto subMesh = std::make_shared<Mesh>();
@@ -253,7 +274,12 @@ void GroundMeshComponent::render(RenderingContext& ctx) {
     ctx.getShader().setMVP(mvp);
     ctx.getShader().setColor(FloatColor(1.0f, 1.0f, 1.0f, 1.0f));
 
-    auto renderMeshList = [&](std::vector<GroundSubMesh>& list) {
+    glEnable(GL_DEPTH_TEST);
+    glDepthMask(GL_TRUE);
+    glDepthFunc(GL_LEQUAL);
+    glDisable(GL_CULL_FACE);
+
+    auto renderMeshList = [&](std::vector<GroundSubMesh>& list, bool isSurface) {
         for (auto& gsm : list) {
             if (!gsm.mesh || gsm.mesh->getIndexCount() == 0) continue;
 
@@ -267,8 +293,19 @@ void GroundMeshComponent::render(RenderingContext& ctx) {
                 }
             }
 
+            if (gsm.textureName.empty() || gsm.textureName == "GroundMesh") {
+                gsm.textureName = isSurface ? "bush.png" : "stone.png";
+            }
+
             if (gsm.textureId == 0 && !gsm.textureName.empty()) {
                 gsm.textureId = ctx.getTexture(gsm.textureName);
+            }
+
+            if (isSurface) {
+                // Top surface gets grass green tint modulation
+                ctx.getShader().setColor(FloatColor(0.25f, 0.82f, 0.15f, 1.0f));
+            } else {
+                ctx.getShader().setColor(FloatColor(1.0f, 1.0f, 1.0f, 1.0f));
             }
 
             if (gsm.textureId != 0) {
@@ -283,8 +320,8 @@ void GroundMeshComponent::render(RenderingContext& ctx) {
         }
     };
 
-    renderMeshList(surfaceMeshes_);
-    renderMeshList(frontMeshes_);
+    renderMeshList(surfaceMeshes_, true);
+    renderMeshList(frontMeshes_, false);
 }
 
 } // namespace caver

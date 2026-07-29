@@ -1,6 +1,8 @@
 #include "caver/graphics/rendering_context.h"
 #include "caver/graphics/gl_inc.h"
 #include "caver/resource/vfs.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb/stb_image.h>
 #include <iostream>
 
 namespace caver {
@@ -34,9 +36,11 @@ bool RenderingContext::initGL(int viewportWidth, int viewportHeight) {
 "attribute vec3 aPosition;\n"
 "attribute vec3 aNormal;\n"
 "attribute vec2 aTexCoord;\n"
+"varying vec3 vNormal;\n"
 "varying vec2 vTexCoord;\n"
 "uniform mat4 uMVP;\n"
 "void main() {\n"
+"    vNormal = aNormal;\n"
 "    vTexCoord = aTexCoord;\n"
 "    gl_Position = uMVP * vec4(aPosition, 1.0);\n"
 "}\n";
@@ -44,16 +48,21 @@ bool RenderingContext::initGL(int viewportWidth, int viewportHeight) {
     std::string fsSrc =
 "#version 100\n"
 "precision mediump float;\n"
+"varying vec3 vNormal;\n"
 "varying vec2 vTexCoord;\n"
 "uniform sampler2D uTexture;\n"
 "uniform vec4 uColor;\n"
 "uniform bool uUseTexture;\n"
+"uniform vec3 uAmbientLight;\n"
+"uniform vec3 uLightDir;\n"
 "void main() {\n"
-"    if (uUseTexture) {\n"
-"        gl_FragColor = texture2D(uTexture, vTexCoord) * uColor;\n"
-"    } else {\n"
-"        gl_FragColor = uColor;\n"
-"    }\n"
+"    vec3 norm = length(vNormal) > 0.001 ? normalize(vNormal) : vec3(0.0, 0.0, 1.0);\n"
+"    vec3 lightDir = length(uLightDir) > 0.001 ? normalize(uLightDir) : vec3(0.3, 0.8, 0.5);\n"
+"    float diff = max(dot(norm, lightDir), 0.0);\n"
+"    vec3 ambient = length(uAmbientLight) > 0.001 ? uAmbientLight : vec3(0.8, 0.8, 0.8);\n"
+"    vec3 lighting = ambient + vec3(diff * 0.4);\n"
+"    vec4 baseColor = uUseTexture ? texture2D(uTexture, vTexCoord) * uColor : uColor;\n"
+"    gl_FragColor = vec4(baseColor.rgb * min(lighting, vec3(1.0)), baseColor.a);\n"
 "}\n";
 
     if (!defaultShader_.compile(vsSrc, fsSrc)) {
@@ -78,7 +87,7 @@ void RenderingContext::setViewport(int width, int height) {
     float aspect = (height > 0) ? (float)width / (float)height : 1.0f;
     projection_ = Matrix4::perspectiveFov(20.0f, aspect, 50.0f, 20000.0f);
 
-    setCamera(Vector2(3535.16f, 407.499f));
+    setCamera(cameraPos_);
 }
 
 void RenderingContext::setCamera(const Vector2& center, float zoom) {
@@ -92,13 +101,22 @@ void RenderingContext::setCamera(const Vector2& center, float zoom) {
     viewProjection_ = projection_ * view_;
 }
 
+void RenderingContext::setMatrix(const Matrix4& model) {
+    model_ = model;
+    Matrix4 mvp = viewProjection_ * model_;
+    defaultShader_.setMVP(mvp);
+}
+
 void RenderingContext::beginFrame() {
     drawCallCount_ = 0;
     triangleCount_ = 0;
-    glClearColor(0.08f, 0.1f, 0.15f, 1.0f);
+    glClearColor(0.04f, 0.06f, 0.10f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     defaultShader_.use();
+    // Set default ambient and directional light uniforms
+    glUniform3f(glGetUniformLocation(defaultShader_.getProgramId(), "uAmbientLight"), 0.8f, 0.8f, 0.8f);
+    glUniform3f(glGetUniformLocation(defaultShader_.getProgramId(), "uLightDir"), 0.3f, 0.8f, 0.5f);
     defaultShader_.setTextureUnit(0);
     defaultShader_.setColor(FloatColor(1, 1, 1, 1));
 }
@@ -152,10 +170,35 @@ uint32_t RenderingContext::getTexture(const std::string& textureName) {
         }
     }
 
+    if (!data || data->empty()) {
+        std::vector<std::string> fallbacks = {"blackbg_2x.tex.png", "blackbg.png", "black128_2x.pvr", "black128.png"};
+        for (const auto& fb : fallbacks) {
+            data = VFS::instance().readFile(fb);
+            if (data && !data->empty()) {
+                matchedPath = fb;
+                std::cout << "[RenderingContext] Using fallback texture '" << fb << "' for missing texture '" << textureName << "'" << std::endl;
+                break;
+            }
+        }
+    }
+
     uint32_t texId = 0;
-    int w = 0, h = 0;
+    int w = 0, h = 0, channels = 0;
     if (data && !data->empty()) {
         texId = pvr_load_texture_from_memory(data->data(), data->size(), &w, &h);
+        if (texId == 0) {
+            unsigned char* imgData = stbi_load_from_memory(data->data(), static_cast<int>(data->size()), &w, &h, &channels, 4);
+            if (imgData) {
+                glGenTextures(1, &texId);
+                glBindTexture(GL_TEXTURE_2D, texId);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, imgData);
+                stbi_image_free(imgData);
+            }
+        }
     }
 
     TextureData tex;

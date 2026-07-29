@@ -352,17 +352,17 @@ static void pvrtcGetDecompressedPixels(const PVRTCWord& P, const PVRTCWord& Q, c
 
 			if (bpp == 2)
 			{
-				pColorData[y * wordWidth + x].red = static_cast<uint8_t>(result.red);
-				pColorData[y * wordWidth + x].green = static_cast<uint8_t>(result.green);
-				pColorData[y * wordWidth + x].blue = static_cast<uint8_t>(result.blue);
-				pColorData[y * wordWidth + x].alpha = static_cast<uint8_t>(result.alpha);
+				pColorData[y * wordWidth + x].red = static_cast<uint8_t>((result.red * 255) / 31);
+				pColorData[y * wordWidth + x].green = static_cast<uint8_t>((result.green * 255) / 31);
+				pColorData[y * wordWidth + x].blue = static_cast<uint8_t>((result.blue * 255) / 31);
+				pColorData[y * wordWidth + x].alpha = static_cast<uint8_t>((result.alpha * 255) / 31);
 			}
 			else if (bpp == 4)
 			{
-				pColorData[y + x * wordHeight].red = static_cast<uint8_t>(result.red);
-				pColorData[y + x * wordHeight].green = static_cast<uint8_t>(result.green);
-				pColorData[y + x * wordHeight].blue = static_cast<uint8_t>(result.blue);
-				pColorData[y + x * wordHeight].alpha = static_cast<uint8_t>(result.alpha);
+				pColorData[y + x * wordHeight].red = static_cast<uint8_t>((result.red * 255) / 63);
+				pColorData[y + x * wordHeight].green = static_cast<uint8_t>((result.green * 255) / 63);
+				pColorData[y + x * wordHeight].blue = static_cast<uint8_t>((result.blue * 255) / 63);
+				pColorData[y + x * wordHeight].alpha = static_cast<uint8_t>((result.alpha * 255) / 63);
 			}
 		}
 	}
@@ -513,9 +513,9 @@ static const int etc1_modifiers[8][2] = {
 };
 
 static void decode_etc1_block(const uint8_t* src, uint8_t* dst, int dst_stride) {
-	uint64_t block = 0;
-	for (int i = 0; i < 8; i++)
-		block = (block << 8) | src[i];
+	uint32_t high_word = ((uint32_t)src[0] << 24) | ((uint32_t)src[1] << 16) | ((uint32_t)src[2] << 8) | src[3];
+	uint32_t low_word  = ((uint32_t)src[4] << 24) | ((uint32_t)src[5] << 16) | ((uint32_t)src[6] << 8) | src[7];
+	uint64_t block = ((uint64_t)high_word << 32) | low_word;
 
 	int diff  = (block >> 33) & 1;
 	int flip  = (block >> 32) & 1;

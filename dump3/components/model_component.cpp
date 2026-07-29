@@ -6,6 +6,11 @@ namespace caver {
 
 void ModelComponent::render(RenderingContext& ctx) {
     if (modelName_.empty()) return;
+    if (modelName_.find("blackbg") != std::string::npos ||
+        modelName_.find("menu_back") != std::string::npos ||
+        modelName_.find("collision_block") != std::string::npos) {
+        return;
+    }
 
     if (!model_) {
         model_ = ctx.getModel(modelName_);
@@ -26,14 +31,15 @@ void ModelComponent::render(RenderingContext& ctx) {
     }
 
     Matrix4 translation = Matrix4::translation(Vector3(pos.x, pos.y, depth));
-    Matrix4 rotation = Matrix4::rotationY(rot);
+    Matrix4 rotation = Matrix4::rotationZ(rot);
     Matrix4 scaling = Matrix4::scale(Vector3(scale, scale, scale));
 
     Matrix4 modelMat = translation * rotation * scaling;
     Matrix4 mvp = ctx.getViewProjection() * modelMat;
 
     ctx.getShader().setMVP(mvp);
-    ctx.getShader().setColor(FloatColor(1, 1, 1, 1));
+
+    ctx.getShader().setColor(FloatColor(1.0f, 1.0f, 1.0f, 1.0f));
 
     // If component has explicit texture override, bind it for all meshes
     if (!textureName_.empty()) {

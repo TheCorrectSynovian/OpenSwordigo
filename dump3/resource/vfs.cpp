@@ -18,6 +18,8 @@ void VFS::addSearchPath(const std::string& path) {
 }
 
 void VFS::initDefaultPaths() {
+    addSearchPath("/home/quantumcreeper/SwordigoDesktop/Resources");
+    addSearchPath("/run/media/quantumcreeper/TVPG/Prenxy Packages/SwordigoDesktop/Resources");
     const char* home = std::getenv("HOME");
     if (home) {
         std::string userAssets = std::string(home) + "/.local/share/swordigo-desktop/assets/resources";

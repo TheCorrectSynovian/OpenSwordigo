@@ -61,7 +61,20 @@ void MainMenuViewController::render(RenderingContext& ctx) {
     menuScene_.render(ctx);
 
     // 2. Render GUI overlay (title banner + play button)
+    glDisable(GL_DEPTH_TEST);
+    glDisable(GL_CULL_FACE);
+    glDepthMask(GL_FALSE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
+    // Restore neutral lighting for UI
+    glUniform3f(glGetUniformLocation(ctx.getShader().getProgramId(), "uAmbientLight"), 1.0f, 1.0f, 1.0f);
+    glUniform3f(glGetUniformLocation(ctx.getShader().getProgramId(), "uLightDir"), 0.0f, 0.0f, 1.0f);
+    
     GUIView::render(ctx);
+    
+    glEnable(GL_DEPTH_TEST);
+    glDepthMask(GL_TRUE);
 }
 
 } // namespace caver

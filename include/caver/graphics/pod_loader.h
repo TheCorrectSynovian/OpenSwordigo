@@ -115,13 +115,14 @@ public:
     const std::string& getTextureName() const { return textureName_; }
 
     void uploadGLBuffers(const std::vector<Vertex>& vertices, const std::vector<uint16_t>& indices);
-    void draw(bool useVAO = true) const;
+    void draw(bool useVAO = false) const;
 
     uint32_t getVAO() const { return vao_; }
     uint32_t getVBO() const { return vbo_; }
     uint32_t getEBO() const { return ebo_; }
     size_t getIndexCount() const { return indexCount_; }
-    size_t getTriangleCount() const { return indexCount_ / 3; }
+    size_t getVertexCount() const { return vertexCount_; }
+    size_t getTriangleCount() const { return indexCount_ > 0 ? indexCount_ / 3 : vertexCount_ / 3; }
 
 private:
     std::string textureName_;
@@ -129,6 +130,7 @@ private:
     uint32_t vbo_{0};
     uint32_t ebo_{0};
     size_t indexCount_{0};
+    size_t vertexCount_{0};
 };
 
 class Model {
@@ -141,7 +143,7 @@ public:
     void addMesh(std::shared_ptr<Mesh> mesh) { meshes_.push_back(std::move(mesh)); }
     const std::vector<std::shared_ptr<Mesh>>& getMeshes() const { return meshes_; }
 
-    void draw(bool useVAO = true) const {
+    void draw(bool useVAO = false) const {
         for (const auto& mesh : meshes_) {
             mesh->draw(useVAO);
         }

@@ -102,6 +102,7 @@ set(OPENSWORDIGO_SOURCES
     src/graphics/shader_program.cpp
     src/graphics/rendering_context.cpp
     src/graphics/gl_render_device.cpp
+    src/graphics/font.cpp
     src/components/background_component.cpp
     src/components/model_component.cpp
     src/components/ground_mesh_component.cpp
@@ -109,6 +110,9 @@ set(OPENSWORDIGO_SOURCES
     src/resource/texture_library.cpp
     src/resource/model_library.cpp
     src/gui/gui_view.cpp
+    src/gui/gui_rounded_rect.cpp
+    src/gui/gui_textured_rect.cpp
+    src/gui/gui_label.cpp
     src/gui/gui_button.cpp
     src/gui/gui_frame_view.cpp
     src/gui/gui_navigation_controller.cpp

@@ -112,9 +112,9 @@ struct Matrix4 {
     static Matrix4 identity() { return Matrix4(); }
     static Matrix4 translation(const Vector3& t);
     static Matrix4 scale(const Vector3& s);
-    static Matrix4 rotationX(float radians);
-    static Matrix4 rotationY(float radians);
-    static Matrix4 rotationZ(float radians);
+    static Matrix4 rotationX(float degrees);
+    static Matrix4 rotationY(float degrees);
+    static Matrix4 rotationZ(float degrees);
     static Matrix4 perspectiveFov(float fovDeg, float aspect, float nearP, float farP);
     static Matrix4 lookAt(const Vector3& eye, const Vector3& target, const Vector3& up);
     static Matrix4 ortho(float left, float right, float bottom, float top, float nearP, float farP);
@@ -141,6 +141,16 @@ struct OrientedRect {
     float angle{0.0f};
 
     bool intersectsLineSegmentOnAxis(const Vector2& start, const Vector2& end, const Vector2& axis) const;
+};
+
+struct Rectangle {
+    float x{0.0f};
+    float y{0.0f};
+    float width{0.0f};
+    float height{0.0f};
+
+    constexpr Rectangle() = default;
+    constexpr Rectangle(float x_, float y_, float w_, float h_) : x(x_), y(y_), width(w_), height(h_) {}
 };
 
 } // namespace caver

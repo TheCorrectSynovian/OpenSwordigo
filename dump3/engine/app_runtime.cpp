@@ -1,5 +1,6 @@
 #include "caver/engine/app_runtime.h"
 #include "caver/resource/texture_library.h"
+#include "caver/game/game_view_controller.h"
 #include <iostream>
 
 namespace caver {
@@ -9,7 +10,7 @@ AppRuntime& AppRuntime::instance() {
     return instance;
 }
 
-bool AppRuntime::initEngine(int windowWidth, int windowHeight) {
+bool AppRuntime::initEngine(int windowWidth, int windowHeight, const std::string& sceneName) {
     if (initialized_) return true;
 
     std::cout << "[AppRuntime] Initializing OpenSwordigo Engine Subsystems..." << std::endl;
@@ -17,14 +18,17 @@ bool AppRuntime::initEngine(int windowWidth, int windowHeight) {
     RenderingContext::instance().initGL(windowWidth, windowHeight);
 
     // Preload UI Atlases
+    TextureLibrary::sharedLibrary().loadAtlas("ui_game_atlas_2x.atlas");
     TextureLibrary::sharedLibrary().loadAtlas("ui_game2_atlas_2x.atlas");
     TextureLibrary::sharedLibrary().loadAtlas("ui_game_atlas_2x.atlas");
 
-    // Boot into Main Menu View Controller
-    mainMenuVC_ = std::make_shared<MainMenuViewController>();
-    mainMenuVC_->initView(windowWidth, windowHeight);
+    std::string targetScene = sceneName.empty() ? "town_part1.scene" : sceneName;
 
-    GUINavigationController::instance().pushViewController(mainMenuVC_);
+    // Boot directly into GameViewController for testing
+    auto gameVC = std::make_shared<GameViewController>();
+    gameVC->setFrame(Vector2(windowWidth / 2.0f, windowHeight / 2.0f), Vector2(windowWidth, windowHeight));
+    gameVC->initGame(targetScene);
+    GUINavigationController::instance().pushViewController(gameVC);
 
     initialized_ = true;
     return true;

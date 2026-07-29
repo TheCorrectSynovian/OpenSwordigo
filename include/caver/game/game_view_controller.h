@@ -21,6 +21,8 @@ public:
     void setPlayerPos(const Vector2& pos) { playerPos_ = pos; }
 
 private:
+    void renderHUD(RenderingContext& ctx);
+
     Scene gameScene_;
     Vector2 playerPos_{3535.16f, 407.5f};
     float playerSpeed_{300.0f};

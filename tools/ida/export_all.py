@@ -8,7 +8,7 @@ import os
 import re
 
 OUT = os.path.expanduser(
-    "~/SwordigoDesktop/OpenSwordigo/rln/ida_decompiled"
+    "~/SwordigoDesktop/OpenSwordigo/arm32"
 )
 
 os.makedirs(OUT, exist_ok=True)

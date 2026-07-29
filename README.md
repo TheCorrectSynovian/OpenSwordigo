@@ -6,82 +6,113 @@
 [![Graphics API](https://img.shields.io/badge/OpenGL-ES%202.0%20%2F%203.3-green.svg)](https://www.khronos.org/opengles/)
 [![Windowing](https://img.shields.io/badge/Windowing-SDL3-red.svg)](https://www.libsdl.org/)
 
-**OpenSwordigo** is a modern, open-source C++17 reimplementation and engine reconstruction of Touch Foo's custom **Caver Engine**, the proprietary game engine powering *Swordigo*.
+## 1. Description
 
-It provides a native engine runtime capable of parsing original binary game assets (`.scene`, `.template`, PowerVR `.POD` 3D meshes, `.pvr` compressed textures, and `.lua` scripts) and executing scene graph hierarchies, component behaviors, and GLES2-compatible rendering natively on modern platforms without relying on ARM binary translation or mobile emulators.
+OpenSwordigo is an open-source game engine reconstruction.
+It recreates the proprietary Caver engine from Touch Foo in C++17.
+
+OpenSwordigo parses original binary game files directly.
+These files include `.scene`, `.template`, PowerVR `.POD` 3D meshes, `.pvr` compressed textures, and `.lua` scripts.
+OpenSwordigo executes game logic and graphics natively on Linux, macOS, and Windows.
+It does not use ARM binary translation or mobile emulators.
 
 ---
 
 > [!IMPORTANT]
-> **OpenSwordigo vs. SwordigoDesktop: Key Differences**
-> - **OpenSwordigo**: A **pure native C++ open-source engine reconstruction**. Built from the ground up based on reverse-engineered Caver engine symbols and binary asset formats. It compiles natively for Linux/macOS/Windows and executes game logic and rendering independently.
-> - **SwordigoDesktop**: A **binary wrapper / dynamic translation host** that executes the compiled Android/iOS ARM shared library (`libswordigo.so`) using CPU emulation (Dynarmic) or dynamic symbol hooking.
+> **Comparison: OpenSwordigo and SwordigoDesktop**
+> - **OpenSwordigo**: A pure native C++ engine reconstruction. It parses game assets directly and runs game code natively.
+> - **SwordigoDesktop**: A binary translation wrapper. It executes the original compiled ARM library (`libswordigo.so`) through CPU emulation.
 
 ---
 
-## Key Features
+## 2. Main Features
 
-- **Native Binary Protobuf Decoder**: Zero-dependency parser for Touch Foo's custom Protocol Buffer binary format (`.scene`, `.template`), supporting variable integer wire types, nested messages, string conversions, and packed arrays.
-- **Caver Scene Graph Architecture**:
-  - `Caver::Scene`: Root spatial manager handling active objects, cameras, render queues, and viewport projections.
-  - `Caver::SceneObject`: Reference-counted entity nodes (`Caver::ReferenceCountedObject`) maintaining local and world transformation hierarchies.
-  - `Caver::ObjectTemplate`: Reusable entity prefab instantiation engine.
-  - `Caver::ComponentFactory`: Dynamic registry mapping string identifier tags (`BackgroundComponent`, `ModelComponent`, `GroundMeshComponent`, `PhysicsObjectComponent`) to C++ component logic.
-- **PowerVR Asset Pipeline**:
-  - **PVR Texture Decoder (`Caver::PVRTCDecoder` & `Caver::PVRLoader`)**: Decompresses hardware PVRTC1 (2bpp/4bpp) and ETC1 texture streams directly to RGBA8888 for OpenGL upload.
-  - **POD 3D Mesh Loader (`Caver::PODLoader`)**: Parses binary PowerVR `.POD` mesh containers, extracting vertex positions, normals, UV texture coordinates, and index buffers.
-- **Graphics Pipeline (`Caver::Graphics`)**:
-  - Modular OpenGL ES 2.0 / OpenGL 3.3 Core state cache and shader program abstractions (`Caver::RenderingContext`, `Caver::ShaderProgram`).
-  - Native component rendering support for parallax 2D backgrounds, transformed 3D POD model meshes, terrain polygon geometry, and collision Debug overlays.
-- **Scripting & Third-Party Integration**:
-  - Built-in **Lua 5.1** runtime with **LuaFileSystem** (`lfs`), **LuaSocket**, and **TOML-C** configuration parsing.
-- **Reverse-Engineering Suite**:
-  - Includes symbol mapping databases (`caver_symbols.txt`, `caver_rtti.txt`, `swordigo_defined_symbols.txt`) and Ghidra analysis scripts for engine research.
+### 2.1 Native Protocol Buffer Decoder
+- Decodes Touch Foo binary Protocol Buffer files without external dependencies.
+- Supports variable integer wire types, 64-bit values, length-delimited data, and 32-bit values.
+- Parses nested message structures, strings, and packed arrays.
+
+### 2.2 Scene Graph Architecture
+- **`Caver::Scene`**: Manages root scene objects, camera views, render queues, and viewport projections.
+- **`Caver::SceneObject`**: Represents entity nodes using reference counting (`Caver::ReferenceCountedObject`). It maintains local and world transforms.
+- **`Caver::ObjectTemplate`**: Instantiates reusable entity prefabs into scene objects.
+- **`Caver::ComponentFactory`**: Maps component names (`BackgroundComponent`, `ModelComponent`, `GroundMeshComponent`, `PhysicsObjectComponent`) to C++ component classes.
+
+### 2.3 PowerVR Asset Loaders
+- **`Caver::PVRTCDecoder` and `Caver::PVRLoader`**: Decompress hardware PVRTC1 and ETC1 texture streams directly to RGBA8888 pixel buffers.
+- **`Caver::PODLoader`**: Reads binary PowerVR `.POD` mesh containers. It extracts vertex positions, normal vectors, UV coordinates, and element index arrays.
+
+### 2.4 Graphics Engine
+- Uses **SDL3** for window management and **OpenGL ES 2.0 / OpenGL 3.3** for graphics rendering.
+- **`Caver::RenderingContext`**: Controls state caching, MVP matrices, shader bindings, and draw calls.
+- **`Caver::ShaderProgram`**: Compiles and binds OpenGL ES 2.0 vertex and fragment shaders.
+
+### 2.5 Scripting and Configuration
+- Integrates **Lua 5.1** runtime for game scripting.
+- Includes **LuaFileSystem** (`lfs`) for file system access.
+- Includes **LuaSocket** for network communication.
+- Includes **TOML-C** for configuration file parsing.
+
+### 2.6 Reverse Engineering Data
+- Contains symbol database files (`caver_symbols.txt`, `caver_rtti.txt`, `swordigo_defined_symbols.txt`).
+- Includes Ghidra analysis scripts and decompilation files in the `ghidra_scripts/` and `rln/` directories.
 
 ---
 
-## Project Structure
+## 3. Project Directory Layout
+
+The directory layout of OpenSwordigo is shown below:
 
 ```
 OpenSwordigo/
 ├── include/caver/
 │   ├── components/        # Engine components (Background, Model, GroundMesh, Physics)
-│   ├── graphics/          # Rendering context, PVRTC decoders, POD loaders, GLES2 shaders
+│   ├── graphics/          # OpenGL context, PVRTC decoders, POD loaders, GLES2 shaders
 │   ├── math/              # Matrix, vector, and transform math primitives
-│   ├── resource/          # Virtual File System (VFS) & custom Protobuf decoder
-│   └── scene/             # Scene, SceneObject, ObjectTemplate, ComponentFactory
+│   ├── resource/          # Virtual File System (VFS) and custom Protobuf decoder
+│   └── scene/             # Scene graph, SceneObject, ObjectTemplate, ComponentFactory
 ├── src/
-│   ├── components/        # Component implementations
-│   ├── graphics/          # OpenGL & texture/mesh processing source code
-│   ├── math/              # Math calculations & matrix transformations
-│   ├── resource/          # Asset streaming & protobuf decoding
-│   ├── scene/             # Scene graph logic & component instantiators
-│   ├── lua/               # Embedded Lua 5.1 engine
-│   ├── luafilesystem/     # LuaFileSystem module
-│   ├── luasocket/         # LuaSocket networking module
-│   ├── toml-c/            # Lightweight TOML parser
-│   ├── main.cpp           # Headless CLI scene parser & diagnostic tool (openswordigo_native)
-│   └── render_main.cpp    # SDL3 + OpenGL native window renderer (openswordigo_render)
-├── ghidra_scripts/        # Reversing scripts & analysis tools
+│   ├── components/        # C++ component implementations
+│   ├── graphics/          # Graphics context and texture/mesh source code
+│   ├── math/              # Math calculations and matrix operations
+│   ├── resource/          # Asset streaming and protobuf decoding source
+│   ├── scene/             # Scene graph logic and component instantiations
+│   ├── lua/               # Embedded Lua 5.1 engine source code
+│   ├── luafilesystem/     # LuaFileSystem module source code
+│   ├── luasocket/         # LuaSocket module source code
+│   ├── toml-c/            # TOML parser source code
+│   ├── main.cpp           # Headless CLI scene parser source (openswordigo_native)
+│   └── render_main.cpp    # SDL3 OpenGL renderer source (openswordigo_render)
+├── ghidra_scripts/        # Reversing scripts and analysis tools
 ├── caver_symbols.txt      # Reconstructed Caver Engine C++ symbol table
-├── caver_rtti.txt         # RTTI type descriptors & inheritance trees
-└── CMakeLists.txt         # Build definition script
+├── caver_rtti.txt         # RTTI type descriptors and class hierarchy
+└── CMakeLists.txt         # Primary CMake build configuration file
 ```
 
 ---
 
-## Building OpenSwordigo
+## 4. Software Prerequisites
 
-### Prerequisites
+Before you build OpenSwordigo, install these software tools:
 
-Ensure you have the following installed on your system:
-- **C++17 Compiler** (GCC 9+, Clang 10+, or MSVC 2019+)
-- **CMake** 3.14 or higher
-- **SDL3** development libraries (`libsdl3-dev`)
-- **OpenGL / OpenGL ES 2.0** headers and drivers
-- **PkgConfig**
+| Tool / Library | Minimum Version | Description |
+| :--- | :--- | :--- |
+| **C++ Compiler** | C++17 (GCC 9+, Clang 10+, MSVC 2019+) | Compiles C++ source files. |
+| **CMake** | 3.14 | Configures the build system. |
+| **SDL3** | 3.0.0 | Controls window creation and user input. |
+| **OpenGL / GLES2** | 2.0 or 3.3 Core | Renders 2D and 3D graphics. |
+| **PkgConfig** | Any active version | Locates system libraries. |
 
-#### Installing Prerequisites on Linux (Ubuntu / Debian)
+---
+
+## 5. Build Instructions
+
+Follow these steps to compile OpenSwordigo from source code.
+
+### Step 1: Install Software Dependencies
+
+#### On Ubuntu or Debian Linux
+Run this command to install the required packages:
 
 ```bash
 sudo apt update
@@ -90,100 +121,125 @@ sudo apt install build-essential cmake pkg-config libsdl3-dev libgl1-mesa-dev
 
 ---
 
-### Compilation Steps
+### Step 2: Configure the CMake Build System
 
-1. Configure the CMake build environment:
-   ```bash
-   cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
-   ```
+Run this command in the repository root directory:
 
-2. Build all engine targets using parallel jobs:
-   ```bash
-   cmake --build build -j$(nproc)
-   ```
+```bash
+cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+```
 
-Upon completion, two binary executables will be available in the `build/` directory:
-- `build/openswordigo_native` (CLI Scene Parser)
-- `build/openswordigo_render` (Native SDL3 OpenGL Renderer)
+This command creates a `build` directory and generates the makefiles.
 
 ---
 
-## Usage & Executables
+### Step 3: Compile the Target Executables
 
-### 1. Headless Scene Graph Parser (`openswordigo_native`)
-
-Parse a Touch Foo binary `.scene` file headlessly to inspect its entity hierarchy, templates, and attached components:
+Run this command to build all targets:
 
 ```bash
-./build/openswordigo_native path/to/town_herohouse.scene
+cmake --build build -j$(nproc)
 ```
 
-### 2. Native Visual Renderer (`openswordigo_render`)
-
-Launch the native SDL3 windowed renderer to load scene assets, upload PVR textures and POD 3D meshes to the GPU, and render the scene in real time:
-
-```bash
-./build/openswordigo_render path/to/town_herohouse.scene
-```
+The build process produces two executable files in the `build/` directory:
+- `build/openswordigo_native`: Headless scene graph parser.
+- `build/openswordigo_render`: SDL3 OpenGL renderer.
 
 ---
 
-## Architecture Overview
+## 6. How to Run OpenSwordigo
+
+### 6.1 Run the Headless Scene Parser (`openswordigo_native`)
+
+Use `openswordigo_native` to inspect scene files without opening a GUI window.
+Run this command:
+
+```bash
+./build/openswordigo_native path/to/scene.scene
+```
+
+The program prints the scene hierarchy, templates, and attached components to standard output.
+
+---
+
+### 6.2 Run the Native Visual Renderer (`openswordigo_render`)
+
+Use `openswordigo_render` to open a window and render a scene file in real time.
+Run this command:
+
+```bash
+./build/openswordigo_render path/to/scene.scene
+```
+
+The program performs these actions:
+1. Opens an SDL3 window.
+2. Initializes an OpenGL ES 2.0 graphics context.
+3. Loads `.scene` files and referenced `.POD` meshes and `.pvr` textures.
+4. Renders the scene graphics at 60 frames per second.
+
+---
+
+## 7. Engine Data Flow Architecture
+
+The diagram below shows how OpenSwordigo processes game assets and renders graphics:
 
 ```mermaid
 graph TD
-    A[Game Assets: .scene / .POD / .pvr] --> B[Caver::VFS Engine]
-    B --> C[Caver::ProtobufDecoder]
-    B --> D[Caver::PODLoader]
-    B --> E[Caver::PVRLoader]
+    A["Game Assets (.scene, .POD, .pvr)"] --> B["Caver::VFS Asset Engine"]
+    B --> C["Caver::ProtobufDecoder"]
+    B --> D["Caver::PODLoader"]
+    B --> E["Caver::PVRLoader"]
     
-    C --> F[Caver::Scene & SceneObject]
-    F --> G[Caver::ComponentFactory]
+    C --> F["Caver::Scene & SceneObject"]
+    F --> G["Caver::ComponentFactory"]
     
-    G --> H[Caver::BackgroundComponent]
-    G --> I[Caver::ModelComponent]
-    G --> J[Caver::GroundMeshComponent]
+    G --> H["Caver::BackgroundComponent"]
+    G --> I["Caver::ModelComponent"]
+    G --> J["Caver::GroundMeshComponent"]
     
     D --> I
     E --> H
     E --> I
     
-    H --> K[Caver::RenderingContext]
+    H --> K["Caver::RenderingContext"]
     I --> K
     J --> K
     
-    K --> L[OpenGL ES 2.0 / SDL3 Window]
+    K --> L["OpenGL ES 2.0 / SDL3 Window"]
 ```
 
 ---
 
-## Development Status & Roadmap
+## 8. Development Status and Roadmap
 
-- [x] **Milestone 1: Core Engine Architecture & Scene Parsing**
-  - Custom zero-dependency Protobuf binary asset decoder
-  - `Scene`, `SceneObject`, and `ObjectTemplate` hierarchy parsing
-  - Component registry & factory pattern implementation
-- [x] **Milestone 2: Native Visual Rendering Pipeline**
-  - SDL3 windowing & OpenGL ES 2.0 graphics context initialization
-  - PVRTC1 / ETC1 texture decompression to RGBA8888
-  - PowerVR `.POD` 3D mesh loader & VBO/VAO upload
-  - Initial 60 FPS real-time scene rendering (`openswordigo_render`)
-- [ ] **Milestone 3: Physics & Collision System**
-  - Integration of `PhysicsObjectComponent` and rigid body collision solvers
-  - Terrain collision polyline query engine
-- [ ] **Milestone 4: Gameplay & Scripting Engine**
-  - Player controller entity behaviors and movement physics
-  - Full Lua 5.1 scripting lifecycle integration (`Caver::ScriptComponent`)
-  - UI, HUD, sound effect trigger hooks, and level transition flow
-
----
-
-## Disclaimer & Legal Notice
-
-OpenSwordigo is an independent reverse-engineering and game engine reconstruction project created purely for educational and preservation purposes. All game content, assets, artwork, audio, and trademarks related to *Swordigo* remain the sole property of **Touch Foo**. This repository does not distribute any proprietary game assets.
+- [x] **Milestone 1: Engine Core and Scene Parsing**
+  - Implement zero-dependency Protobuf binary decoder.
+  - Implement `Scene`, `SceneObject`, and `ObjectTemplate` graph structures.
+  - Implement `ComponentFactory` and component registry.
+- [x] **Milestone 2: Native Rendering Pipeline**
+  - Implement SDL3 window management and OpenGL ES 2.0 context.
+  - Implement PVRTC1 and ETC1 texture decompression to RGBA8888.
+  - Implement PowerVR `.POD` 3D mesh loader and vertex buffer creation.
+  - Render real-time graphics at 60 FPS in `openswordigo_render`.
+- [ ] **Milestone 3: Physics and Collision System**
+  - Implement `PhysicsObjectComponent` and rigid body collision solvers.
+  - Implement terrain polyline collision query system.
+- [ ] **Milestone 4: Gameplay and Scripting Engine**
+  - Implement player controller entity movement and state machine.
+  - Integrate Lua 5.1 script execution for entity logic (`Caver::ScriptComponent`).
+  - Implement HUD, user interface, audio hooks, and level transitions.
 
 ---
 
-## License
+## 9. Legal Notice and Trademarks
 
-OpenSwordigo source code is distributed under the [MIT License](LICENSE).
+OpenSwordigo is an independent open-source project.
+Developers created this project for educational and software preservation purposes.
+All trademarks, game assets, artwork, and audio files related to *Swordigo* belong to **Touch Foo**.
+This repository does not contain proprietary game assets.
+
+---
+
+## 10. License
+
+The source code of OpenSwordigo is released under the [MIT License](LICENSE).

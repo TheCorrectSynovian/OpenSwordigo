@@ -52,6 +52,7 @@ public:
         return nullptr;
     }
 
+    Matrix4 getWorldMatrix() const;
     void loadFromProtobuf(const ProtoMessage& msg);
     void update(float dt);
     void render(class RenderingContext& ctx);

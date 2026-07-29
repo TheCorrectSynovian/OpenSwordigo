@@ -14,7 +14,7 @@ class AppRuntime {
 public:
     static AppRuntime& instance();
 
-    bool initEngine(int windowWidth, int windowHeight);
+    bool initEngine(int windowWidth, int windowHeight, const std::string& sceneName = "town_part1.scene");
     void update(float dt);
     void render();
 

@@ -1,5 +1,6 @@
 #include "caver/scene/scene_object.h"
 #include "caver/scene/component_factory.h"
+#include "caver/graphics/rendering_context.h"
 
 namespace caver {
 
@@ -61,6 +62,14 @@ void SceneObject::loadFromProtobuf(const ProtoMessage& msg) {
     }
 }
 
+Matrix4 SceneObject::getWorldMatrix() const {
+    Matrix4 rot = Matrix4::rotationZ(rotation_);
+    Matrix4 scl = Matrix4::scale(Vector3(scaling_, scaling_, scaling_));
+    Matrix4 rotScl = rot * scl;
+    Matrix4 trans = Matrix4::translation(Vector3(position_.x, position_.y, depth_));
+    return trans * rotScl;
+}
+
 void SceneObject::update(float dt) {
     for (auto& comp : components_) {
         comp->update(dt);
@@ -69,6 +78,7 @@ void SceneObject::update(float dt) {
 
 void SceneObject::render(RenderingContext& ctx) {
     if (hidden_) return;
+    ctx.setMatrix(getWorldMatrix());
     for (auto& comp : components_) {
         comp->render(ctx);
     }

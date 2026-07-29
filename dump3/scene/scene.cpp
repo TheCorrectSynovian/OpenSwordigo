@@ -76,18 +76,8 @@ bool Scene::loadFromProtobuf(const ProtoMessage& sceneMsg) {
         auto obj = std::make_shared<SceneObject>();
         obj->loadFromProtobuf(objMsg);
 
-        // Apply template defaults if templateName is set
-        if (!obj->getTemplateName().empty()) {
-            auto tmpl = ObjectLibrary::instance().findTemplate(obj->getTemplateName());
-            if (tmpl && !tmpl->getTemplateObjectMsg().fields.empty()) {
-                // Overlay template components/properties
-                SceneObject tmplObj;
-                tmplObj.loadFromProtobuf(tmpl->getTemplateObjectMsg());
-                for (const auto& comp : tmplObj.getComponents()) {
-                    obj->addComponent(comp);
-                }
-            }
-        }
+        std::cout << "[SceneDebug] Object template='" << obj->getTemplateName() 
+                  << "' pos=(" << obj->getPosition().x << ", " << obj->getPosition().y << ") depth=" << obj->getDepth() << std::endl;
 
         addObject(obj);
     }
@@ -104,7 +94,85 @@ void Scene::update(float dt) {
 }
 
 void Scene::render(RenderingContext& ctx) {
-    for (auto& obj : objects_) {
+    if (name_.find("menu") != std::string::npos) {
+        GLuint bgTex = ctx.getTexture("menu_back_2x.tex.png");
+        if (bgTex > 0) {
+            glDisable(GL_DEPTH_TEST);
+            glDepthMask(GL_FALSE);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, bgTex);
+            ctx.getShader().setUseTexture(true);
+            ctx.getShader().setColor(FloatColor(1, 1, 1, 1));
+            Matrix4 identity;
+            ctx.getShader().setMVP(identity);
+
+            static std::shared_ptr<Mesh> fullscreenQuad;
+            if (!fullscreenQuad) {
+                fullscreenQuad = std::make_shared<Mesh>();
+                std::vector<Vertex> verts = {
+                    {{-1.0f, -1.0f, 0.0f}, {0, 0, 1}, {0.0f, 0.0f}},
+                    {{ 1.0f, -1.0f, 0.0f}, {0, 0, 1}, {1.0f, 0.0f}},
+                    {{ 1.0f,  1.0f, 0.0f}, {0, 0, 1}, {1.0f, 1.0f}},
+                    {{-1.0f,  1.0f, 0.0f}, {0, 0, 1}, {0.0f, 1.0f}}
+                };
+                std::vector<uint16_t> indices = {0, 1, 2, 0, 2, 3};
+                fullscreenQuad->uploadGLBuffers(verts, indices);
+            }
+            fullscreenQuad->draw();
+            glDepthMask(GL_TRUE);
+            glEnable(GL_DEPTH_TEST);
+        }
+    } else {
+        // Render grasslandsbackground_day_2x.tex.png for town/grasslands scenes
+        glDisable(GL_DEPTH_TEST);
+        glDepthMask(GL_FALSE);
+        
+        GLuint bgTex = ctx.getTexture("grasslandsbackground_day_2x.tex.png");
+        if (bgTex == 0) {
+            bgTex = ctx.getTexture("grasslandsbackground_day.png");
+        }
+        if (bgTex == 0) {
+            bgTex = ctx.getTexture("woodkeep_bg_2x.tex.png");
+        }
+
+        if (bgTex > 0) {
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, bgTex);
+            ctx.getShader().setUseTexture(true);
+            ctx.getShader().setColor(FloatColor(1, 1, 1, 1));
+        } else {
+            ctx.getShader().setUseTexture(false);
+            ctx.getShader().setColor(FloatColor(0.12f, 0.44f, 0.92f, 1.0f));
+        }
+
+        Matrix4 identity;
+        ctx.getShader().setMVP(identity);
+
+        static std::shared_ptr<Mesh> bgQuad;
+        if (!bgQuad) {
+            bgQuad = std::make_shared<Mesh>();
+            std::vector<Vertex> verts = {
+                {{-1.0f, -1.0f, 0.0f}, {0, 0, 1}, {0.0f, 0.0f}},
+                {{ 1.0f, -1.0f, 0.0f}, {0, 0, 1}, {1.0f, 0.0f}},
+                {{ 1.0f,  1.0f, 0.0f}, {0, 0, 1}, {1.0f, 1.0f}},
+                {{-1.0f,  1.0f, 0.0f}, {0, 0, 1}, {0.0f, 1.0f}}
+            };
+            std::vector<uint16_t> indices = {0, 1, 2, 0, 2, 3};
+            bgQuad->uploadGLBuffers(verts, indices);
+        }
+        bgQuad->draw();
+
+        glDepthMask(GL_TRUE);
+        glEnable(GL_DEPTH_TEST);
+    }
+
+    // Sort objects back-to-front by depth (larger depth value = further back)
+    std::vector<std::shared_ptr<SceneObject>> sortedObjects = objects_;
+    std::stable_sort(sortedObjects.begin(), sortedObjects.end(), [](const auto& a, const auto& b) {
+        return a->getDepth() > b->getDepth();
+    });
+
+    for (auto& obj : sortedObjects) {
         obj->render(ctx);
     }
 }
